@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function Syntax</title>
+</head>
+
+<body>
+
+    <script>
+        /*
+        Function
+        -Arrow function
+        --Regular vs Aroow [parm + no parm]
+        --Multiple line
+        */
+
+        let print1 = function () {
+            return 10;
+        }
+        console.log(print1())
+
+        let print2 = () => 10;
+        console.log(print2())
+
+
+
+        let print3 = function (n) {
+            return n;
+        }
+        console.log(print3(100))
+
+        let print4 = (n) => n;
+        console.log(print4(100))
+
+
+
+        let print5 = function (a, b) {
+            return a + b;
+        }
+        console.log(print5(100, 50))
+
+        let print6 = (a, b) => a + b;
+        console.log(print6(100, 50))
+
+
+
+        let print7 = function (a, b) {
+            let s = a * b
+            return s;
+        }
+        console.log(print7(5, 5))
+
+        let print8 = (a, b) => {
+            let s = a * b
+            return s;
+        }
+        console.log(print8(5, 5))
+
+    </script>
+</body>
+
+</html>

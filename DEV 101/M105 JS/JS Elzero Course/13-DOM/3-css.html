@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #my-div {
+            font-size: 40px;
+            line-height: 2;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="my-div">Div With Many Classes</div>
+    <script>
+        /*
+          DOM [CSS]
+          - style
+          - cssText
+          - removeProperty(propertyName) [Inline, Stylesheet]
+          - setProperty(propertyName, value, priority)
+        */
+        let element = document.getElementById("my-div");
+
+        element.style.color = "red";
+        element.style.backgroundColor = "rgb(100 255 100)";
+
+        element.style.cssText = "text-align: center; color: #999; background-color: #444";
+
+        element.style.removeProperty("color");
+        element.style.setProperty("color", "#111");
+
+        document.styleSheets[0].rules[0].style.removeProperty("color");
+        document.styleSheets[0].rules[0].style.setProperty("background-color", "red", "important");
+    </script>
+</body>
+
+</html>

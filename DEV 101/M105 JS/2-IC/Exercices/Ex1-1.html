@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function valeurAbsolue() {
+            let n1=document.getElementById('n1').value;
+            let res=document.getElementById('res');
+            let va=n1;
+            if(n1<0)
+                va=-n1;
+            res.innerText='Valeur Absolue : ' +va;
+        }
+    </script>
+</head>
+<body>
+    <input type="number" id="n1">
+    <button onclick="valeurAbsolue()">Valeur Absolue</button><br>
+    <label id="res"></label>
+</body>
+</html>

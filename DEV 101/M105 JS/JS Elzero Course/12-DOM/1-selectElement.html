@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What Is DOM And Select Elements</title>
+</head>
+
+<body>
+
+    <!--      id       getElementById()             -->
+    <div id="my-div">Hello div</div>
+    <script>
+        let myIdElement = document.getElementById("my-div");
+    </script>
+
+    <!--    classe     getElementsByClassName()     -->
+    <span class="my-span special"></span>
+    <span class="my-span"></span>
+    <script>
+        let myCNElements = document.getElementsByClassName("my-span");
+    </script>
+
+    <!-- By Tag Name    getElementsByTagName        -->
+    <p>Hello Par 1</p>
+    <p>Hello Par 2</p>
+
+    <script>
+        let myTNElements = document.getElementsByTagName("p");
+        console.log(myTNElements[0]);
+    </script>
+
+    <!-- CSS Selectors  querySelector() querySelectorAll() -->
+    <script>
+        //Find Element By CSS Selectors
+        let myQueryElement = document.querySelector("#my-div");
+        console.log(myQueryElement);
+        //get the first element have the class
+        let myQueryElement1 = document.querySelector(".my-span");
+        console.log(myQueryElement1);
+        //get All elements have the class
+        let myQueryElement2 = document.querySelectorAll(".my-span");
+        console.log(myQueryElement2);
+    </script>
+
+    <!-- 
+    Find Element By Collection
+        title
+        body
+        images
+        forms
+        links
+    -->
+    <form action="">
+        <input type="text" name="one" value="Hello">
+    </form>
+    <form action="">
+        <input type="text" name="two" value="Hello">
+    </form>
+    <a href="https://google.com">Google</a>
+    <a href="https://facebook.com">Google</a>
+
+    <script>
+        console.log(document.title);
+        console.log(document.body);
+        console.log(document.images);
+        console.log(document.forms);
+        console.log(document.forms[0].one.value);
+        console.log(document.links);
+        console.log(document.links[1].href);
+    </script>
+</body>
+
+</html>

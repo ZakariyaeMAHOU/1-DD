@@ -1,0 +1,44 @@
+## 1 <span style="color:red">Merise</span>:
+### <span style="color:rgb(0 50 255)">Dictionnaire de données</span>:
+### <span style="color:rgb(0 50 255)">GDF</span>:
+### <span style="color:rgb(0 50 255)">MCD</span>:
+### <span style="color:rgb(0 50 255)">Formes Normales</span>:
+### <span style="color:rgb(0 50 255)">MLD</span>:
+### <span style="color:rgb(0 50 255);">=> Conception / Rétro-conception</span>:
+## 2 <span style="color:red">SQL</span>:
+### <span style="color:rgb(0 50 255)">LDD</span>:
+#### <span style="color:rgb(0 255 50)"> Create DB</span>:
+#### <span style="color:rgb(0 255 50)"> Create Table / Contrainte</span>:
+#### <span style="color:rgb(0 255 50)"> Alter (modification)</span>:
+#### <span style="color:rgb(0 255 50)"> Drop (Supremation)</span>:
+#### <span style="color:rgb(0 255 50)"> Create view</span>:
+#### <span style="color:rgb(0 255 50)"> Create index</span>:
+### <span style="color:rgb(0 50 255)">LMD</span>:
+#### <span style="color:rgb(0 255 50)"> Insert</span>:
+#### <span style="color:rgb(0 255 50)"> Update</span>:
+#### <span style="color:rgb(0 255 50)"> Delete</span>:
+#### <span style="color:rgb(0 255 50)"> Select</span>:
+###### <span style="color:orange">Jointures</span>:
+###### <span style="color:orange">Sores Requetes</span>:
+###### <span style="color:orange">fct de calcul</span>:
+###### <span style="color:orange">Group by | having</span>:
+### <span style="color:rgb(0 50 255)">LCD</span>:
+#### !!<span style="color:rgb(0 255 50)"> Transaction</span>:
+#### <span style="color:rgb(0 255 50)"> Connexion</span>:
+#### <span style="color:rgb(0 255 50)"> Users</span>:
+#### <span style="color:rgb(0 255 50)"> Roles</span>:
+#### <span style="color:rgb(0 255 50)"> Droits</span>:
+## 3 <span style="color:red">TSQL</span>:
+### <span style="color:rgb(0 50 255)">Variables</span>:
+#### <span style="color:rgb(0 255 50)"> Déclaration</span>:
+#### <span style="color:rgb(0 255 50)"> Affectation</span>:
+#### <span style="color:rgb(0 255 50)"> V.globales</span>:
+### <span style="color:rgb(0 50 255)">if</span>:
+### <span style="color:rgb(0 50 255)">case</span>:
+### <span style="color:rgb(0 50 255)">while</span>:
+### <span style="color:rgb(0 50 255)">Procédures Stockées</span>:
+### <span style="color:rgb(0 50 255)">Fonctions utilisateurs</span>:
+### <span style="color:rgb(0 50 255)">Tiggers</span>:
+### <span style="color:rgb(0 50 255)">Curseurs</span>:
+
+

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Animation - KeyFrames, Name, Duration</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(11, 224, 0);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+            transform: translate(-50%, -50%);
+
+            animation-name: change-color;
+            animation-duration: 8s;
+        }
+
+        @keyframes change-color {
+            0% {
+                background-color: rgb(11, 224, 0);
+            }
+
+            25% {
+                background-color: rgb(252, 167, 48);
+            }
+
+            50% {
+                background-color: rgb(223, 255, 219);
+            }
+
+            75% {
+                background-color: rgb(255, 212, 138);
+            }
+
+            100% {
+                background-color: rgb(11, 224, 0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>Animation</div>
+</body>
+
+</html>

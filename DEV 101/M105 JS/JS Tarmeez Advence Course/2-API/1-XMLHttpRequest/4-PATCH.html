@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PATCH</title>
+</head>
+
+<body>
+    <h1>All Posts</h1>
+    <div class="posts"></div>
+
+</body>
+<script>
+    // PATCH (PUT)
+    // -----> PATCH => you can update one propertie
+    // -----> PUT => you must write all properties
+    function updateData() {
+        let myRequest = new XMLHttpRequest();
+        myRequest.open("PATCH", "https://jsonplaceholder.typicode.com/posts/1");
+        myRequest.responseType = "json";
+        myRequest.setRequestHeader("Accept", "application/json");
+        myRequest.setRequestHeader("Content-type", "application/json");
+
+        let bodyParamsUpdate = JSON.stringify({
+            id: 1,
+            title: 'this Post are updated',
+            body: 'bar',
+            userId: 1,
+        })
+
+        myRequest.send(bodyParamsUpdate)
+
+        myRequest.onload = function () {
+            if (this.status >= 200 && this.status < 300 && this.readyState == 4) {
+                console.log(myRequest.response)
+                document.querySelector(".posts").innerHTML += `<h2>${myRequest.response.title}<h2>`;
+                console.log("The post has been updated")
+            } else {
+                console.log("error")
+            }
+        }
+    }
+    updateData()
+</script>
+
+</html>

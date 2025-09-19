@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container"></div>
+
+    <script>
+        // 1
+        let T_Ords = [
+            {
+                Référence: "A1000",
+                Désignation: "Dell latitude 5420",
+                Garantie: "3 ans",
+                Caractéristiques: "i5 11G",
+                Prix: 9500
+            },
+            {
+                Référence: "A2000",
+                Désignation: "Hp elite book x360",
+                Garantie: "2 ans",
+                Caractéristiques: "i7 11G",
+                Prix: 235000
+            },
+            {
+                Référence: "A3000",
+                Désignation: "Asus light gamer F571H",
+                Garantie: "3 ans",
+                Caractéristiques: "i5 10G",
+                Prix: 11000
+            }
+        ];
+
+        // 2.a
+        function getAllOrds() {
+            let tableauHTML = `
+            <table>
+                <tr>
+                    <th>Référence</th>
+                    <th>Désignation</th>
+                    <th>Garantie</th>
+                    <th>Caractéristiques</th>
+                    <th>Prix</th>
+                    <th></th>
+                </tr>
+            `;
+            for (let i = 0; i < T_Ords.length; i++) {
+                tableauHTML += `
+                <tr>
+                    <td>${T_Ords[i].Référence}</td>
+                    <td>${T_Ords[i].Désignation}</td>
+                    <td>${T_Ords[i].Garantie}</td>
+                    <td>${T_Ords[i].Caractéristiques}</td>
+                    <td>${T_Ords[i].Prix}</td>
+                    <td><button onclick = "deleteOrd('${T_Ords[i].Référence}')">Supprimer</button></td>
+                </tr>
+                `;
+            }
+            tableauHTML += `</table>`;
+            document.getElementById("container").innerHTML = tableauHTML;
+        }
+
+        // 2.b
+        function deleteOrd(a) {
+            T_Ords = T_Ords.filter((b) => b.Référence !== a);
+            getAllOrds();
+        }
+    </script>
+    <label>Désignation:</label>
+    <input type="text" id="des">
+    <button onclick="getOrd(document.getElementById('des').value)">Filter</button>
+    <div id="divdes">
+    </div>
+    <script>
+        // 2.c 
+        function getOrd(des) {
+            // T_Ords = T_Ords.filter(c => c.Désignation === des)
+            T_Ords = T_Ords.filter(c => c.Désignation.split(" ").includes(`${des}`));
+            let tableDes = `<table>`;
+            for (let i = 0; i < T_Ords.length; i++) {
+                tableDes += `
+                    <tr>
+                        <td>${T_Ords[i].Référence}</td>
+                        <td>${T_Ords[i].Désignation}</td>
+                        <td>${T_Ords[i].Garantie}</td>
+                        <td>${T_Ords[i].Caractéristiques}</td>
+                        <td>${T_Ords[i].Prix}</td>
+                    </tr>
+                `;
+            }
+            tableDes += `</table>`;
+            document.getElementById('divdes').innerHTML = tableDes;
+        }
+        getAllOrds();
+    </script>
+</body>
+
+</html>

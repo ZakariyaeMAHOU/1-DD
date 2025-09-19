@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return Nested Function</title>
+</head>
+
+<body>
+
+    <script>
+        /*
+        Function
+        -Function inside function
+        -Return function
+        */
+
+        //exp 1
+        function sayMsg(fName, lName) {
+            let msg = `Hello`;
+            //Nested Function
+            function sayHello() {
+                msg = `${msg} ${fName} ${lName}`;
+            }
+            sayHello();
+            return msg;
+        }
+        console.log(sayMsg("Zakaria", "Mahou"));
+
+        //exp 2
+        function sayMsg(fName, lName) {
+            let msg = `Hello`;
+            //Nested Function
+            function sayHello() {
+                msg = `${msg} ${fName} ${lName}`;
+            }
+            sayHello();
+            return msg;
+        }
+        console.log(sayMsg("Zakaria", "Mahou"));
+
+        //exp 3
+        function sayMsg(fName, lName) {
+            let msg = `Hello`;
+
+            //Nested Function
+            function sayHello() {
+                function getFN() {
+                    return `${fName} ${lName}`;
+                }
+                return `${msg} ${getFN()}`;
+            }
+            return sayHello();
+        }
+        console.log(sayMsg("Zakaria", "Mahou"));
+    </script>
+</body>
+
+</html>

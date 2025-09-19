@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+
+        .users {
+            width: 25%;
+            padding: 20px;
+            border: 1px solid #000;
+        }
+
+        .posts {
+            width: 65%;
+            padding: 20px;
+            border: 1px solid #000;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            padding: 0;
+            margin: 0;
+        }
+
+        .user,
+        .post {
+            padding: 10px;
+            margin: 10px;
+            cursor: pointer;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="users">
+            <div class="user">
+                <h2>name</h2>
+                <h4>email</h4>
+            </div>
+        </div>
+        <div class="posts">
+            <div class="post">
+                <h2>titlE</h2>
+                <h4>body</h4>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function eventListener() {
+            let us = document.querySelectorAll(".user");
+            us.forEach((u, i) => {
+                u.addEventListener("click", function () {
+                    let number = "https://jsonplaceholder.typicode.com/posts?userId="
+                    number += i + 1;
+                    getPostsById(number);
+                })
+            })
+        }
+
+        function getPostsById(url = "https://jsonplaceholder.typicode.com/posts?userId=1") {
+            let myRequest = new XMLHttpRequest();
+            myRequest.open("GET", url);
+            myRequest.responseType = "json";
+            myRequest.send();
+            myRequest.onload = function () {
+                let posts = myRequest.response;
+                if (this.status >= 200 && this.status < 300 && this.readyState == 4) {
+                    let container = document.querySelector(".posts");
+                    container.innerHTML = "";
+                    for (post of posts) {
+                        let content = `
+                            <div class="post">
+                                <h2>${post.title}</h2>
+                                <h4>${post.body}</h4>
+                            </div>
+                        `;
+                        container.innerHTML += content;
+                    }
+                }
+            }
+        }
+        getPostsById();
+
+        function getUsers() {
+            let myRequest = new XMLHttpRequest();
+            myRequest.open("GET", "https://jsonplaceholder.typicode.com/users");
+            myRequest.responseType = "json";
+            myRequest.send();
+            myRequest.onload = function () {
+                let users = myRequest.response;
+                if (this.status >= 200 && this.status < 300 && this.readyState == 4) {
+                    let container = document.querySelector(".users");
+                    container.innerHTML = "";
+                    for (user of users) {
+                        let content = `
+                            <div class="user">
+                                <h2>${user.name}</h2>
+                                <h4>${user.email}</h4>
+                            </div>
+                        `;
+                        container.innerHTML += content;
+                    }
+                }
+                eventListener();
+            }
+        }
+        getUsers();
+    </script>
+</body>
+
+</html>

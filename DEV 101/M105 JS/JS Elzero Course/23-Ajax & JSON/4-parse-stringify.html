@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        /*
+            JSON
+            - JSON.parse => Convert Text Data To JS Object
+            - JSON.stringify => Convert JS Object To JSON
+        */
+
+        let myJsonObjFromServer = '{"name": "Zakaria", "age": 19}';
+        // let myJsonObjFromServer = "{\"name\": \"Zakaria\", \"age\": 19}";
+        console.log(myJsonObjFromServer);
+        console.log(typeof myJsonObjFromServer);
+
+        let myJsObj = JSON.parse(myJsonObjFromServer);
+        console.log(myJsObj);
+        console.log(typeof myJsObj);
+
+        myJsObj.name = "Zakariyae";
+        myJsObj.age = 20;
+
+        let myJsonObjToServer = JSON.stringify(myJsObj);
+        console.log(myJsonObjToServer);
+        console.log(typeof myJsonObjToServer);
+    </script>
+</body>
+
+</html>

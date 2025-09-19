@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 5</title>
+</head>
+
+<body>
+
+    <script>
+        //If Condition Chalenge
+
+        let a = 10;
+
+        if (a < 10) {
+            console.log(10);
+        } else if (a >= 10 && a <= 40) {
+            console.log("10 To 40");
+        } else if (a > 40) {
+            console.log("> 40");
+        } else {
+            console.log("Unknown");
+        }
+
+        a < 10
+            ? console.log(10)
+            : a >= 10 && a <= 40
+                ? console.log("10 To 40")
+                : a > 40
+                    ? console.log("> 40")
+                    : console.log("Unknown");
+
+        // Write Previous Condition With Ternary If Syntax
+
+        let st = "Elzero Web School";
+
+        if (typeof st === typeof "34") {
+            console.log("Good");
+        }
+
+        // W Position May Change
+        if (st.charAt(7).toLowerCase() === "w") {
+            console.log("Good");
+        }
+
+        if (st !== "string") {
+            console.log("Good");
+        }
+
+        if (typeof st === typeof "number") {
+            console.log("Good");
+        }
+
+        if (st.substr(0, 6).repeat(2) === "ElzeroElzero") {
+            console.log("Good");
+        }
+
+
+
+        // Switch And If Condition Challenge
+        /*
+            Switch Challenge
+        */
+
+        let job = "Manager";
+        let salary = 0;
+
+        /*
+        if (job === "Manager") {
+            salary = 8000;
+        } else if (job === "IT" || job === "Support") {
+            salary = 6000;
+        } else if (job === "Developer" || job === "Designer") {
+            salary = 7000;
+        } else {
+            salary = 4000;
+        }
+        */
+
+        switch (job) {
+            case "Manager":
+                salary = 8000;
+                console.log(`My Salary is : ${salary}`);
+                break;
+            case "IT":
+            case "Support":
+                salary = 6000;
+                console.log(`My Salary is : ${salary}`);
+                break;
+            case "Developer":
+            case "Designer":
+                salary = 7000;
+                console.log(`My Salary is : ${salary}`);
+                break;
+            default:
+                salary = 4000;
+                console.log(`My Salary is : ${salary}`);
+        }
+
+
+        /*
+            If Challenge
+        */
+
+        let holidays = 1;
+        let money = 0;
+
+        /*
+        switch (holidays) {
+            case 0:
+                money = 5000;
+                console.log(`My Money is ${money}`);
+                break;
+            case 1:
+            case 2:
+                money = 3000;
+                console.log(`My Money is ${money}`);
+                break;
+            case 3:
+                money = 2000;
+                console.log(`My Money is ${money}`);
+                break;
+            case 4:
+                money = 1000;
+                console.log(`My Money is ${money}`);
+                break;
+            case 5:
+                money = 0;
+                console.log(`My Money is ${money}`);
+                break;
+            default:
+                money = 0;
+                console.log(`My Money is ${money}`);
+        }
+        */
+
+        if (holidays == 0) {
+            money = 5000;
+            console.log(`My Money is ${money}`);
+        } else if (holidays === 1 || holidays === 2) {
+            money = 3000;
+            console.log(`My Money is ${money}`);
+        } else if (holidays === 3) {
+            money = 2000;
+            console.log(`My Money is ${money}`);
+        } else if (holidays === 4) {
+            money = 1000;
+            console.log(`My Money is ${money}`);
+        } else if (holidays === 5) {
+            money = 0;
+            console.log(`My Money is ${money}`);
+        } else {
+            money = 0;
+            console.log(`My Money is ${money}`);
+        }
+
+
+
+
+
+
+
+        // Assignements
+        console.log("Assignements (operators)")
+        // Assignement 1
+        console.log("Assignement 1")
+        console.log(100 == "100"); // true
+        console.log(100 < 1000); // true
+        console.log(110 > 100 && 10 < 20); // true
+        console.log(-10 == "-10"); // true
+        console.log(+-50 <= +"-40"); // true
+        console.log(-10 <= -"-40"); // true
+        console.log(+"10" == 10); // true
+        console.log(-20 < false); // true
+
+        // Assignement 2
+        console.log("Assignement 2")
+        let num1 = 10;
+        let num2 = 20;
+
+        console.log(num1 <= num2); // true
+        console.log(num1 < num2); // true
+        console.log(num2 >= num1); // true
+        console.log(num2 > num1); // true
+        console.log(num1 != num2); // true
+        console.log(num1 !== num2); // true
+
+        // Assignement 2
+        console.log("Assignement 2")
+        let x = 20;
+        let y = 30;
+        let z = 10;
+
+        console.log(x < y && x > z || x > y); // true
+        console.log(x != y != x != z); // true
+        console.log(!(x > y) && !(x > y) && !(x < z) && !(x < z)); // true
+
+        console.log("\n\n\n")
+
+        // Assignements if condition
+        console.log("Assignements (if condition)")
+        // Assignement 1
+        console.log("Assignement 1")
+        let n0 = 13; // "009"*
+        if (n0 < 10) {
+            console.log("00" + n0);
+        } else if (n0 >= 10 && n0 < 100) {
+            console.log("0" + n0);
+        } else {
+            console.log(n0);
+        }
+
+        console.log("\n\n\n")
+
+        // Assignement 2
+        console.log("Assignement 2")
+        let n1 = 10;
+        let str = "10";
+        let str2 = "30";
+
+        if (n1 == str) {
+            console.log("{n1} Is The Same Value As {str}")
+        }
+        if (n1 == str && n1 !== str) {
+            console.log("{num1} Is The Same Value As {str} But Not The Same Type")
+        }
+        if (n1 != str2 && n1 !== str2) {
+            console.log("{num1} Is Not The Same Value Or The Same Type As {str2}")
+        }
+        if (str != str2 && typeof str == typeof str2) {
+            console.log("{str} Is The Same Type As {str2} But Not The Same Value")
+        }
+
+        console.log("\n\n\n")
+
+        // Assignement 3
+        console.log("Assignement 3")
+        let m1 = 10;
+        let m2 = 30;
+        let m3 = "30";
+
+        if (m3 > m1 && typeof m3 != typeof m2) {
+            console.log("30 Is Larger Than 10 And Type string Not The Same Type As number")
+        }
+        if (m3 > m1 && m3 == m2 && typeof m3 != typeof m2) {
+            console.log("30 Is Larger Than 10 And Value Is The Same As 30 And Type string Not The Same Type As number")
+        }
+        if (m3 !== m1 && typeof m3 != typeof m2) {
+            console.log("{num3} Value And Type Is Not The Same As {num1} And Type Is Not The Same As {num2}")
+        }
+
+        console.log("\n\n\n")
+
+        // Assignement 4
+        console.log("Assignement 4")
+        // Edit What You Want Here
+
+        let nb1 = 11;
+        let nb2 = 10;
+        let nb3 = 11;
+        let nb4 = 33;
+
+        /*
+          Do Not Edit Below This Line
+          Needed Output
+          True 7 Times
+        */
+
+        // Condition 1
+
+        if (nb1 > nb2) {
+            console.log("True");
+        } else {
+            console.log("False");
+        }
+
+        // Condition 2
+
+        if (nb1 > nb2 && nb1 < nb4) {
+            console.log("True");
+        } else {
+            console.log("False");
+        }
+
+        // Condition 3
+
+        if (nb1 > nb2 && nb1 === nb3) {
+            console.log("True");
+        } else {
+            console.log("False");
+        }
+
+        // Condition 4
+
+        if ((nb1 + nb2) < nb4) {
+            console.log("True");
+        } else {
+            console.log("False");
+        }
+
+        // Condition 5
+
+        if ((nb1 + nb3) < nb4) {
+            console.log("True");
+        } else {
+            console.log("False");
+        }
+
+        // Condition 6
+
+        if ((nb1 + nb2 + nb3) < nb4) {
+            console.log("True");
+        } else {
+            console.log("False");
+        }
+
+        // Condition 7
+
+        if (nb4 - (nb1 + nb3) + nb2 === 21) {
+            console.log("True");
+        } else {
+            console.log("False");
+        }
+
+        console.log("\n\n\n")
+
+        // Assignement 4
+        console.log("Assignement 4 (switch statement)");
+
+        let dy = "    tuesday  ";
+        let d = dy.trim().charAt(0).toUpperCase() + dy.trim().substring(1);
+        switch (d) {
+            default:
+                console.log("Its Not A Valid Day");
+                break;
+            case "Monday":
+            case "Thursday":
+                console.log("From 10:00 AM To 5:00 PM");
+                break;
+            case "Tuesday":
+                console.log("From 10:00 AM To 6:00 PM");
+                break;
+            case "Wednesday":
+                console.log("From 10:00 AM To 7:00 PM");
+                break;
+            case "Friday":
+            case "Saturday":
+            case "Sunday":
+                console.log("No Appointments Available");
+                break;
+        }
+    </script>
+</body>
+
+</html>

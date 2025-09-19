@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="pageServeur.php">
+        <fieldset>
+            <legend>Formulaire d'inscription</legend>
+            <label for="nom">Nom</label>
+            <input type="email" name="email" id="email" placeholder="Saisir votre ......."><br>
+            <label for="prenom">Prenom</label>
+            <input type="text" name="prenom" id="prenom" placeholder="Saisir votre ......."><br>
+            <label for="email">Email</label>
+            <input type="text" name="nom" id="nom" placeholder="Saisir votre ......."><br>
+            <label for="sexe">Sexe</label>
+                <label for="masculin">Masculin</label>
+                <input type="radio" id="masculin" name="sexe">
+                <label for="feminin">Feminin</label>
+                <input type="radio" id="feminin" name="sexe"><br>
+            <label for="photo">Photo</label>
+            <input type="file" name="photo" id="photo"><br>
+            <label for="pays">Pays</label>
+            <select id="pays" name="pays">
+                <option>France</option>
+                <option>Maroc</option>
+            </select><br>
+            <label for="leslangesPreferes">Les langes préférés</label>
+            <select id="leslangesPreferes" name="leslangesPreferes" size="4" multiple>
+                <option>Java</option>
+                <option>C</option>
+                <option>C++</option>
+                <option>PHP</option>
+            </select>Pour une assistance<br>
+            <label for="domaines">Domaines</label>
+            <input type="checkbox" name="info" id="info" checked>
+            <label for="info">Informatique</label>
+            <input type="checkbox" name="gest" id="gest">
+            <label for="gest">Gestion</label> <br>
+            <input type="submit" value="Envoyer">
+            <input type="reset" value="Annuler">
+        </fieldset>
+    </form>
+</body>
+</html>

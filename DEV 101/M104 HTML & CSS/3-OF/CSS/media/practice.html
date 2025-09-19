@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries And Responsive Designs Standards</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        .parent {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            gap: 5px 0;
+        }
+
+        .parent div {
+            padding: 20px;
+            background-color: red;
+            color: white;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            width: 100%;
+        }
+
+
+
+        /* mobile */
+        @media (max-width: 767px) {}
+
+
+
+        /* small csreens */
+        @media (min-width: 768px) {
+            .parent div {
+                width: calc(50% - 10px);
+            }
+        }
+
+
+
+        /* medium screens */
+        @media (min-width: 992px) {
+            .parent div {
+                width: calc(25% - 5px);
+            }
+        }
+
+
+
+        /* large screens */
+        @media (min-width: 1200px) {}
+
+        /* X large screens */
+        @media (min-width: 1400px) {}
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        /*
+            Generators
+            - Delegate Generator
+        */
+
+        function* generateNums() {
+            yield 1;
+            yield 2;
+            yield 3;
+        }
+
+        function* generateLetters() {
+            yield "A";
+            yield "B";
+            yield "C";
+        }
+
+        function* generateAll() {
+            yield* generateNums();
+            yield* generateLetters();
+            yield* [4, 5, 6];
+        }
+
+        let generator = generateAll();
+
+        console.log(generator.next());
+        console.log(generator.next());
+        console.log(generator.next());
+        console.log(generator.next());
+        console.log(generator.next());
+        console.log(generator.return("z"));
+        console.log(generator.next());
+        console.log(generator.next());
+        console.log(generator.next());
+        console.log(generator.next());
+
+        // for (let value of generator) {
+        //     console.log(value);
+        // }
+    </script>
+</body>
+
+</html>

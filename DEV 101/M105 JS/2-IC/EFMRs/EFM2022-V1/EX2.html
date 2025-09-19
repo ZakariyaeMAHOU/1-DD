@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex2</title>
+</head>
+
+<body>
+    <!-- 1 -->
+    <form action="">
+        <label for="nom">Nom:</label>
+        <input type="text" name="nom" id="nom" placeholder="Nom">
+        <span id="nomErreur" class="erreurMsg"></span><br>
+
+        <label for="prenom">Prénom:</label>
+        <input type="text" name="prenom" id="prenom" placeholder="Prénom">
+        <span id="prenomErreur" class="erreurMsg"></span><br>
+
+        <label for="email">Email:</label>
+        <input type="text" name="email" id="email" placeholder="Email">
+        <span id="emailEreur" class="erreurMsg"></span><br>
+
+        <label for="commentaire">Commentaire:</label>
+        <textarea name="commentaire" id="commentaire" placeholder="Tapez votre commentaire"></textarea>
+        <span id="commentaireEreur" class="erreurMsg"></span><br>
+
+        <button type="submit" onclick="envoyer(event)">Envoyer</button>
+    </form>
+
+    <!-- 2 -->
+    <script>
+        let nom = document.getElementById('nom');
+        let prenom = document.getElementById('prenom');
+        let email = document.getElementById('email');
+        let commentaire = document.getElementById('commentaire');
+
+        let nomErreur = document.getElementById('nomErreur');
+        let prenomErreur = document.getElementById('prenomErreur');
+        let emailEreur = document.getElementById('emailEreur');
+        let commentaireEreur = document.getElementById('commentaireEreur');
+
+
+
+        // function envoyer() {
+        //     if (nom.value.trim() === "") {
+        //         nomErreur.textContent = "Nom est obligatoire";
+        //     }
+        //     if (prenom.value.trim() === "") {
+        //         prenomErreur.textContent = "Prénom est obligatoire";
+        //     }
+        //     if (email.value.trim() === "") {
+        //         emailEreur.textContent = "Email est obligatoire";
+        //     }
+        //     if (commentaire.value.trim() === "") {
+        //         commentaireEreur.textContent = "Commentaire est obligatoire";
+        //     }
+        // }
+
+        function envoyer(event) {
+            event.preventDefault();
+
+            nomErreur.textContent = "";
+            prenomErreur.textContent = "";
+            emailEreur.textContent = "";
+            commentaireEreur.textContent = "";
+
+            let valid = true;
+
+            if (nom.value.trim() === "") {
+                nomErreur.textContent = "Nom est obligatoire";
+                valid = false;
+            }
+            if (prenom.value.trim() === "") {
+                prenomErreur.textContent = "Prénom est obligatoire";
+                valid = false;
+            }
+            if (email.value.trim() === "") {
+                emailEreur.textContent = "Email est obligatoire";
+                valid = false;
+            }
+            if (commentaire.value.trim() === "") {
+                commentaireEreur.textContent = "Commentaire est obligatoire";
+                valid = false;
+            }
+
+            if (valid) {
+                alert("Formulaire prêt à être envoyé !");
+            }
+        }
+
+    </script>
+</body>
+
+</html>

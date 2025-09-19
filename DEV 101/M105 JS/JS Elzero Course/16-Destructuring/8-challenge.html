@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let chosen = 3;
+
+        let myFriends = [
+            { title: "Osama", age: 39, available: true, skills: ["HTML", "CSS"] },
+            { title: "Ahmed", age: 25, available: false, skills: ["Python", "Django"] },
+            { title: "Sayed", age: 33, available: true, skills: ["PHP", "Laravel"] },
+        ];
+
+        // function showDetails() {
+        //     let {} = myFriends;
+        // }
+        // if (chosen === 1) {
+        //     var [{ title: name, age, available, skills: [one, two] }, ,] = myFriends;
+        // }
+        // else if (chosen === 2) {
+        //     var [, { title: name, age, available, skills: [one, two] },] = myFriends;
+        // }
+        // else if (chosen === 3) {
+        //     var [, , { title: name, age, available, skills: [one, two] }] = myFriends;
+        // }
+        let { title: name, age, available, skills: [one, two] } = myFriends[chosen - 1];
+        if (available === true) {
+            var a = "available";
+        } else {
+            var a = "not available";
+        }
+        console.log(name);
+        console.log(age);
+        console.log(a);
+        console.log(two);
+    </script>
+</body>
+
+</html>

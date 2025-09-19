@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let obj = {
+            theName: "Zakaria",
+            theAge: 19,
+            theCity: "Berkane",
+            theCountry: "Morocco",
+            skills: {
+                html: 90,
+                css: 80,
+                javascript: 60,
+            }
+        }
+        let { theName: n, theAge: a, theCity, theCountry: c = "spain", skills: { html, css, javascript: js } } = obj;
+        console.log(n);
+        console.log(a);
+        console.log(theCity);
+        console.log(c);
+        console.log(`my progress in html is ${html}`);
+        console.log(`my progress in css is ${css}`);
+        console.log(`my progress in css is ${js}`);
+        console.log("");
+
+        let { html: skillsOne, css: skillsTwo, javascript: skillsThree } = obj.skills;
+        console.log(`my progress in html is ${skillsOne}`);
+        console.log(`my progress in css is ${skillsTwo}`);
+        console.log(`my progress in css is ${skillsThree}`);
+    </script>
+</body>
+
+</html>

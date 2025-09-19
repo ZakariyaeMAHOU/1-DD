@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>Hello World</div>
+
+    <script>
+        // Set
+        window.localStorage.setItem("color", "red");
+        window.localStorage.border = '2px solid red';
+        window.localStorage['backgroundColor'] = '#00F';
+
+        // Get + set on document
+        let div = document.querySelector('div');
+        let bd = window.localStorage.getItem("border");
+        div.style.border = bd;
+        div.style.color = window.localStorage["color"];
+        div.style.backgroundColor = window.localStorage.backgroundColor;
+
+        // Get key
+        console.log(window.localStorage.key(0));
+
+        // Remove one (by key)
+        window.localStorage.removeItem("color");
+
+        // clear all
+        window.localStorage.clear()
+        console.log(localStorage);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        /*
+            Date And Time
+
+            new Date(timestamp)
+            new Date(Date String)
+            new Date(Numeric Values)
+
+            Format
+            - "Oct 25 1982"
+            - "10/25/1982"
+            - "1982-10-25" => ISO International Standard
+            - "1982 10"
+            - "1982"
+            - "82"
+            - 1982, 9, 25, 2, 10, 0
+            - 1982, 9, 25
+            - "1982-10-25T06:10:00Z"
+
+            Date.parse("String") // Read Date From A String
+        */
+
+        console.log(Date.parse("Jun 20 2006")); //1150758000000
+        let date = new Date(1150758000000);
+        console.log(date);
+
+        let date1 = new Date("Jun 20 2006");
+        console.log(date1);
+
+        let date2 = new Date("6/16/2006");
+        console.log(date2);
+
+        let date3 = new Date("2006-6-20");
+        console.log(date3);
+
+        let date4 = new Date("2006 06 16");
+        console.log(date4);
+
+        let date5 = new Date("2006 06");
+        console.log(date5);
+
+        let date6 = new Date("2006");
+        console.log(date6);
+
+        let date7 = new Date(2006, 5, 16, 2, 10);
+        console.log(date7);
+
+        let date8 = new Date(2006, 5, 20);
+        console.log(date8);
+
+        let date9 = new Date("2006-06-16T02:10:00Z");
+        console.log(date9);
+
+    </script>
+</body>
+
+</html>

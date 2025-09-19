@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       *{
+        margin: 0;
+        padding: 0;
+       }
+       body{
+        background-image: url(image/fond.png);
+        background-repeat: repeat-x;
+       }
+       #main{
+        border: 1px solid #0011ff;
+        margin: auto;
+        width: 70%;
+        height: 500px;
+       }
+       #gauche{
+        border: 1px solid #fc0000;
+        background-color: rgb(255, 255, 255);
+        float: left;
+        width: 15%;
+        margin: 0;
+       }
+       #droite{
+        border: 1px solid #00ff9d;
+        background-color: rgb(255, 255, 255);
+        float: right;
+        width: 84%;
+        height: 500px;
+        margin: 0;
+       }
+       ul{
+           list-style: none;
+       }
+       li>ul>#droite{
+        background-image: url(image/menu.png);
+           float: left;
+       }
+       #menuGauche{
+        border: 1px solid #000;
+        border-top-left-radius: 10%;
+        border-bottom-left-radius: 10%;
+       }
+
+       #menuGauche>ul{
+        padding: 5px;
+        list-style: inside;
+        list-style-image: url(image/e.gif);
+       }
+       #menuGauche{
+        margin: 0 0 20px 30px;
+       }
+       a {
+        text-decoration: none;
+        color: inherit;
+        }
+        
+        #menuGauche>ul>li{
+            padding: 4px;
+       }
+       #menuGauche>h2{
+        background-image: url(image/menu.png);
+       }
+       
+    </style>
+</head>
+    <body>
+        <div id="main">
+            <div id="gauche">
+                <img src="image/logo.gif" alt="logo">
+                <div id="menuGauche">
+                    <h2>Menu</h2>
+                    <ul>
+                        <li><a href="#">Lien 1</a></li>
+                        <hr>
+                        <li><a href="#">Lien 2</a></li>
+                        <hr>
+                        <li><a href="#">Lien 3</a></li>
+                        <hr>
+                        <li><a href="#">Lien 4</a></li>
+                        <hr>
+                        <li><a href="#">Lien 5</a></li>
+                        <hr>
+                        <li><a href="#">Lien 6</a></li>
+                        <hr>
+                        <li><a href="#">Lien 7</a></li>
+                        <hr>
+                    </ul>
+                </div>
+                <div id="quickSearch">
+                    <h2>Quick search</h2>
+                    <form action="#">
+                        <input type="search" name="search" id="search">
+                        <input type="submit" value="SEARCH">
+                    </form>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">Produits</a></li>
+                    <li><a href="#">Offres</a></li>
+                    <li><a href="#">A propos</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <form action="#">
+                    <h2>Connexion</h2>
+                    <input type="text" name="login" id="login" placeholder="Login">
+                    <input type="password" name="motDePasse" id="motDePasse" placeholder="Mot de passe">
+                    <input type="submit" value="Valider">
+                </form>
+                <div id="contenu">
+                    <div class="produit">
+                        <img src="image/pc.gif" alt="pc">
+                        <h3>Core i5</h3>
+                        <p>Text Text</p>
+                        <p>Text Text</p>
+                        <p>Text Text</p>
+                        <a href="#">Acheter</a>
+                        <a href="#">Détails</a>
+                    </div>
+                </div>
+                <div id="footer">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo doloremque laboriosam veritatis excepturi repudiandae! Optio laborum hic molestiae architecto quisquam, consequuntur minima blanditiis praesentium tenetur dignissimos, veniam nesciunt nihil perferendis!</p>
+                </div>
+            </nav>
+        </div>
+    </body>
+    </html>

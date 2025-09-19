@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a:link {
+            color: red;
+            text-decoration: none;
+        }
+        a:visited {
+            color: green;
+        }
+        a:hover {
+            text-decoration: underline dotted;
+        }
+        a:active {
+            border: 1px solid #000;
+        }
+        /*********************************************/
+        ul {
+            list-style-position: inside;
+        }
+        li {
+            width: 50%;
+        }
+        /************/
+        li:first-child {
+            color: red;
+        }
+        li:last-child {
+            background-color: green;
+        }
+        li:nth-child(3) {
+            list-style-type: circle;
+            padding-left: 10px;
+        }
+        li:nth-last-child(2) {
+            list-style-type: none;
+        }
+        /* Pair     &     Impair */
+        li:nth-child(even) {
+            border-right: 4px solid #000;
+        }
+        li:nth-child(odd) {
+            border-left: 5px solid #000;
+        }
+        /*******************************************/
+        table {
+            border-collapse: collapse;
+            width: 80%;
+        }
+        td,th {
+            border: 1px solid #000;
+        }
+        tr:nth-child(even) {
+            background-color: gray;
+        }
+        tr:nth-child(odd):not(:first-child) {
+            background-color: blanchedalmond;
+        }
+        /*******************************************/
+        div {
+            border: 1px solid #0055ff;
+            margin: 10px;
+            padding: 10px;
+        }
+        section {
+            border: 1px solid #00d994;
+        }
+        p:first-of-type {
+            background-color: #00793a;
+        }
+        p:last-of-type {
+            background-color: #fd90ff;
+        }
+        p:nth-of-type(3) {
+            border: 3px solid #e40000;
+        }
+        p:nth-last-of-type(3) {
+            border: 3px solid #006ae3;
+        }
+        /* p:nth-child(2){
+            color: #ffffff;
+        } */
+        a:only-child {
+            background-color: #00ffea;
+        }
+        a:only-of-type {
+            border: 2px solid #c40000;
+        }
+        /******************************************/
+        input:required {
+            background-color: rgb(255, 130, 193);
+        }
+        input:focus {
+            border: 2px solid #3300ff;
+            outline: none;
+            background-color: #9eb3ff;
+        }
+        input:checked+span {
+            font-weight: bold;
+        }
+        button:disabled {
+            background-color: #f28787;
+        }
+        button:enabled {
+            background-color: #97ffa5;
+        }
+        input:valid {
+            border: 2px solid #00ff37;
+        }
+        input:invalid {
+            border: 2px solid #ff0000;
+        }
+    </style>
+</head>
+<body>
+    <div><a href="#a">Lien</a></div>
+
+    <ul>
+        <li>Texte 1</li>
+        <li>Texte 2</li>
+        <li>Texte 3</li>
+        <li>Texte 4</li>
+        <li>Texte 5</li>
+        <li>Texte 6</li>
+    </ul>
+    
+    <table>
+        <tr>
+            <th>Titre 1</th>
+            <th>Titre 2</th>
+            <th>Titre 3</th>
+        </tr>
+        <tr>
+            <td>Texte 1</td>
+            <td>Texte 2</td>
+            <td>Texte 3</td>
+        </tr>
+        <tr>
+            <td>Texte 1</td>
+            <td>Texte 2</td>
+            <td>Texte 3</td>
+        </tr>
+        <tr>
+            <td>Texte 1</td>
+            <td>Texte 2</td>
+            <td>Texte 3</td>
+        </tr>
+        <tr>
+            <td>Texte 1</td>
+            <td>Texte 2</td>
+            <td>Texte 3</td>
+        </tr>
+        <tr>
+            <td>Texte 1</td>
+            <td>Texte 2</td>
+            <td>Texte 3</td>
+        </tr>
+        <tr>
+            <td>Texte 1</td>
+            <td>Texte 2</td>
+            <td>Texte 3</td>
+        </tr>
+        <tr>
+            <td>Texte 1</td>
+            <td>Texte 2</td>
+            <td>Texte 3</td>
+        </tr>
+    </table>
+    <!-- **************** -->
+     <div>
+        <h5>Titre 1</h5>
+        <p>Texte 1
+            <a href="#ab">Lien</a>
+        </p>
+        <p>Texte 2</p>
+        <p>Texte 3</p>
+        <p>Texte 4</p>
+        <span>aaaa</span>
+        <section>
+            <h6>Titre 2</h6>
+            <p>Texte 3</p>
+            <p>Texte 4</p>
+            <p>Texte 5</p>
+            <p>Texte 6</p>
+            <span>aaaa</span>
+        </section>
+        <article>
+            <a href="#b">Lien 2</a>
+        </article>
+        <nav>
+            <a href="#bb">Lien 3</a>
+            <span>AAAAA</span>
+        </nav>
+     </div>
+     <form action="">
+        <input type="text" name="nom" id="nom" placeholder="Nom" required><br>
+        <input type="text" name="nom" id="nom" placeholder="Prénom"><br>
+        <input type="radio" name="genr" id="m"><span>M</span>
+        <input type="radio" name="genr" id="f"><span>F</span> <br>
+        <input type="tel" name="tel" id="tel" placeholder="tel" pattern="0[567][0-9]{8}"><br>
+        <button type="submit">Envoyer</button>
+        <button type="button">Valider</button>
+        <button type="reset" disabled>Annuler</button>
+     </form>
+</body>
+</html>

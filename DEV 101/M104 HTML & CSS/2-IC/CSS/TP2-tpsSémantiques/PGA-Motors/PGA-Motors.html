@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+                
+        }
+        a{
+            text-decoration: none;
+        }
+        #principale{
+
+            margin: 5px auto ;
+            width: 80%;
+
+            background-image: url(../TP7-PGA-Motors/images/fondvert.gif);
+            background-repeat: no-repeat;
+            background-position: top right;
+  
+        }
+
+        h1{
+            text-align: center;
+            font-size: 30px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  
+        }
+
+        #partieBleue{
+            background-image: url(../TP7-PGA-Motors/images/degrade-bleu-ciel.jpg) ;
+            background-repeat: no-repeat;
+            background-position: 0% 50%;
+            background-size: 250px 450px;
+        }
+        
+        h2{
+            text-align: left ;
+            color: rgb(238, 154, 168) ;
+        }
+
+        table{
+            width: 100%;
+            border: solid 1px green ;
+            border-spacing: 0px;
+            margin: 10px 0px ;
+        }
+        ul{
+            list-style: square;
+            margin-left: 0px;
+            color: rgb(238, 154, 168) ;
+            margin: 0px 10px;
+            
+        }
+        li
+        p,table{
+            color: black;
+
+        }
+
+
+        caption{
+            background-color: rgb(238, 255, 237);
+            border: solid 1px rgb(89, 112, 89);
+        }
+
+        th{
+            border: solid 1px rgb(81, 102, 86);
+            background-color: rgb(152, 221,154) ;
+        }
+
+        td{
+            border: solid 1px green ;
+        }
+
+        form{
+            text-align: center;
+            margin: 10px 0px 0px 0px ;
+
+        }
+        label{
+            display: inline-block;
+            width: 100px;
+            text-align: right;
+            margin: 2px;
+            font-family:'Courier New', Courier, monospace
+            'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: small;
+        }
+        button{
+            border-radius: 0;
+            margin: 2px 0 10px 0;
+            border: 0;
+            background-color: rgb(228, 228, 228);
+            padding: 2px 15px ;
+            font-size: xx-small;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        input{
+            padding: 2px 5px ;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div id="principale" style="border: 10px;">
+        <h1>PGA-Motors - Extranet MKG Opérationnel</h1>
+        <hr>
+        <div id="partieBleue">
+            <ul>
+                <li><span><h2>Sommaire</h2></span>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque aliquam magnam veritatis nulla distinctio incidunt minima veniam temporibus autem, adipisci laudantium est cupiditate molestias, amet accusantium, beatae nesciunt placeat tenetur!</p>
+                </li>
+        <hr>
+                <li><h2>Exemple de documents</h2>
+                    <table>
+                        <caption>liste des documents de ce site</caption>
+                        <tr>
+                            <th>Titre</th>
+                            <th>Type</th>
+                            <th>Taille</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="../PGAMotors/images/ie.gif" alt="ie" width="20">
+                                <a href="#">document.html</a>
+                            </td>
+                            <td>text/html</td>
+                            <td>2.4 ko</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="images/css.gif" alt="ie"
+                                width="20">
+                                <a href="#">styles.css</a>
+                            </td>
+                            <td>text/css</td>
+                            <td>2.7 ko</td>
+                        </tr>
+                    </table>
+                    
+        <hr>
+                </li>
+            </ul>
+                <form action="#">
+                    <label for="identifiant">Identifiant :</label>
+                    <input type="text" name="identifiant" id="identifiant"><br>
+                    <label for="motDePasse">Mot de passe :</label>
+                    <input type="password" name="motDePasse" id="motDePasse"><br>
+                    <button>Se connecter</button>
+                </form>
+        </div>
+        <hr>
+    </div>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        li{
+          list-style-type: none;  
+        }
+
+        ul{
+            list-style-type: none;  
+          }
+        a{
+            text-decoration: none;
+        }
+
+
+
+
+
+
+
+
+        li>ul{
+            display: none;
+        }
+        div>ul>li{
+            float: left;
+            background-color: #00e1ff;
+            border-left: 1px solid #c0b182;
+            border-right: 1px solid #68c26f;
+            width: 16.66%;
+            box-sizing: border-box;
+            height: 20px;
+            text-align: center;
+            font-weight: bold;
+        } 
+        div>ul>li:first-child{
+            border-left: none;
+        }
+        div>ul>li:last-child{
+            border-right: none;
+        }
+        div>ul>li:hover{
+            background-color: #ff8800;
+            color: #fff;
+        }
+        div>ul>li:hover>ul{
+            display: block;
+        }
+        li li {
+            border-bottom: 1px solid #000;
+        }
+        li li:last-child{
+            border-bottom: none;
+        }
+        li a{
+            text-decoration: none;
+            display: block;
+            font-weight: normal;
+        }
+        li a:hover{
+            background-color: purple;
+            border-right: 1px solid #ff9900;
+            color: #ffffff;
+        }
+    </style>
+    <title>Menu</title>
+</head>
+<body>
+    <div>  
+        <ul>
+            <li><a href="">Parti 1</a>
+                <ul>
+                    <li><a href="">lien 1</a></li>
+                    <li><a href="">lien 2</a></li>
+                    <li><a href="">lien 3</a></li>
+                    <li><a href="">lien 4</a></li>
+                    <li><a href="">lien 5</a></li>
+                    <li><a href="">lien 6</a></li>
+                    <li><a href="">lien 7</a></li>
+                </ul>
+            </li>
+            <li><a href="">Parti 2</a>
+                <ul>
+                    <li><a href="">lien 1</a></li>
+                    <li><a href="">lien 2</a></li>
+                    <li><a href="">lien 3</a></li>
+                    <li><a href="">lien 4</a></li>
+                    <li><a href="">lien 5</a></li>
+                    <li><a href="">lien 6</a></li>
+                    <li><a href="">lien 7</a></li>
+                </ul>
+            </li>
+            <li><a href="">Parti 3</a>
+                <ul>
+                    <li><a href="">lien 1</a></li>
+                    <li><a href="">lien 2</a></li>
+                    <li><a href="">lien 3</a></li>
+                    <li><a href="">lien 4</a></li>
+                    <li><a href="">lien 5</a></li>
+                    <li><a href="">lien 6</a></li>
+                    <li><a href="">lien 7</a></li>
+                </ul>
+            </li>
+            <li><a href="">Parti 4</a>
+                <ul>
+                    <li><a href="">lien 1</a></li>
+                    <li><a href="">lien 2</a></li>
+                    <li><a href="">lien 3</a></li>
+                    <li><a href="">lien 4</a></li>
+                    <li><a href="">lien 5</a></li>
+                    <li><a href="">lien 6</a></li>
+                    <li><a href="">lien 7</a></li>
+                </ul>
+            </li>
+            <li><a href="">Parti 5</a>
+                <ul>
+                    <li><a href="">lien 1</a></li>
+                    <li><a href="">lien 2</a></li>
+                    <li><a href="">lien 3</a></li>
+                    <li><a href="">lien 4</a></li>
+                    <li><a href="">lien 5</a></li>
+                    <li><a href="">lien 6</a></li>
+                    <li><a href="">lien 7</a></li>
+                </ul>
+            </li>
+            <li><a href="">Parti 6</a>
+                <ul>
+                    <li><a href="">lien 1</a></li>
+                    <li><a href="">lien 2</a></li>
+                    <li><a href="">lien 3</a></li>
+                    <li><a href="">lien 4</a></li>
+                    <li><a href="">lien 5</a></li>
+                    <li><a href="">lien 6</a></li>
+                    <li><a href="">lien 7</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

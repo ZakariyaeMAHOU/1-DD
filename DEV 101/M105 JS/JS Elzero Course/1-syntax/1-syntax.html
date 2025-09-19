@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>syntax</title>
+    <script>
+        window.onload = function () {
+        };
+    </script>
+</head>
+
+<body>
+    <script>
+        /*
+         Output To Screen
+           - window.alert("");
+           - document.write("");
+           - console.log("");
+        */
+
+        /*
+         Console Methods
+           - console.log("log");
+           - console.error("error");
+           - console.table(["Zakaria", "Anas", "Haytam"]);
+           
+           - console.log("%cHello %cI'm Zakaria", "color:red", "color:blue")
+        */
+
+        /*
+        String Syntax
+        */
+        console.log('Zakaria "mahou"')
+        console.log("Zakaria 'mahou'")
+        console.log('Zakaria \'mahou\'')
+        console.log("Zakaria \"mahou\"")
+        console.log("Zakaria \
+        mahou")
+        console.log("Zakaria\nmahou")
+        console.log("Zakaria\tmahou")
+
+
+        let a = "We Love";
+        let b = "JavaScript";
+        let c = "And";
+        let d = "Programing";
+        console.log(a + " " + b + "\n" + c + " " + d + " ");
+        console.log(`${a} ${b} \n ${c} ${d}`);
+
+
+        let title = "Programing";
+        let Paragraph = "Programing Paragraph";
+        let markUp = `
+            <div class="card">
+                <div class="child">
+                    <h2>${title}</h2>
+                    <p>Paragraph ${Paragraph}</p>
+                </div>
+            </div>
+        `;
+        document.write(markUp)
+    </script>
+
+</html>

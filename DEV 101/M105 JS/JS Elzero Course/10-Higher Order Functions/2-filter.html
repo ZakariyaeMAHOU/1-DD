@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter</title>
+</head>
+
+<body>
+
+    <script>
+        let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
+        let friendsA = friends.filter((a) => a[0] === "A")
+        console.log(friendsA);
+
+
+        let numbers = [11, 20, 2, 5, 17, 10];
+        let pn = numbers.filter((a) => a % 2 === 0)
+        console.log(pn);
+
+        let sentence = "I love Foood code too Playing much hhhhh";
+        let snt = sentence
+            .split(" ")
+            .filter((a) => a.length <= 4)
+            .join(" ");
+        console.log(snt);
+
+        let ignoreNbr = "Elz123er4o";
+        let ign = ignoreNbr
+            .split("")
+            .filter((a) => isNaN(a))
+            .join("");
+        console.log(ign);
+
+        let mix = "JZ2N14N";
+        let mx = mix
+            .split("")
+            .filter((a) => !isNaN(parseInt(a)))
+            .map((a) => a * a)
+            .join("");
+        console.log(mx);
+    </script>
+</body>
+
+</html>

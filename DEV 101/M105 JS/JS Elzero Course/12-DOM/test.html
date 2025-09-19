@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>OTP Input</title>
+    <style>
+        input {
+            width: 25px;
+            height: 25px;
+            text-align: center;
+            border: 2px solid #000;
+            border-radius: 5px;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <input type="text" class="code" maxlength="1">
+    <input type="text" class="code" maxlength="1">
+    <input type="text" class="code" maxlength="1">
+    <input type="text" class="code" maxlength="1">
+    <input type="text" class="code" maxlength="1">
+    <input type="text" class="code" maxlength="1">
+
+    <script>
+        let inputs = document.querySelectorAll(".code");
+
+        inputs.forEach((input, index) => {
+            input.addEventListener("input", function () {
+                if (this.value.length === 1 && index < inputs.length - 1) {
+                    inputs[index + 1].focus(); // الانتقال للخانة التالية
+                }
+            });
+
+            input.addEventListener("keydown", function (e) {
+                if (e.key === "Backspace" && !this.value && index > 0) {
+                    inputs[index - 1].focus(); // الرجوع للخلف إذا كانت الخانة فارغة
+                }
+            });
+        });
+
+        // تركيز على أول خانة عند تحميل الصفحة
+        window.onload = () => inputs[0].focus();
+    </script>
+</body>
+
+</html>

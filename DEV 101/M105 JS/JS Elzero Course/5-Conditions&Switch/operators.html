@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>operators</title>
+</head>
+
+<body>
+
+    <script>
+        /*
+        Coparison oerators
+          == Equal
+          != Not Equal
+
+          === Identical
+          !== Not Identical
+
+          > Larger Than
+          >= Larger Than Or Equal
+
+          < Smaller Than
+          <= Smaller Than Or Equal
+        */
+
+        console.log(10 == '10');//Compaire Value Only "true"
+        console.log(10 != '10');//Compaire Value Only "false"
+
+        console.log(10 === '10');//Compaire Value + Type "false"
+        console.log(10 !== '10');//Compaire Value + Type "true"
+
+
+        /*
+        Logical operattors
+          ! Not
+          && And
+          || Or
+        */
+
+        console.log(!true);//false
+        console.log(!(10 == "10"));//!true = false
+
+        console.log(10 == "10" && 10 === "10");//true && false = false
+        console.log(10 == "10" && 10 !== "10");//true && true = true
+        console.log(10 == "10" && !(10 === "10"));//true && !false = true && true = true
+
+        console.log(10 == "10" || 10 === "10");//true || false = true
+        console.log(10 == "10" || 10 !== "10");//true || true = true
+        console.log(10 != "10" || 10 === "10");//false || false = false
+    </script>
+</body>
+
+</html>

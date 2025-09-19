@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignments</title>
+</head>
+
+<body>
+    <script>
+        /*
+        Assignments For Lessons 48 To 53
+        */
+
+        console.log("Assignment 1");
+
+        let start = 10;
+        let end = 100;
+        let exclude = 40;
+
+        for (let i = start; i <= end; i += start) {
+            if (i === exclude) continue
+            console.log(i);
+        }
+
+
+        console.log("\n\nAssignment 2");
+        let s = 10;
+        let e = 0;
+        let stop = 3;
+
+        for (let j = s; j > e; j--) {
+            if (j < 10) {
+                console.log("0" + j);
+            } else {
+                console.log(j);
+            }
+            if (j === stop) break
+        }
+
+
+        console.log("\n\nAssignment 3");
+        let start1 = 1;
+        let end1 = 6;
+        let breaker = 2;
+
+        for (let i = start1; i <= end1; i++) {
+            console.log(i);
+            console.log("--" + breaker);
+            console.log("--" + (end1 - breaker));
+        }
+
+
+        console.log("\n\nAssignment 4");
+        let index = 10;
+        let jump = 2;
+
+        let i = index;
+        for (; ;) {
+            console.log(i);
+            if (i === 4) break;
+            i -= jump;
+        }
+
+
+        console.log("\n\nAssignment 5");
+        let friends = ["Ahmed", "Sayed", "Eman", "Mahmoud", "Ameer", "Osama", "Sameh"];
+        let letter = "a";
+        let counter = letter.length;
+
+        for (let a = letter.length; a < friends.length; a++) {
+            if (friends[a][--letter.length].toUpperCase() !== letter.toUpperCase()) {
+                console.log(counter + " => " + friends[a]);
+                counter++;
+            }
+        }
+
+
+        console.log("\n\nAssignment 6");
+        let strt = 0;
+        let swappedName = "elZerO";
+        let aa = [];
+
+        for (let i = strt; i < swappedName.length; i++) {
+            if (swappedName[i] === swappedName[i].toLowerCase()) {
+                aa = aa.concat(swappedName[i].toUpperCase());
+            } else {
+                aa = aa.concat(swappedName[i].toLowerCase());
+            }
+        }
+        console.log(aa.join(""));
+
+
+        console.log("\n\nAssignment 7");
+        let strtt = 0;
+        let mix = [1, 2, 3, "A", "B", "C", 4];
+
+        for (let i = ++strtt; i < mix.length; i++) {
+            if (typeof mix[i] === "number") {
+                console.log(mix[i]);
+            }
+        }
+
+
+        /*
+        Assignments For Lessons 54 To 56
+        */
+
+
+        console.log("\n\nAssignment 8");
+
+        let x = ["Ahmed", "Sayed", "Ali", 1, 2, "Mahmoud", "Amany"];
+        let y = 0;
+        let z = 0;
+
+        while (y < x.length) {
+            if (x[y][z] !== "A" && typeof x[y] === "string") {
+                console.log(x[y]);
+            }
+            y++;
+        }
+    </script>
+</body>
+
+</html>

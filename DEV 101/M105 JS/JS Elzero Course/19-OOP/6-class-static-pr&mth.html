@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        class User {
+            //static properties
+            static count = 0;
+            //constructor
+            constructor(i, u, s) {
+                this.id = i;
+                this.username = u;
+                this.salary = s;
+                User.count++;
+            }
+            //static method
+            static numberOfUsers() {
+                return `${this.count} user`;
+            }
+        }
+
+        let user1 = new User(100, "Zakaria", 6000);
+        let user2 = new User(101, "Med", 7000);
+        let user3 = new User(102, "Soufian", 8000);
+        let user4 = new User(103, "Yassin", 9000);
+
+        console.log(user1.count);
+        console.log(User.count);
+
+        console.log(User.numberOfUsers());
+    </script>
+</body>
+
+</html>

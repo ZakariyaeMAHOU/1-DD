@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop For And Concept Of Loop</title>
+</head>
+
+<body>
+
+    <script>
+        /*
+        Loop
+        - For
+            for([1];[2];[3])
+        */
+
+        let myFriends = ["Anas", "Haytam", "Ahmed", "Yanis"];
+
+        for (let i = 0; i < myFriends.length; i++) {
+            console.log(myFriends[i]);
+        }
+
+
+
+        myFriends = [12, 42, 11, "Anas", "Haytam", "Ahmed", "Yanis"];
+        let names = [];
+
+        for (let i = 0; i < myFriends.length; i++) {
+            if (isNaN(myFriends[i])) {
+                names = names.concat(myFriends[i]);
+            }
+        }
+        console.log(names);
+    </script>
+</body>
+
+</html>

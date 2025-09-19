@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Text with Rounded Corners</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f8fff0; /* خلفية الصفحة بلون مائل إلى الأبيض */
+        }
+
+        .box {
+            width: 600px; /* عرض المربع */
+            height: 200px; /* ارتفاع المربع */
+            background: linear-gradient(45deg, #ffcc80, #80ff80); /* تدرج بين الأخضر والبرتقالي */
+            background-size: 300% 300%; /* حجم التدرج لجعله يتحرك */
+            animation: glow 3s infinite; /* تحريك الخلفية */
+            display: flex;
+            align-items: center;
+            overflow: hidden; /* إخفاء النص الزائد */
+            position: relative;
+            border: 3px solid orange; /* حافة للمربع */
+            border-radius: 20px; /* حواف منحنية */
+            box-shadow: 0 0 20px rgba(255, 165, 0, 0.5); /* إضافة تأثير ظل */
+        }
+
+        @keyframes glow {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .box .text {
+            color: orange; /* لون النص */
+            font-size: 200px; /* حجم النص كبير */
+            font-weight: bold;
+            position: absolute;
+            white-space: nowrap; /* النص يبقى على سطر واحد */
+            left: 100%; /* يبدأ خارج المربع من جهة اليمين */
+            transition: left 5s linear; /* الحركة سلسة */
+        }
+
+        .box:hover .text {
+            left: -250%;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="text">Dima Berkane</div>
+    </div>
+</body>
+</html>

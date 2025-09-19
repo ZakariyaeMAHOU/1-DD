@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignments</title>
+</head>
+
+<body>
+
+    <script>
+        // Assignment 1
+        console.log("Assignement1");
+        // Create Your Object Here
+        let member = new Object({
+            name: "Elzero",
+            age: 38,
+            country: "Egypt",
+            fullDetails: function () { return `My name is ${member.name}, My age is ${member.age}, I live in ${member.country}` },
+        });
+        console.log(member.name); // Elzero
+        console.log(member.age); // 38
+        console.log(member.country); // Egypt
+        console.log(member.fullDetails());
+        // My Name Is Elzero, My Age Is 38, I Live in Egypt
+
+
+        //Assignment 2
+        console.log("Assignment 2");
+        // Method One
+        // Create Your Object Here
+        let objMethodOne = {
+            property: "Method One",
+        };
+        console.log(objMethodOne.property); // "Method One"
+
+        // Method Two
+        // Create Your Object Here
+        let objMethodTwo = new Object({
+            property: "Method Two",
+        });
+        console.log(objMethodTwo.property); // "Method Two"
+
+        // Method Three
+        // Create Your Object Here
+        let objMethodThree = Object.create(objMethodTwo);
+        objMethodThree.property = "Method Three";
+        console.log(objMethodThree.property); // "Method Three"
+
+        // Method Four
+        // Create Your Object Here
+        let objMethodFour = Object.assign(objMethodThree);
+        objMethodFour.property = "Method Four";
+        console.log(objMethodFour.property); // "Method Four"
+    </script>
+</body>
+
+</html>

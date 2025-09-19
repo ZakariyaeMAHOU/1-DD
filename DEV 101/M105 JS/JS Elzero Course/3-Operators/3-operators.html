@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators</title>
+</head>
+
+<body>
+
+    <script>
+        /*
+         Arethmetic Operators
+           + Addition
+           - Substraction
+           * Multiplication
+           / Division
+           % Modulus
+
+           ++ Increment [Post / Pre]
+           -- Descrement [Post / Pre]
+        */
+
+        console.log(10 + 20);//30 is a number
+        console.log(10 + "Hi");// 10Hi is a string
+
+        console.log(10 - 5);//5 is a number
+        console.log(10 - "Hi");//NaN 
+
+        console.log(10 * 2);//20 is a number
+        console.log(10 * "Hi");//NaN
+
+        console.log(20 / 10);//2 is a number
+        console.log(20 / "Hi");//NaN
+
+        console.log(10 % 2);//0
+        console.log(11 % 2);//1
+
+        //Post Increment
+        let n1 = 15;
+        console.log(n1++)//15
+        console.log(n1)//16
+
+        //Pre Increment
+        let n2 = 32;
+        console.log(++n2)//33
+        console.log(n2)//33
+
+        //Post Descrement
+        let n3 = 45;
+        console.log(n3--)//45
+        console.log(n3)//44
+
+        //Pre Descrement
+        let n4 = 76;
+        console.log(--n4)//75
+        console.log(n4)//75
+
+
+        //Unary Plus
+        console.log(+100)//100 is a number
+        console.log(+"100")//100 is a number
+        console.log(+"-100")//-100 is a number
+        console.log(+"Hi")//NaN
+        console.log(+null)//0 is a number
+        console.log(+true)//1 is a number
+        console.log(+false)//0 is a number
+
+        //Unary Negation
+        console.log(-100)//-100 is a number
+        console.log(-"100")//-100 is a number
+        console.log(-"-100")//100 is a number
+        console.log(-"Hi")//NaN
+        console.log(-null)//-0 is a number
+        console.log(-true)//-1 is a number
+        console.log(-false)//-0 is a number
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transformation et Transition CSS</title>
+  <style>
+    /* Style de base pour le bouton */
+    body{
+        margin: 200px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: 2px solid #007bff;
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: all 3000ms ease; /* Transition pour toutes les propriétés */
+    }
+
+    /* Effet au survol du bouton */
+    button:hover {
+      background-color: #ff5733;  /* Changement de couleur */
+      transform: scale(1.2) translateY(-10px); /* Transformation : agrandir et déplacer */
+    }
+
+    /* Optionnel : ajout d'un effet au focus pour l'accessibilité */
+    button:focus {
+      outline: none;
+      box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Ombre au focus */
+    }
+  </style>
+</head>
+<body>
+
+  <button>Survolez-moi</button>
+
+</body>
+</html>

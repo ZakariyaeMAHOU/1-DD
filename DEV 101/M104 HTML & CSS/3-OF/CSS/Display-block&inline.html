@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Display(Block,Inline,Inline-block)</title>
+        <style>
+            /* block 
+            -Take full width if no width
+            -Add line break
+            -Respect pading, margin, width, height
+            */
+            /* inline
+            -Respect width, height
+            -do not Add line break
+            -Respect pading, margin (just left and right)
+            */
+            /* inline-block 
+            -Allow Elements befor and after it
+            -
+            -Respect pading, margin, width, height
+            */
+
+            .block {
+                background: #c55757;
+            }
+
+            .inline {
+                background: #94da53;
+            }
+
+            .inline-block {
+                background: #3582ce;
+                display: inline-block;
+            }
+
+            .block,
+            .inline,
+            .inline-block {
+                margin: 10px;
+                padding: 10px;
+                width: 200px;
+                height: 50px;
+            }
+
+            
+
+            /* display and visivilite */
+
+            .display-and-visivilite {
+                background-color: rgb(200 20 200);
+            }
+            
+            .display-none {
+                display: none;
+            }
+
+            .visivilite-hidden {
+                visibility: hidden;
+            }
+
+
+
+
+            .width {
+                background-color: aqua;
+                margin: 10px;
+                padding: 10px;
+                width: fit-content;
+            }
+        </style>
+    </head>
+    <body>
+
+        <h1>Block</h1>
+        <div class="block">block element</div>
+        <div class="block">block element</div>
+        <div class="block">block element</div>
+
+        
+        <h1>inline</h1>
+        <span class="inline">inline element</span>
+        <span class="inline">inline element</span>
+        <span class="inline">inline element</span>
+        
+
+        <h1>inline-block</h1>
+        <span class="inline-block">inline-block element</span>
+        <span class="inline-block">inline-block element</span>
+        <span class="inline-block">inline-block element</span>
+
+
+
+
+
+        <h1>display-none</h1>
+
+
+        <div class="display-and-visivilite">
+
+            <div class="display-none">display-none</div>
+            <div>display-none</div>
+            <div>display-none</div>
+
+        </div>
+
+
+
+
+
+        <h1>visivilite-hidden</h1>
+
+        <div class="display-and-visivilite">
+
+            <div class="visivilite-hidden">visivilite-hidden</div>
+            <div>visivilite-hidden</div>
+            <div>visivilite-hidden</div>
+
+        </div>
+
+
+
+
+
+        <h1>width: fit-content;</h1>
+        <div class="width">Lorem, ipsum.</div>
+        <div class="width">Lorem, ipsum dolo rsit.</div>
+        <div class="width">Lorem, ipsum dolor sit amet consectetur .</div>
+    </body>
+</html>

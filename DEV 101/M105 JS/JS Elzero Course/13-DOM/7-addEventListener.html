@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Paragraph</p>
+
+    <script>
+        let p = document.querySelector("p");
+
+        p.addEventListener('click', function () {
+            let copyP = p.cloneNode(true);
+            copyP.className = "copy"
+            // p.after(copyP)
+            document.body.appendChild(copyP)
+        });
+
+        // let cloned = document.querySelector(".copy")
+        // cloned.addEventListener('click', function () {
+        //     console.log("this is clone pargraph");
+        // });
+
+        document.addEventListener('click', function (e) {
+            if (e.target.className === "copy") {
+                console.log("this paragraph is cloned")
+            }
+        })
+    </script>
+</body>
+
+</html>

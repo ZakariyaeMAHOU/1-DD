@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+    <style>
+        :root {
+            --mainColor: rgb(198, 91, 129);
+            --mainPadding: 20px;
+            --mainMargin: 20px;
+        }
+        .mainDiv {
+            color: white;
+            background-color: var(--mainColor, rgb(54, 2, 110));
+            padding: calc(10px + var(--mainMargin));
+            margin: var(--mainMargin);
+        }
+        .mainTitle {
+            color: var(--mainColor);
+            border-color: #eee;
+            padding: var(--mainPadding);
+            margin: var(--mainMargin);
+        }
+        .mainP {
+            color: var(--mainColor);
+            border: 1px solid var(--mainColor);
+            padding: var(--mainPadding);
+            margin: var(--mainMargin);
+        }
+        .mainLink {
+            margin: var(--mainMargin);
+        }
+        a:hover {
+            color: var(--mainColor);
+        }
+    </style>
+</head>
+<body>
+    <div class="mainDiv">
+        <h1>Main div</h1>
+    </div>
+    <div class="mainTitle">
+        <H2>Main Title</H2>
+    </div>
+    <div class="mainP">
+        <p>My Paragraph</p>
+    </div>
+    <div class="mainLink">
+        <a href="#">My Link</a>
+    </div>
+</body>
+</html>

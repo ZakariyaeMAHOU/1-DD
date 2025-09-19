@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+
+        .users {
+            width: 25%;
+            padding: 20px;
+            border: 1px solid #000;
+        }
+
+        .posts {
+            width: 65%;
+            padding: 20px;
+            border: 1px solid #000;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            padding: 0;
+            margin: 0;
+        }
+
+        .user,
+        .post {
+            padding: 10px;
+            margin: 10px;
+            cursor: pointer;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="users"></div>
+        <div class="posts"></div>
+    </div>
+
+    <script>
+        function getId(id) {
+            getPostsById(id)
+        }
+
+        function getPostsById(userId = 1) {
+            axios.get('https://jsonplaceholder.typicode.com/posts?userId=' + `${userId}`)
+                .then(function (response) {
+                    if (response.status >= 200 && response.status < 300) {
+                        let posts = response.data;
+                        ///////////////////////
+                        let container = document.querySelector(".posts");
+                        container.innerHTML = "";
+                        for (post of posts) {
+                            let content = `
+                                <div class="post">
+                                    <h2>${post.title}</h2>
+                                    <h4>${post.body}</h4>
+                                </div>
+                            `;
+                            container.innerHTML += content;
+                        }
+                        //////////////////////////
+                    }
+                })
+                .catch((err) => {
+                    console.log("posts Error:" + err)
+                })
+        }
+
+        function getUsers() {
+            return new Promise((resolve, reject) => {
+                axios.get('https://jsonplaceholder.typicode.com/users')
+                    .then(function (response) {
+                        let users = response.data;
+                        ///////////////////////
+                        let container = document.querySelector(".users");
+                        container.innerHTML = "";
+                        for (user of users) {
+                            let content = `
+                                    <div class="user" onclick="getId(${user.id})">
+                                        <h2>${user.name}</h2>
+                                        <h4>${user.email}</h4>
+                                    </div>
+                                `;
+                            container.innerHTML += content;
+                        }
+                        //////////////////////////
+                        resolve();
+                    })
+                    .catch((err) => {
+                        reject("error request: " + err)
+                    })
+            })
+        }
+        getUsers()
+            .then(() => {
+                getPostsById()
+            })
+            .catch((err) => {
+                console.log("users Error:" + err)
+            })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 3</title>
+</head>
+
+<body>
+
+    <script>
+
+        //Chalenges (Video 22)
+
+        //Chalenge 1
+        let a = 10;// 11 12 13 -14 14 13 12
+        let b = "20";// 20 21 -21 21 22
+        let c = 80;// 80 81 82 81
+
+        console.log(++a + +b++ + +c++ - +a++);//11+20+80-11=100
+        /*
+          [++a] [+] [+b++] [+] [+c++] [-] [+a++]
+          [++a]
+          - Value: 11
+          - Explain: Pre Increment
+          [+]
+          - Explain:
+          [+b++]
+          - Value: 20
+          - Explain: Post Increment
+          [+]
+          - Explain:
+          [+c++]
+          - Value: 80
+          - Explain: Post Increment
+          [-]
+          - Explain:
+          [+a++]
+          - Value: 10
+          - Explain: Post Increment
+        */
+        console.log(++a + -b + +c++ - -a++ + +a);//13-21+81+13+14=100
+        /*
+        [++a] [+] [-b] [+] [+c++] [-] [-a++] [+] [+a]
+          [++a]
+          - Value: 13
+          - Explain: Pre Increment
+          [+]
+          - Explain:
+          [-b]
+          - Value: -21
+          - Explain: Unary Negation
+          [+]
+          - Explain:
+          [+c++]
+          - Value: 81
+          - Explain: Post Increment
+          [-]
+          - Explain:
+          [-a++]
+          - Value: -13
+          - Explain: Post Increment + Unary Negation
+          [+]
+          - Explain:
+          [+a]
+          - Value: 14
+          - Explain: Unary Plus
+        */
+        console.log(--c + +b + --a * +b++ - +b * a + --a - +true);//81+21+13*21-22*13+12-1=100
+        /*
+          [--c] [+] [+b] [+] [--a] [*] [+b++] [-] [+b] [*] [a] [+] [--a] [-] [+true]
+          [--c]
+          - Value: 81
+          - Explain: Pre descrement
+          [+]
+          - Explain:
+          [+b]
+          - Value: 21
+          - Explain: Unary Plus
+          [+]
+          - Explain:
+          [--a]
+          - Value: 13
+          - Explain: Pre descrement
+          [*]
+          - Explain:
+          [+b++]
+          - Value: 21
+          - Explain: Post Increment
+          [-]
+          - Explain:
+          [+b]
+          - Value: 22
+          - Explain: Unary plus
+          [*]
+          - Explain:
+          [a]
+          - Value: 13
+          - Explain:
+          [+]
+          - Explain:
+          [--a]
+          - Value: 12
+          - Explain: Pre descrement
+          [-]
+          - Explain:
+          [+true]
+          - Value: 1
+          - Explain:Unary plus
+        */
+
+
+        // Chalenge 2
+        let d = "-100";
+        let e = "20";
+        let f = 30;
+        let g = true;
+
+        // Only Use Variables Value
+        // Do Not Use Variable Twice
+
+        console.log(-d * +e); // 2000
+        console.log(-d + -d - --f + ++g); // 173
+
+        // Assignments:
+
+        // Assignment 1
+        // Replace ? With Arithmetic Operators
+        console.log(10 * 20 + 15 % 3 + 190 + 10 - 400); // 0
+
+        // Assignment 2
+        let num = 3;
+        // Solution One
+        console.log(num + num++); // 6
+        // Solution Two
+        console.log(++num + true); // 6
+        // Soultion Three
+        console.log(++num); // 6
+        // Soultion Four
+        console.log(++num - true); // 6
+        // Solution Five
+        console.log(--num); // 6
+        // Solution Six
+        console.log(--num + true); // 6
+
+        // Assignment 3
+        let n = "10";
+        // Solution One
+        console.log(+n + +n); // 20
+        // Solution Two
+        console.log(+n + +n++); // 20
+        // Solution Three
+        console.log(n * n-- - n * n + n - ++n); // 20
+
+    </script>
+</body>
+
+</html>

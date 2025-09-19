@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Searching Array</title>
+</head>
+
+<body>
+
+    <script>
+        /*
+        Arrays Methods [Search]
+        -indexOf
+        -lastIndexOf
+        -includes
+        */
+
+        let myFriends = ["Anas", "Haytam", "Ahmed", "Amine", "Anas"];
+        console.log(myFriends);
+
+        console.log(myFriends.indexOf("Haytam"));//1
+        console.log(myFriends.indexOf("Haytam", 0));//1
+        console.log(myFriends.indexOf("Haytam", 4));// -1 = nothing
+
+        console.log(myFriends.lastIndexOf("Anas"));//4
+        console.log(myFriends.lastIndexOf("Anas", 2));//0
+        console.log(myFriends.lastIndexOf("Anas", -2));//0
+
+        console.log(myFriends.includes("Ahmed"));//true
+        console.log(myFriends.includes("Ahmed", 3));//false
+    </script>
+</body>
+
+</html>

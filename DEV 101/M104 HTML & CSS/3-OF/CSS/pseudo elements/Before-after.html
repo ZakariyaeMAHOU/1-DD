@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before and after</title>
+    <style>
+        .parent {
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+        .one {
+            background-color: #EEE;
+            width: 440px;
+            padding: 10px;
+            float: left;
+            position: relative;
+        }
+        .user {
+            background-color: #EEE;
+            width: 50px;
+            margin-right: 20px;
+            padding: 10px;
+            height: 55.5px;
+            float: left;
+            font-size: 50px;
+            text-align: center;
+        }
+
+/**********************************************/
+        .one::after {
+            content: "";
+/**********************************************/
+            position: absolute;
+            width: 5px;
+            height: 100%;
+            right: -7px;
+            top: 0;
+            background-color: aqua;
+        }
+
+/***********************************************/
+        .one::before {
+            content: "";
+/***********************************************/
+            position: absolute;
+            left: -20px;
+            top: 50%;
+            height: 0px;
+            width: 0px;
+            margin-top: -10px;
+            border-width: 10px;
+            border-style: solid;
+            border-color: transparent aqua transparent transparent;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="user">O</div>
+        <div class="one">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime nesciunt perferendis at ad quas fugiat repudiandae, perspiciatis officiis placeat deleniti et officia.</div>
+    </div>
+    <div class="parent">
+        <div class="user">A</div>
+        <div class="one">Tempore tenetur possimus, similique qui officia illum magnam. Possimus, accusamus doloremque necessitatibus itaque nemo ipsum nulla reiciendis.</div>
+    </div>
+    <div class="parent">
+        <div class="user">E</div>
+        <div class="one">Voluptas fugiat asperiores praesentium quod est sunt eligendi voluptates perferendis eius quaerat, amet omnis quo accusantium, commodi fuga, quia non maxime incidunt.</div>
+    </div>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Js</li>
+        <ul>
+            <li>React Js</li>
+            <li>Vue Js</li>
+            <li>Angular</li>
+        </ul>
+    </ul>
+</body>
+</html>

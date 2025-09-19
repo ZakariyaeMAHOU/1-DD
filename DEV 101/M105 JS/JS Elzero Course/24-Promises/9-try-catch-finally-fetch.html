@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        /*
+            Async & Await With Try, Catch, Finally
+        */
+
+        // const myPromise = new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //         // resolve("Iam The Good Promise");
+        //         reject(Error("Iam The Bad Promise"));
+        //     }, 3000);
+        // });
+
+        // async function readData() {
+        //     console.log("Before Promise");
+
+        //     try {
+        //         console.log(await myPromise);
+        //     } catch (reason) {
+        //         console.log(`Reason: ${reason}`)
+        //     } finally {
+        //         console.log("After Promise");
+        //     }
+        // }
+
+        // readData();
+
+
+        // async function readData() {
+        //     console.log("Before Promise");
+        //     console.log(await fetch("https://api.github.com/users/elzerowebschool/repos").catch((rej) => console.log(Error("not found"))));
+        //     console.log("After Promise");
+        // }
+        // readData();
+
+
+        async function fetchData() {
+            console.log("Before Fetch");
+
+            try {
+                let myData = await fetch("https://api.github.com/users/elzerowebschool/repos");
+                console.log(await myData.json());
+            } catch (reason) {
+                console.log(`Reason: ${reason}`)
+            } finally {
+                console.log("After Fetch");
+            }
+        }
+
+        fetchData();
+    </script>
+</body>
+
+</html>

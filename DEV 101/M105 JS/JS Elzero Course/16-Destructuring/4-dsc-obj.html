@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let obj = {
+            theName: "Zakaria",
+            theAge: 19,
+            theCity: "Berkane",
+            theCountry: "Morocco"
+        }
+        // console.log(obj.theName);
+        // console.log(obj.theAge);
+        // console.log(obj.theCity);
+        // console.log(obj.theCountry);
+        // console.log("");
+
+        // let theName = obj.theName;
+        // let theAge = obj.theAge;
+        // let theCity = obj.theCity;
+        // let theCountry = obj.theCountry;
+        // console.log(theName);
+        // console.log(theAge);
+        // console.log(theCity);
+        // console.log(theCountry);
+        // console.log("");
+
+        // ({ theName, theAge, theCity, theCountry } = obj);
+        let { theName, theAge, /*theCity,*/ theCountry } = obj;
+        console.log(theName);
+        console.log(theAge);
+        // console.log(theCity);
+        console.log(theCountry);
+        console.log("");
+    </script>
+</body>
+
+</html>

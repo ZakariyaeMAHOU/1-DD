@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        class User {
+            constructor(i, u, s) {
+                this.id = i;
+                this.username = u;
+                this.salary = s;
+            }
+        }
+        // function User(i, u, s) {
+        //     this.id = i;
+        //     this.username = u;
+        //     this.salary = s;
+        // }
+
+        let user1 = new User(100, "Zakaria", 6000);
+
+        console.log(user1);
+        console.log(user1 instanceof User);
+        console.log(user1.constructor);
+        console.log(user1.constructor === User);
+    </script>
+</body>
+
+</html>

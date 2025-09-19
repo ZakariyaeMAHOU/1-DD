@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Advanced Examples</title>
+</head>
+
+<body>
+
+    <script>
+        /*
+        Fonction
+        -User-Defined vs Built In
+        -Parameter + Argument
+            userName => Parameter (Variable)
+            "Zakarie" => Argument (Value)
+        */
+
+        function sayHello(userName, age, level) {
+            if (age >= 18) {
+                console.log("Hi " + userName + ", your age is " + age + ", your level is " + level);
+            } else {
+                console.log("error")
+            }
+        }
+
+        sayHello("Zakaria", "18", "Bac");
+        sayHello("Mohammed", "21", "Bac+2");
+        sayHello("Soufian", "15", "3AC");
+    </script>
+</body>
+
+</html>

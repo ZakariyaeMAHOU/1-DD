@@ -1,0 +1,24 @@
+/* tag  */
+
+/* target all paragraphs */
+.p-3 {
+    color: rgb(255, 220, 200);
+    font-size: larger;
+}
+
+/* Target all elements have this class */
+.first-p {
+    color: blue;
+    font-size: x-large;
+}
+
+/* Target all elements have this id  */
+#secend-p {
+    color: green;
+    font-size: medium;
+}
+
+
+
+
+

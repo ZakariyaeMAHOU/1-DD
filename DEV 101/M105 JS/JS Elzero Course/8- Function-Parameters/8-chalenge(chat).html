@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Arguments Function Challenge</title>
+</head>
+
+<body>
+    <script>
+        function showDetails(name, age, status) {
+            let info = [name, age, status];
+            let n = info.find(info => typeof info === "string");
+            let a = info.find(info => typeof info === "number");
+            let s = info.find(info => typeof info === "boolean");
+
+            if (s === true) {
+                console.log(`Hello ${n}, Your Age Is ${a}, You Are Available For Hire`)
+            } else {
+                console.log(`Hello ${n}, Your Age Is ${a}, You Are Not Available For Hire`)
+            }
+        }
+        showDetails("Zakaria", 18, true);
+        showDetails(18, true, "Zakaria");
+        showDetails(false, "Zakaria", 18);
+    </script>
+</body>
+
+</html>

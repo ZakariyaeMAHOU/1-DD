@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: azure;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div>
+            <label for="first-number">First Number</label>
+            <input type="text" id="first-number">
+        </div>
+        <div>
+            <label for="second-number">Second Number</label>
+            <input type="text" id="second-number">
+        </div>
+        <button id="divide-btn">Divide</button>
+        <p>Result: <span id="Result"></span></p>
+        <a href="index.html">index</a>
+    </div>
+</body>
+
+<script src="logic.js"></script>
+<script>
+    let btn = document.querySelector("#divide-btn");
+    btn.addEventListener("click", function () {
+        let firstNumber = document.querySelector("#first-number").value
+        let secondNumber = document.querySelector("#second-number").value
+
+        try {
+            let result = divide(firstNumber, secondNumber)
+            document.querySelector("#Result").innerHTML = result
+        } catch (errr) {
+            alert("You can't divide by zero")
+            document.querySelector("#Result").innerHTML = "Unknown"
+        }
+    });
+</script>
+
+</html>

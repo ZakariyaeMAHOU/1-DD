@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Cloning</title>
+</head>
+
+<body>
+    <p id="par" class="par">this is <span>p</span></p>
+    <div>Div</div>
+
+    <script>
+        /*
+        DOM [Cloning]
+        - cloneNode(Deep)
+        */
+
+        let par = document.querySelector(".par").cloneNode(true);
+        let div = document.querySelector("div");
+
+        par.id = "copy"
+
+        div.appendChild(par);
+    </script>
+</body>
+
+</html>

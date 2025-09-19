@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        class User {
+            constructor(i, u, s) {
+                this.id = i;
+                this.username = u;
+                this.salary = s;
+            }
+            // update
+            update(newId, newUsername, newSalary) {
+                this.id = newId || this.id;
+                this.username = newUsername || this.username;
+                this.salary = newSalary || this.salary;
+            }
+        }
+
+        let user1 = new User(100, "Zakaria", 6000);
+
+        user1.update(101, "Mahou", 9000);
+        console.log(user1);
+    </script>
+</body>
+
+</html>

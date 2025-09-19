@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .champ {
+            border-radius: 20px;
+            box-shadow: 5px 5px 5px cyan;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="prenom">
+    <button onclick="alert(document.getElementById('prenom').value)">ok</button>
+    <script>
+        let input=document.getElementById('prenom');
+        input.placeholder='Salam';
+        input.style='color:red;border:2px solid blue;outline:none';
+        input.className='champ';
+    </script>
+</body>
+</html>

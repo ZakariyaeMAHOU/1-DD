@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POST</title>
+</head>
+
+<body>
+    <h1>All Posts</h1>
+    <div class="posts"></div>
+
+</body>
+<script>
+    // POST
+    function createData() {
+        let myRequest = new XMLHttpRequest();
+        myRequest.open("POST", "https://jsonplaceholder.typicode.com/posts");
+        myRequest.responseType = "json";
+        myRequest.setRequestHeader("Accept", "application/json")
+        myRequest.setRequestHeader("Content-type", "application/json")
+
+        let bodyParams = {
+            title: 'this is the new post',
+            body: 'add add add add add add add',
+            userId: 2,
+        }
+
+        myRequest.send(JSON.stringify(bodyParams))
+
+        myRequest.onload = function () {
+            if (this.status >= 200 && this.status < 300 && this.readyState == 4) {
+                document.querySelector(".posts").innerHTML += `<h2>${myRequest.response.title}<h2>`;
+                console.log("The post has been created")
+            } else {
+                console.log("error")
+            }
+        }
+    }
+    createData()
+</script>
+
+</html>

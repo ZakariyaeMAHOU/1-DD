@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors Reference</title>
+    <style>
+        div p {
+            color: blue;
+        }
+
+        div>p {
+            background-color: aqua;
+        }
+
+        div+p {
+            text-decoration: line-through;
+        }
+
+        div~p {
+            background-color: chartreuse;
+        }
+
+        .one.two {
+            background-color: darkgray;
+        }
+
+        [href] {
+            color: white;
+        }
+
+        [href="https://google.com"] {
+            background-color: brown;
+        }
+
+        [href^="img"] {
+            background-color: green;
+        }
+
+        [href$="mp4"] {
+            background-color: rgb(255, 35, 160);
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>Paragraph into the div</p>
+        <p>Paragraph into the div</p>
+        <p>Paragraph into the div</p>
+        <section>
+            <p>Paragraph into section</p>
+        </section>
+        <p>Paragraph after section</p>
+        <p>Paragraph after section</p>
+        <p>Paragraph after section</p>
+    </div>
+    <p>Paragraph outside the div</p>
+
+    <hr>
+
+    <p>Paragraph outside the div</p>
+    <section class="parent">
+        <section class="child">
+            <section class="one two">one two</section>
+            <p>Paragraph into the other div</p>
+            <section class="one">one</section>
+            <section class="two">two</section>
+            <a href="https://google.com">link</a>
+            <a href="img.png">link</a>
+            <a href="vd.mp4">link</a>
+        </section>
+    </section>
+</body>
+
+</html>

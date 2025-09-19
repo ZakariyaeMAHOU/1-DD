@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let obj1 = new Object({
+            prop1: 1,
+            prop: "from obj1",
+            meth1: function () { return "hi" },
+        });
+
+        let obj2 = new Object({
+            prop2: 2,
+            prop: "from obj2",
+            meth2: function () { return "hello" },
+        });
+        //Creat object with assign method
+        let obj3 = Object.assign({}, obj1, obj2);
+        console.log(obj3);
+    </script>
+    <script>
+        console.log('\n');
+        console.log('\n');
+        console.log('\n');
+        let user = { name: "Sara", age: 22, addresses: { one: "Berkane", two: "chefchaoun" }, };
+
+        let clone = Object.assign({}, user);
+
+        console.log(clone); // { name: "Sara", age: 22 }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>3</div>
+    <script>
+        let myDiv = document.querySelector('div');
+        function downCounter() {
+            myDiv.innerHTML -= 1;
+            if (myDiv.innerHTML === "0") {
+                clearInterval(counter)
+            }
+        }
+        let counter = setInterval(downCounter, 1000);
+    </script>
+</body>
+
+</html>

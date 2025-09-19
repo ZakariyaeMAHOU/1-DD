@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let myObject = {
+            a: 1,
+            b: 2,
+        };
+        Object.defineProperty(myObject, "c", {
+            writable: false, // 👈 القيمة ثابتة
+            enumerable: false, // 👈 مخفي عن التعداد
+            configurable: false, // 👈 غير قابلة للتغيير/الحذف
+            value: 3,
+        });
+
+        // writable
+        myObject.c = 100; // 3
+
+        // enumerable
+        for (let pr in myObject) {
+            console.log(pr, myObject[pr]);
+        }
+
+        // configurable
+        // Object.defineProperty(myObject, "c", {
+        // writable: true,
+        // enumerable: true,
+        // configurable: true,
+        // value: 100,
+        // });
+        console.log(delete (myObject.c));
+
+        console.log(myObject)
+    </script>
+</body>
+
+</html>

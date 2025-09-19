@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        class User {
+            #password;
+            constructor(i, u, p) {
+                this.id = i;
+                this.username = u;
+                this.#password = p;
+            }
+            checkPass(pass) {
+                return this.#password === pass;
+            }
+        }
+
+        let user1 = new User(100, "Zakaria", "123456");
+
+        console.log(User.prototype);
+        console.log(user1);
+
+        User.prototype.country = "Morocco";
+        User.prototype.sayHello = function () {
+            return "Hello";
+        };
+        console.log(user1.sayHello());
+        console.log(user1.country);
+    </script>
+</body>
+
+</html>

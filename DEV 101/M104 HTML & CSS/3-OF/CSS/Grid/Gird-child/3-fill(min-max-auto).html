@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min, Max And Auto Fill</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+        .parent {
+            margin: 20px auto;
+            /* width: 800px; */
+            height: 500px;
+            border-color: #eee;
+            display: grid;
+            /* gap: 10px; */
+            grid-template-columns:  repeat(auto-fill, minmax(200px, 1fr));
+        }
+        .parent div {
+            background-color: red;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+            align-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+    </div>
+</body>
+</html>

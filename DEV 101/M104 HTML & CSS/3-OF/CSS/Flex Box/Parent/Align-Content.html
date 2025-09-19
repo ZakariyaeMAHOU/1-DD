@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>align-content</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .flex {
+            background-color: #eee;
+            width: 600px;
+            height: 400px;
+            padding: 20px;
+            margin: 20px auto;
+            /*********************************/
+            display: flex;
+            /* flex-direction: row;
+            flex-wrap: wrap; */
+            flex-flow: row wrap;
+            /*********************************/
+            align-content: center;
+        }
+        .flex1 {
+            background-color: #eee;
+            width: 600px;
+            height: 400px;
+            padding: 20px;
+            margin: 20px auto;
+            /*********************************/
+            display: flex;
+            /* flex-direction: row;
+            flex-wrap: wrap; */
+            flex-flow: row wrap;
+            /*********************************/
+            align-content: space-between;
+        }
+        .flex2 {
+            background-color: #eee;
+            width: 600px;
+            height: 400px;
+            padding: 20px;
+            margin: 20px auto;
+            /*********************************/
+            display: flex;
+            /* flex-direction: row;
+            flex-wrap: wrap; */
+            flex-flow: row wrap;
+            /*********************************/
+            align-content: space-around;
+        }
+        .flex3 {
+            background-color: #eee;
+            width: 600px;
+            height: 400px;
+            padding: 20px;
+            margin: 20px auto;
+            /*********************************/
+            display: flex;
+            /* flex-direction: row;
+            flex-wrap: wrap; */
+            flex-flow: row wrap;
+            /*********************************/
+            align-content: space-evenly;
+        }
+        .flex div,
+        .flex1 div,
+        .flex2 div,
+        .flex3 div
+         {
+            background-color: red;
+            color: white;
+            width: calc(100%/3);
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h3>align-content: center;</h3>
+    <div class="flex">
+        <div class="one">Text 1</div>
+        <div class="two">Text 2</div>
+        <div class="three">Text 3</div>
+        <div class="four">Text 4</div>
+        <div class="five">Text 5</div>
+    </div>
+    <h3>align-content: space-between;</h3>
+    <div class="flex1">
+        <div class="one">Text 1</div>
+        <div class="two">Text 2</div>
+        <div class="three">Text 3</div>
+        <div class="four">Text 4</div>
+        <div class="five">Text 5</div>
+    </div>
+    <h3>align-content: space-around;</h3>
+    <div class="flex2">
+        <div class="one">Text 1</div>
+        <div class="two">Text 2</div>
+        <div class="three">Text 3</div>
+        <div class="four">Text 4</div>
+        <div class="five">Text 5</div>
+    </div>
+    <h3>align-content: space-evenly;</h3>
+    <div class="flex3">
+        <div class="one">Text 1</div>
+        <div class="two">Text 2</div>
+        <div class="three">Text 3</div>
+        <div class="four">Text 4</div>
+        <div class="five">Text 5</div>
+    </div>
+</body>
+</html>

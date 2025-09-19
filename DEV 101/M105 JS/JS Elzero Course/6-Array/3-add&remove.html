@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add And Remove From My Array</title>
+</head>
+
+<body>
+
+    <script>
+        /*
+        Arrays Methods [Adding And Removing]
+        -unshift("", "")   Add element to the first
+        -push("", "")      Add element to the end
+        -shift()   Remove first element from array
+        -pop()     Remove last element from array
+        */
+
+        let myFriends = ["Anas", "Haytam"];
+        console.log(myFriends);
+        //Add element to the first
+        myFriends.unshift("Zakaria", "Mohammed");
+        console.log(myFriends);
+        //Add element to the end
+        myFriends.push("Ahmed", "Amine");
+        console.log(myFriends);
+        //Remove first element from array
+        let first = myFriends.shift();
+        console.log(`First name is ${first}`);
+        console.log(myFriends);
+        //Remove last element from array
+        let last = myFriends.pop();
+        console.log(`Last name is ${last}`);
+        console.log(myFriends)
+    </script>
+</body>
+
+</html>

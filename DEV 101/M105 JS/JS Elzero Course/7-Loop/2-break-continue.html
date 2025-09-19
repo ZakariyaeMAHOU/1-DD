@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop Control - Break, Continue, Label</title>
+</head>
+
+<body>
+
+    <script>
+        /*
+        Loop Control
+        -Break
+        -continue
+        -Label
+        */
+
+        //break
+        let products = ["Keybord", "Mouse", "Pen", "Pad", "Monitor"];
+
+        for (let i = 0; i < products.length; i++) {
+            console.log(products[i]);
+            if (products[i] === "Pen")
+                break;
+        }
+
+
+        console.log("\n");
+        console.log("\n");
+        //continue
+        products = ["Keybord", 33, "Mouse", 10, 21, "Pen", "Pad", 23, "Monitor"];
+
+        for (let i = 0; i < products.length; i++) {
+            if (!isNaN(products[i]))
+                continue;
+            console.log(products[i]);
+        }
+
+
+        console.log("\n");
+        console.log("\n");
+        //label
+        products = ["Keybord", "Mouse", "Pen", "Pad", "Monitor"];
+        let colors = ["Red", "Green", "Black"];
+
+        mainLoop: for (let i = 0; i < products.length; i++) {
+            console.log(products[i]);
+            nestedLoop: for (let j = 0; j < colors.length; j++) {
+                console.log(`-${colors[j]}`);
+                if (colors[j] === "Green")
+                    break mainLoop;
+            }
+            console.log("\n");
+        }
+    </script>
+</body>
+
+</html>

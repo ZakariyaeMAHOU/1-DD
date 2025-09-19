@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animation fluide et interactive</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+
+    .fluid-shape {
+      width: 150px;
+      height: 150px;
+      background-color: #3498db;
+      border-radius: 50%;
+      position: relative;
+      transition: all 0.6s ease-in-out; /* Transition fluide pour toutes les transformations */
+      cursor: pointer;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Transformation au survol de la souris */
+    .fluid-shape:hover {
+      transform: rotate(45deg) scale(1.5) translateX(50px) translateY(-50px);
+      background-color: #e74c3c; /* Changement de couleur */
+    }
+
+    /* Formes interactives - changement de forme au survol */
+    .fluid-shape:hover:before {
+      content: '';
+      position: absolute;
+      top: -20px;
+      left: -20px;
+      width: 0;
+      height: 0;
+      border-left: 80px solid transparent;
+      border-right: 80px solid transparent;
+      border-bottom: 140px solid #2ecc71; /* Triangle vert */
+      transform: rotate(180deg);
+    }
+
+    /* Forme de base : Cercle */
+    .fluid-shape:after {
+      content: '';
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 130px;
+      height: 130px;
+      background-color: #9b59b6;
+      border-radius: 50%;
+      transition: all 0.6s ease;
+    }
+
+    /* Effet de transition pour les bords de la forme */
+    .fluid-shape:hover:after {
+      border-radius: 10%; /* De cercle à forme angulaire */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="fluid-shape"></div>
+
+</body>
+</html>

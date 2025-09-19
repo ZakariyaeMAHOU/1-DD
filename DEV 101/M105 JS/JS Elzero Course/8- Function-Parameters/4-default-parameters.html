@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Default Parameters</title>
+</head>
+
+<body>
+
+    <script>
+        /*
+        Function
+        -Default function parameters
+        -Function parameters default [Undefined]
+        -Old strategies [Condition + Logical or]
+        -ES6 Method
+        */
+
+        function sayHello(userName, age = "Unknown") {
+            // if (age === undefined) {
+            //     age = "Unknown"
+            // }
+            // age = age || "Unknown" 
+            console.log("Hi " + userName + ", your age is " + age + ", your level is " + level);
+        }
+    </script>
+</body>
+
+</html>

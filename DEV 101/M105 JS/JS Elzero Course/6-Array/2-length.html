@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Length With Array</title>
+</head>
+
+<body>
+
+    <script>
+        /*
+        Arrays Methods
+        -Length
+        */
+
+        let myFriends = ["Anas", "Haytam", "Ahmed", "Amine"];
+
+        // Add an element into Array
+        // First Method (❌)
+        console.log(myFriends.length);//4
+        myFriends[4] = "Mohammed";
+        console.log(myFriends);//   ["Anas", "Haytam", "Ahmed", "Amine", "Mohammed"]
+        // Second Method (✅)
+        myFriends[myFriends.length] = "Zakaria";
+        console.log(myFriends);//   ["Anas", "Haytam", "Ahmed", "Amine", "Mohammed", "Zakaria"]
+
+        //Update last element into Array
+        myFriends[myFriends.length - 1] = "Soufian";
+        console.log(myFriends);//   ["Anas", "Haytam", "Ahmed", "Amine", "Mohammed", "Soufian"]
+
+        //control the Array
+        myFriends.length = 3;
+        console.log(myFriends);//["Anas", "Haytam", "Ahmed"]
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Types And Variables</title>
+</head>
+
+<body>
+    <script>
+        /*
+        Data Types:
+        */
+        console.log(typeof "Zakaria Mahou"); //string
+        console.log(typeof 49); //number
+        console.log(typeof 49.5); //number
+        console.log(typeof NaN); //number
+        console.log(typeof [18, 18, 19]); //name: array / type: object
+        console.log(typeof ["Zakariyae", "Anas", "Haytam"]); //name: array / type: object
+        console.log(typeof { name: "Zakariyae", age: 18, city: "Berkane" }); //object
+        console.log(typeof true); //boolean
+        console.log(typeof false); //boolean
+        console.log(typeof undefined); //undefined
+        console.log(typeof null); //object
+
+        /*
+        Variables
+        */
+        var admin = "Zakariyae",
+            adminAge = 18,
+            adminCity = "Berkane";
+        console.log("Name: " + admin, "\nAge: " + adminAge, "\nCity: " + adminCity)
+        /*
+            Var
+                -Redeclare (Yes Yes)
+                -Access Before Declare (Undefined)
+                -Added To window(window.var)(Global scope)
+                -Local scope: Function scope not block scope (محصوره داخل الدالة فقط)
+            Let
+                -Redeclare (Yes & No => Error)
+                -Access Before Declare (Error)
+                -Added To window(No)
+                -Local scope: Function scope not block scope ({} محصوره داخل)
+            Const
+                -Redeclare (No => Error No => Error)
+                -Access Before Declare (Error)
+                -Added To window(No)
+                -Local scope: Function scope not block scope ({} محصوره داخل)
+        */
+        var a = 1;
+        var a = 2;
+        console.log(a)
+
+        var b = 1;
+        b = 2;
+        console.log(a)
+
+
+        console.log(d);
+        var d = 3;
+    </script>
+</body>
+
+</html>

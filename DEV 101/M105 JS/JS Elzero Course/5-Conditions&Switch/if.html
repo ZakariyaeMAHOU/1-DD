@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If Condition</title>
+</head>
+
+<body>
+
+    <script>
+        /*
+        Control Flow
+          if
+          else if
+          else
+        */
+
+        let price = 100,
+            discountAmount = 30,
+            discount = false,
+            contry = "Morocco",
+            student = true;
+
+        if (discount == true) {
+            price -= discountAmount
+        }
+        else if (contry == "Morocco") {
+            //Nested
+            if (student == true) {
+                price -= discountAmount + 30
+            }
+            else {
+                price -= discountAmount + 10
+            }
+        }
+        else {
+            price -= 10
+        }
+
+        console.log(price);
+
+
+
+        /*
+        Conditional (Ternary) Operator
+        */
+        let name = "Zakaria",
+            gender = "Male",
+            marialStatus = false;
+
+        if (gender == "Male") {
+            console.log("Mr", name);
+        } else {
+            if (marialStatus == false) {
+                console.log("Miss", name);
+            } else if (marialStatus == true) {
+                console.log("Mrs", name);
+            } else {
+                console.log("Ms", name);
+            }
+        }
+        // condition ? if true : if false;
+        gender == "Male"
+            ? console.log("Mr", name)
+            : marialStatus == false
+                ? console.log("Miss", name)
+                : marialStatus == true
+                    ? console.log("Mrs", name)
+                    : console.log("Ms", name);
+
+        let admin = gender == "Male"
+            ? "Mr " + name
+            : marialStatus == false
+                ? "Miss " + name
+                : marialStatus == true
+                    ? "Mrs " + name
+                    : "Ms " + name;
+        document.write(`Hello ${admin}`);
+
+
+
+        /*
+        Logical Or ||
+          Null + Undefined + Any Falsy value
+        Nullish Coalescing Operator ??
+          Null + Undefined
+        */
+
+        let prc = 0 //undefined // null // ""
+        console.log(`The Price Is ${prc || 100}`)
+        console.log(`The Price Is ${prc ?? 100}`)
+    </script>
+</body>
+
+</html>

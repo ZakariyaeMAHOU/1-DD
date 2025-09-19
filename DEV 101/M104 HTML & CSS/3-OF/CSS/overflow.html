@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>over flew</title>
+    <style>
+        /* overflew (visible & hidden & scroll & auto) */
+        .div1,
+        .div2,
+        .div3,
+        .div4,
+        .div5,
+        .div6 {
+            background-color: grey;
+            padding: 10px;
+            margin: 100px 0;
+            width: 150px;
+            height: 150px;
+        }
+
+        .div1 {
+            /* visible  */
+            overflow: visible;
+        }
+
+        .div2 {
+            /* hidden */
+            overflow: hidden;
+        }
+
+        .div3 {
+            /* scroll */
+            overflow: scroll;
+        }
+        
+        .div4 {
+            /* auto */
+            overflow: auto;
+        }
+
+        .div5 {
+            overflow-x: hidden;
+        }
+
+        .div6 {
+            overflow-y: hidden;
+        }
+    </style>
+</head>
+<body>
+    <h1>overflew</h1>
+    <h3>visible</h3>
+    <div class="div1">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam enim corrupti dolor voluptatibus, eaque quasi ducimus quaerat! Harum commodi rem, veritatis explicabo, reiciendis dolorum voluptates at fugit sequi aperiam labore.</p>
+    </div>
+    <h3>hidden</h3>
+    <div class="div2">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam enim corrupti dolor voluptatibus, eaque quasi ducimus quaerat! Harum commodi rem, veritatis explicabo, reiciendis dolorum voluptates at fugit sequi aperiam labore.</p>
+    </div>
+    <h3>scroll</h3>
+    <div class="div3">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam enim corrupti dolor voluptatibus, eaque quasi ducimus quaerat! Harum commodi rem, veritatis explicabo, reiciendis dolorum voluptates at fugit sequi aperiam labore.</p>
+    </div>
+    <h3>auto</h3>
+    <div class="div4">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam enim corrupti dolor voluptatibus, eaque quasi ducimus quaerat! Harum commodi rem, veritatis explicabo, reiciendis dolorum voluptates at fugit sequi aperiam labore.</p>
+    </div>
+
+    <h1>overflew x and y</h1>
+    <div class="div5">
+        <p>ieozihdizhzhziohzfoihefoizhfoizhfiofhioeahfoiahfoiahfoiahfohafioahfoiaLorem ipzdzdzadazdadadadadadedddddddddddddsum dolor sit amet consectetur, adipisicing elit. Numquam enim corrupti dolor voluptatibus, eaque quasi ducimus quaerat! Harum commodi rem, veritatis explicabo.</p>
+    </div>
+    <div class="div6">
+        <p>ieozihdizhzhziohzfoihefoizhfoizhfiofhioeahfoiahfoiahfoiahfohafioahfoiaLorem ipzdzdzadazdadadadadadedddddddddddddsum dolor sit amet consectetur, adipisicing elit. Numquam enim corrupti dolor voluptatibus, eaque quasi ducimus quaerat! Harum commodi rem, veritatis explicabo.</p>
+    </div>
+</body>
+</html>

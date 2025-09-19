@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>first-letter-line and selection</title>
+    <style>
+        .div-1::first-letter {
+            font-size: 60px;
+            font-family: serif;
+            font-style: italic;
+            font-weight: bold;
+            color: brown;
+        }
+        .div-1::selection {
+            background-color: aqua;
+            color: brown;
+        }
+
+        .div-2::first-line {
+            color: brown;
+        }
+        .div-2::selection{
+            background-color: brown;
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="div-1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro, sequi cumque, ipsam omnis quis ex odit ducimus dolorum rerum commodi est dolores, voluptate non fuga repellat praesentium tempora architecto voluptas?</div>
+    <hr>
+    <div class="div-2">Impedit voluptatum facere nihil magni est doloremque cupiditate nemo beatae aliquid recusandae deserunt delectus aspernatur soluta quos, laboriosam quaerat eos earum adipisci. Repellendus suscipit quasi tempora provident veritatis qui repudiandae!</div>
+</body>
+</html>

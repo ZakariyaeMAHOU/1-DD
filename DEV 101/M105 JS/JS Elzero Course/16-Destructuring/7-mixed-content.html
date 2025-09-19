@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        const user = {
+            theName: "Osama",
+            theAge: 39,
+            skills: ["HTML", "CSS", "JavaScript"],
+            addresses: {
+                egypt: "Cairo",
+                ksa: "Riyadh",
+            },
+        };
+
+        let { theName: n, theAge: a, skills: [h, c, js], addresses: { egypt, ksa } } = user;
+        console.log(`Your name is ${n}`);
+        console.log(`Your age is ${a}`);
+        console.log(`Your skills is : ${h} - ${c} - ${js}`);
+        console.log(`Your address is ${egypt}`);
+    </script>
+</body>
+
+</html>

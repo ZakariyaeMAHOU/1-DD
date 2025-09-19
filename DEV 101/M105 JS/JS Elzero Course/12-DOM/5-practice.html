@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        for (let i = 0; i < 10; i++) {
+            let product = document.createElement('div');
+            let h3 = document.createElement('h3');
+            let paragh = document.createElement('p');
+
+            product.className = "product"
+            h3.textContent = `Product ${i + 1}`;
+            paragh.textContent = `Product ${i + 1} Description`;
+
+            product.appendChild(h3);
+            product.appendChild(paragh);
+
+            document.body.appendChild(product);
+        }
+    </script>
+</body>
+
+</html>

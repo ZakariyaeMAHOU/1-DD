@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <select id="yearSelect">
+        <option value=""></option>
+    </select>
+
+    <script>
+        const select = document.getElementById('yearSelect');
+        const startYear = 1950;
+        const currentYear = new Date().getFullYear(); // سنة اليوم تلقائياً
+
+        for (let year = startYear; year <= currentYear; year++) {
+            const option = document.createElement('option');
+            option.value = year;
+            option.textContent = year;
+            select.appendChild(option);
+        }
+    </script>
+
+</body>
+
+</html>

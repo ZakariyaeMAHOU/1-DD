@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		body {
+			/* background-color: rgb(135, 98, 215); */
+			background-image: url(./bgck.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			min-height: 100vh;
+		}
+
+		.container {
+			/* border: 1px solid #000; */
+			border-radius: 20px;
+			width: 60%;
+			height: 300px;
+			margin: 10% auto;
+			padding: 20px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-content: center;
+			align-items: center;
+			/* gap: 10px; */
+			backdrop-filter: blur(10px);
+			box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+		}
+
+		h1 {
+			color: rgb(226, 204, 255);
+			font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+			margin: 20px;
+		}
+
+		input {
+			border: 1px solid #fff;
+			border-radius: 20px;
+			width: 60%;
+			height: 30px;
+			margin-top: 20px;
+			background-color: transparent;
+			color: #fff;
+			padding: 5px 20px;
+		}
+
+		input::placeholder {
+			padding-left: 15px;
+			/* font-weight: bolder; */
+			color: #a177ad;
+		}
+
+		p {
+			color: #ff0000;
+			margin: 0;
+			padding: 0;
+			padding-top: 5px;
+			margin-bottom: -10px;
+		}
+
+		button {
+			border: 1px solid #fff;
+			background-color: #fff;
+			border-radius: 20px;
+			width: calc(60% + 40px);
+			height: 40px;
+			margin: 20px;
+			cursor: pointer;
+		}
+	</style>
+	<!-- axios -->
+	<script src="../node_modules/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<h1>Login</h1>
+		<input id="email" type="text" placeholder="Email">
+		<input id="password" type="password" placeholder="password">
+		<p></p>
+		<button onclick="login()">Login</button>
+	</div>
+	<script>
+		let email = document.getElementById("email")
+		let password = document.getElementById("password")
+		let btn = document.querySelector("button")
+
+		function login() {
+			axios.post('https://reqres.in/api/login', {
+				"email": email.value,
+				"password": password.value
+			}, {
+				headers: {
+					'Content-Type': 'application/json',
+					'x-api-key': 'reqres-free-v1'
+				}
+			})
+				.then((response) => {
+					let token = response.data.token
+					localStorage.setItem("token", token)
+					window.location.href = "1-auth.html";
+				})
+				.catch((err) => {
+					document.querySelector("p").textContent = err.response.data.error
+				})
+		}
+
+	</script>
+</body>
+
+</html>

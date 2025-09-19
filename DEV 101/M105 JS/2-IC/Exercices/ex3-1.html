@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calculer(){
+            let n1=+document.getElementById('n1').value;
+            let n2=+document.getElementById('n2').value;
+            document.getElementById('res').innerText=n1+n2;
+        }
+    </script>
+</head>
+<body>
+    <input type="number" id="n1">+
+    <input type="number" id="n2">=
+    <label id="res"></label>
+    <button onclick="calculer()">calculer</button>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function permuter(){
+            let n1=document.getElementById('n1');
+            let n2=document.getElementById('n2');
+            let n3=n1.value;
+            n1.value=n2.value;
+            n2.value=n3;
+        }
+    </script>
+</head>
+<body>
+    <input type="number" id="n1">
+    <input type="number" id="n2">
+    <button onclick="permuter()">Permuter</button>
+</body>
+</html>

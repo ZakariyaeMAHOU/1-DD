@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let myVar = "full name";
+        let user = {
+            "full name": "Zakaria",
+            age: 18,
+            skills: ["Html", "CSS", "Js"],
+            available: false,
+            addresses: {
+                spain: "Barcelona",
+                morocco: {
+                    one: "Berkane",
+                    two: "chefchaoun"
+                },
+            },
+            checkAv: function () {
+                if (user.available === true)
+                    return 'Free for work';
+                else
+                    return 'not free';
+            }
+        };
+        console.log(user["full name"]);//"Zakaria"
+        console.log(user.myVar);//undefined
+        console.log(user[myVar]);//"Zakaria"
+        // Dot Notation & Bracket notation
+        console.log(user.age);//18
+        console.log(user["age"]);//18
+
+        console.log(user.skills);//["Html", "CSS", "Js"]
+        console.log(typeof user.skills);//object
+        console.log(user.skills.join(" - "));// Html - CSS - Js
+        console.log(user.skills[0]);//Html
+
+        console.log(user.available);//false
+        console.log(typeof user.available);//boolean
+
+        console.log(user.addresses);//{spain: "Barcelona",morocco: {one: "Berkane",two: "chefchaoun"}}
+        console.log(typeof user.addresses);//object
+        console.log(user.addresses.spain);//Barcelona
+        console.log(typeof user.addresses.spain);//string
+
+        console.log(user.checkAv());//not free
+        console.log(typeof user.checkAv());//string(because he returned string)
+        console.log(typeof user.checkAv);//function
+    </script>
+</body>
+
+</html>

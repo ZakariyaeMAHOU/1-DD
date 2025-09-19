@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //syntax match(pattern)
+        //     - new RegExp("pattern", "modifier(s)")
+        let input = "hello welcome to Elzero Web Shcool elzero course";
+        let regex = /elzero/;
+        console.log(input.match(regex));
+        //modifiers
+        console.log(input.match(/elzero/i));//  i => case-insensitive
+        console.log(input.match(/elzero/ig));// g => global
+    </script>
+</body>
+
+</html>

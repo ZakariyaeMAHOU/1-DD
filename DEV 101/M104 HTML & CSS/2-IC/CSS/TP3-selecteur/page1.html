@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page 0</title>
+    <style>
+        div>p{
+            background-color: chocolate;
+        }
+        div section p   {
+           background-color: rgb(253, 0, 0);
+           border: 1px solid #000;
+        }
+        div+p{
+            background-color: rgb(207, 191, 191);
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        div~p{
+            border-radius: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <p>text 1</p>
+        <p>text 2</p>
+        <section>
+            <p>text 3</p>
+            <p>text 4</p>
+        </section>
+    </div>
+    <p>text 5</p>
+    <p>text 6</p>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Layout With Template Areas</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .page {
+            background-color: #dda0f2;
+            height: 100vh;
+
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            grid-template-rows: 30px auto 50px;
+            grid-template-areas: 
+            "logo logo nav nav nav nav nav nav nav nav" 
+            "side cont cont cont cont cont cont cont cont cont" 
+            "fot fot fot fot fot fot fot fot fot fot";
+
+        }
+        h2 {
+            grid-area: logo;
+
+            margin: 0 auto;
+        }
+        nav {
+            grid-area: nav;
+
+            display: grid;
+            grid-template-columns: repeat(4, 20%);
+            justify-content: space-evenly;
+        }
+        aside {
+            grid-area: side;
+
+            background-color: #c5abcc;
+            padding: 20px;
+        }
+        section {
+            grid-area: cont;
+
+            background-color: #eeee;
+            padding: 20px;
+        }
+        footer {
+            grid-area: fot;
+
+            background-color: #666666;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <h2>LOGO</h2>
+
+        <nav>
+            <a href="#">HOME</a>
+            <a href="#">SERVICES</a>
+            <a href="#">ABOUT</a>
+            <a href="#">CONTACT</a>
+        </nav>
+
+        <aside>
+            <ul>
+                <li><a href="#">p1</a></li>
+                <li><a href="#">p2</a></li>
+                <li><a href="#">p3</a></li>
+                <li><a href="#">p4</a></li>
+            </ul>
+        </aside>
+
+        <section>
+            <h3>Home</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint eum, doloremque nisi asperiores rerum beatae pariatur laborum, ducimus molestiae sed iure soluta ratione repudiandae eius quaerat, hic quidem corrupti dolore!</p>
+            <h3>Services</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint eum, doloremque nisi asperiores rerum beatae pariatur laborum, ducimus molestiae sed iure soluta ratione repudiandae eius quaerat, hic quidem corrupti dolore!</p>
+            <h3>About</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint eum, doloremque nisi asperiores rerum beatae pariatur laborum, ducimus molestiae sed iure soluta ratione repudiandae eius quaerat, hic quidem corrupti dolore!</p>
+            <h3>Contact</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint eum, doloremque nisi asperiores rerum beatae pariatur laborum, ducimus molestiae sed iure soluta ratione repudiandae eius quaerat, hic quidem corrupti dolore!</p>
+        </section>
+
+        <footer>
+            <p>zlejdlfez zeiuoize ziuoezuoizejoizeu uuoizef</p>
+        </footer>
+
+    </div>
+</body>
+</html>

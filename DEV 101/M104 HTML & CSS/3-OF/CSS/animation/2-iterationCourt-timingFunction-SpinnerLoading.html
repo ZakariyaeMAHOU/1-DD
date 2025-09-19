@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Animation - Iteration Count, Timing Function, Spinner Loadings</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        body {
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: #eee;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -50px;
+            margin-top: -50px;
+            color: white;
+            border-radius: 50%;
+            border: 5px solid #ff0000;
+            border-left-color: transparent;
+            /* border-left: none;
+            border-right: none; */
+
+            animation-name: spin;
+            animation-duration: 1s;
+
+            animation-iteration-count: 5;
+            animation-timing-function: linear;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

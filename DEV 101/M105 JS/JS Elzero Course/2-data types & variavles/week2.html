@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 2</title>
+</head>
+
+<body>
+    <script>
+        // Chalenge (Video 18)
+        let title = "Mahou",
+            desc = "Zakariyae Mahou",
+            date = "12/03";
+        let div = `
+            <div>
+                <h3>${title}</h3>
+                <p>${desc}</p>
+                <span>${date}</span>
+            </div>
+        `;
+        document.write(div.repeat(4));
+
+        // Assignment 1
+        let nbrOne = 10,
+            nbrTwo = 20;
+        console.log(nbrOne + "" + nbrTwo);
+        console.log(typeof (nbrOne + "" + nbrTwo));
+
+        console.log(`${nbrOne}${nbrTwo}`);
+        console.log(typeof `${nbrOne}${nbrTwo}`);
+
+        console.log(nbrTwo + "\n" + nbrOne)
+        console.log(`${nbrTwo}\n${nbrOne}`);
+
+        /*
+        // Assignment 2
+        console.log(elzero.innerHTML); // object
+        console.log(typeof elzero); // object
+        */
+
+        // Assignment 3
+        console.log(`\`I'm In\n\\\\\nLove \\\\ """ '''\n++ With ++\n\\"""\\"""\n""JavaScript""\`\``);
+
+        // Assignment 4
+        let a = 21;
+        let b = 20;
+        console.log("_" + (a + "_" + b).repeat(4) + "_"); // _21_2021_2021_2021_20_
+    </script>
+</body>
+
+</html>

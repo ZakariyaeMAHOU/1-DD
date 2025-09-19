@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reduce</title>
+</head>
+
+<body>
+
+    <script>
+        let nums = [10, 20, 15, 30];
+        let add = nums.reduce((a, next) => a + next, 5 /* a=5 is initial value and next=10*/);
+        console.log(add);
+
+        let thBiggest = ["Bla", "Propaganda", "ojfdlojther", "aaa", "battery", "test"];
+        let big = thBiggest.reduce((a, next) => a.length > next.length ? next = a : a = next)
+        console.log(big);
+
+        let removeChars = ["E", "@", "@", "L", "Z", "@", "@", "E", "R", "@", "O"];
+        let rc = removeChars
+            .filter((a) => a !== "@")
+            .map((a, i) => i === 0 ? a.toUpperCase() : a.toLowerCase())
+            .reduce((a, next, i, arr) => `${a}${next}`);
+        console.log(rc);
+    </script>
+</body>
+
+</html>

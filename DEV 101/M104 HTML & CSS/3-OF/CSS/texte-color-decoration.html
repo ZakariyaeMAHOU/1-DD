@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text</title>
+    <style>
+        div {
+            background-color: #EEE;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        /* text shadow  */
+        .div-1 {
+            text-shadow: 0px 0px 2px  rgb(255, 0, 0);
+        }
+        
+        /* text color  */
+        .div-2 {
+            color: red;
+        }
+
+        /* text align */
+        .div-3 {
+            text-align: center;
+        }
+
+        /* direction: rtl or ltr */
+        .div-4 {
+            direction: rtl;
+        }
+
+        /* text decoration  */
+        .div-4 > #p1 {
+            text-decoration: underline;
+        }
+        .div-4 > #p2 {
+            text-decoration: overline;
+        }
+        .div-4 > #p3 {
+            text-decoration: line-through;
+        }
+
+        /* Font style and variant and weight */
+        .div-8 p.p1 {
+            font-style: italic;
+        }
+        .div-8 p.p2 {
+            font-variant: small-caps;
+        }
+        .div-8 p.p3 {
+            font-weight: bolder;
+        }
+
+        /* text transform */
+        .div-5 > #p1 {
+            text-transform: capitalize;
+        }
+        .div-5 > #p2 {
+            text-transform: lowercase;
+        }
+        .div-5 > #p3 {
+            text-transform: uppercase;
+        }
+
+        /* text overflew */
+        .div-6 {
+            width: 200px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* text spacing  */
+        .div-7 > #p1 {
+            letter-spacing: 5px;
+        }
+        .div-7 > #p2 {
+            text-indent: 50px;
+        }
+        .div-7 > #p3 {
+            word-spacing: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>text shadow</h2>
+    <div class="div-1">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus eveniet ratione soluta, rem aspernatur ea optio nam inventore eum, officiis ipsum. Velit quasi culpa, dicta cum optio natus. Eligendi, commodi.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus eveniet ratione soluta, rem aspernatur ea optio nam inventore eum, officiis ipsum. Velit quasi culpa, dicta cum optio natus. Eligendi, commodi.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus eveniet ratione soluta, rem aspernatur ea optio nam inventore eum, officiis ipsum. Velit quasi culpa, dicta cum optio natus. Eligendi, commodi.</p>
+    </div>
+    <h2>text color</h2>
+    <div class="div-2">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus eveniet ratione soluta, rem aspernatur ea optio nam inventore eum, officiis ipsum. Velit quasi culpa, dicta cum optio natus. Eligendi, commodi.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus eveniet ratione soluta, rem aspernatur ea optio nam inventore eum, officiis ipsum. Velit quasi culpa, dicta cum optio natus. Eligendi, commodi.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus eveniet ratione soluta, rem aspernatur ea optio nam inventore eum, officiis ipsum. Velit quasi culpa, dicta cum optio natus. Eligendi, commodi.</p>
+    </div>
+    <h2>text align</h2>
+    <div class="div-3">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus eveniet ratione soluta, rem aspernatur ea optio nam inventore eum, officiis ipsum. Velit quasi culpa, dicta cum optio natus. Eligendi, commodi.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus eveniet ratione soluta, rem aspernatur ea optio nam inventore eum, officiis ipsum. Velit quasi culpa, dicta cum optio natus. Eligendi, commodi.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus eveniet ratione soluta, rem aspernatur ea optio nam inventore eum, officiis ipsum. Velit quasi culpa, dicta cum optio natus. Eligendi, commodi.</p>
+    </div>
+    <h2>direction: rtl or ltr</h2>
+    <div class="div-4">
+        <p>لغة CSS هي اللغة المسؤولة عن تنسيق صفحات ال Web وهي التي تتيح لك إستعمال الألوان والخطوط والأبعاد .</p>
+        <p>لغة CSS هي اللغة المسؤولة عن تنسيق صفحات ال Web وهي التي تتيح لك إستعمال الألوان والخطوط والأبعاد .</p>
+        <p>لغة CSS هي اللغة المسؤولة عن تنسيق صفحات ال Web وهي التي تتيح لك إستعمال الألوان والخطوط والأبعاد .</p>
+        
+    </div>
+    <h2>text decoration</h2>
+    <div class="div-4">
+        <p id="p1">underline</p>
+        <p id="p2">overline</p>
+        <p id="p3">line-through</p>
+    </div>
+    <h2>Font style and variant and weight</h2>
+    <div class="div-8">
+        <p class="p1">font-style: italic;</p>
+        <p class="p2">font-variant: small-caps;</p>
+        <p class="p3">font-weight: bolder;</p>
+    </div>
+    <h2>text transform</h2>
+    <div class="div-5">
+        <p id="p1">first capital letter</p>
+        <p id="p2">first lowercase letter</p>
+        <p id="p3">all letters are capitalized.</p>
+    </div>
+    <h2>text overflew</h2>
+    <div class="div-6">Lorem ipsum, dolor sit amet consectetur.
+    </div>
+    <h2></h2>
+    <div class="div-7">
+        <p id="p1">letter-spacing</p>
+        <p id="p2">text-indent </p>
+        <p id="p3">word spacing word spasing</p>
+    </div>
+</body>
+</html>

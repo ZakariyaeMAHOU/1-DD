@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <input type="text" id="username" name="username" placeholder="Max 10 Chars only"><span id="userV"></span><br>
+        <input type="text" id="age" name="age" placeholder="Cant be empty"><span id="ageV"></span><br>
+        <input type="submit" id="btn" onclick="validateForm()" value="submit data">
+    </form>
+
+    <script>
+
+        /*
+            DOM [Events]
+            - Use Events On HTML
+            - Use Events On JS
+            --- onclick
+            --- oncontextmenu
+            --- onmouseenter
+            --- onmouseleave
+        
+            --- onload
+            --- onscroll
+            --- onresize
+        
+            --- onfocus
+            --- onblur
+            --- onsubmit
+        */
+
+        let form = document.querySelector('form');
+        let username = document.getElementById('username');
+        let age = document.getElementById('age');
+
+        let errU = document.createElement('span');
+        let errA = document.createElement('span');
+        username.appendChild(errU);
+        age.appendChild(errA);
+
+        form.onsubmit = function (e) {
+            let userValide = false;
+            let ageValide = false;
+
+            if (username.value.length < 10) {
+                userValide = true;
+            } else {
+                userValide = false;
+            }
+
+            if (age.value !== "") {
+                ageValide = true;
+            } else {
+                ageValide = false;
+            }
+
+            if (!userValide || !ageValide) {
+                e.preventDefault();
+            } else {
+                alert("submit succes")
+            }
+        }
+    </script>
+</body>
+
+</html>

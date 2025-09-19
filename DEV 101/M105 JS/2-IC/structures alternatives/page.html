@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = prompt("Entrer premier nombre :");
+        let b = prompt("Entrer deuxieme nombre :");
+        let c = prompt("Entrer operation nombre :");
+        let s;
+        if (c == "+")
+            s = +a + +b;
+        else if (c == "-")
+            s = a - b;
+        else if (c == "*")
+            s = a * b;
+        else
+            s = a / b;
+        alert(a + c + b + '=' + s);
+
+    </script>
+</body>
+
+</html>

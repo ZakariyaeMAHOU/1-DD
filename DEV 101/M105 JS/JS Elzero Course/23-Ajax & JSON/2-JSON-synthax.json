@@ -1,0 +1,17 @@
+{
+    "name": "Zakaria",
+    "age": 19,
+    "emails": {
+        "primaryEmails": {
+            "email1": "Zakariyaemahou@gmail.com",
+            "email2": "Mahouzakariyae@gmail.com"
+        },
+        "secondEmails": {
+            "email1": "Zikomahou@gmail.com",
+            "email2": "Zakimahou8@gmail.com"
+        }
+    },
+    "skills": ["HTML", "CSS", "JS"],
+    "free": false,
+    "null": null
+}

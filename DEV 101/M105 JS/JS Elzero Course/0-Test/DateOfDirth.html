@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Of Birth</title>
+</head>
+
+<body>
+    <label>Year:</label>
+    <select name="years" id="years"></select>
+
+    <label>Month:</label>
+    <select name="months" id="months"></select>
+
+    <label>Day:</label>
+    <select name="days" id="days"></select>
+
+    <button onclick="verifieDate()">Check</button>
+
+    <script>
+        let now = new Date();
+        //Years
+        let yearMax = now.getFullYear(),
+            yearMin = yearMax - 121;
+
+        for (let i = yearMax; i > yearMin; i--) {
+            let options = document.createElement("option");
+            options.value = i;
+            options.text = i;
+            document.getElementById("years").appendChild(options);
+        }
+        //Months
+        for (let i = 1; i <= 12; i++) {
+            let options = document.createElement("option");
+            options.value = i;
+            options.text = i;
+            document.getElementById("months").appendChild(options)
+        }
+        //Days
+        for (let i = 1; i <= 31; i++) {
+            let options = document.createElement("option");
+            options.value = i;
+            options.text = i;
+            document.getElementById("days").appendChild(options)
+        }
+
+        //Verification
+
+        function verifieDate() {
+            let year = +document.getElementById("years").value;
+            let month = + document.getElementById("months").value;
+            let day = + document.getElementById("days").value;
+            let dayMax;
+
+            if (month === 4 || month === 6 || month === 9 || month === 11) dayMax = 30;
+            else if (month === 2 && year % 4 === 1) dayMax = 28;
+            else if (month === 2 && year % 4 === 0) dayMax = 29;
+            else dayMax = 31;
+
+            let p = document.createElement("p");
+
+            if (day <= dayMax) {
+                p.textContent = "The date is correct";
+            } else {
+                p.textContent = "The date is incorrect";
+            }
+            document.body.appendChild(p);
+        }
+    </script>
+</body>
+
+</html>

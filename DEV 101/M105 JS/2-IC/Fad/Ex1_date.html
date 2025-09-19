@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* 1. Créer une fct retournerNomJour(n) qui prend en paramètre un nombre entre 0 et 6
+            et renvoie le nom du jour dans la semaine en français sinon la chaine 'erreur'
+           2. Créer une fct retournerNomMois(n) qui prend en paramètre un nombre entre 0 et 11 sinon la chaine 'erreur'
+            et renvoie le nom du mois en français
+           3. Créer un objet Date pour récupérer la date du système et afficher 
+              la date d'aujourd'hui sous la forme jj/mm/aaaa avec les noms du jour et du mois en français
+        */
+        function retournerNomJour(n) {
+            let jours = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
+            if (n >= 0 && n <= 6)
+                return jours[n];
+            return 'Erreur';
+        }
+        function retournerNomMois(n){
+            let mois = ["Janvier", "Fevrier", "Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Decembre"];
+            if (n >= 0 && n <= 11)
+                return mois[n];
+            return 'Erreur';
+        }
+        let now=new Date();
+        document.write('Aujourd\'hui : '+now.toLocaleDateString());
+        let jour=now.getDay();
+        document.write('<br>Nom du jour : '+retournerNomJour(jour));
+        document.write('<br>Nom du mois : '+retournerNomMois(now.getMonth()));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

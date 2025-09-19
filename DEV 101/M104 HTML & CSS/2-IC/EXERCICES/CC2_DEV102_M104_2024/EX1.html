@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX1</title>
+    <style>
+        label {
+            display: inline-block;
+            width: 100px;
+            text-align: right;
+        }
+        input:focus {
+            background-color: rgb(0, 200, 255);
+        }
+        input:checked+span {
+            font-weight: bolder;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <label>Nom : </label>
+        <input type="text"><br>
+        <label>Genre : </label>
+        <input type="radio" name="genre"><span>F</span>
+        <input type="radio" name="genre"><span>M</span> <br>
+        <label>Langues : </label>
+        <input type="checkbox"><span>Fr</span>
+        <input type="checkbox"><span>Ar</span> <br>
+        <input type="button" value="Valider">
+        <input type="button" value="Annuler">
+    </form>        
+</body>
+</html>

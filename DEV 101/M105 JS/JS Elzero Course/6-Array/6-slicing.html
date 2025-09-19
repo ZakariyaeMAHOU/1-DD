@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slicing Array</title>
+</head>
+
+<body>
+
+    <script>
+        /*
+        Arrays Methods [Slicing]
+        -slice(Sart [opt], End [opt] not including end)
+        ---slice() => All Array
+        ---If Start is undefined => 0
+        ---Negative count from end
+        ---If end is undefined || > Indexes => Slice to the end array.length
+        ---Return new array
+        -splice(Start [Mand], Deletecount [opt] [0 no remove], The items to add [opt] )
+        ---If Negative => Start From the end
+        */
+
+        let myFriends = ["Anas", "Haytam", "Mohammed", "Amine", "Ahmed"];
+
+        console.log("slice");
+        console.log(myFriends.slice(0, 3));// ["Anas", "Haytam", "Mohammed"]
+        console.log(myFriends.slice(-3));// ["Mohammed", "Amine", "Ahmed"]
+        console.log(myFriends);// Array Don't save changes
+
+        console.log("splice");
+        console.log(myFriends.splice(2, 3, "Zakaria", "Zakaria"));// Remove this: ["Mohammed", "Amine", "Ahmed"] And changed by: ["Zakaria", "Zakaria"]  =>  ["Mohammed", "Amine", "Ahmed"]
+        console.log(myFriends);// Remove this: ["Mohammed", "Amine", "Ahmed"] And changed by: ["Zakaria", "Zakaria"]  =>  ["Anas", "Haytam", "Zakaria", "Zakaria"]
+        console.log(myFriends);// Array Save The changes
+    </script>
+</body>
+
+</html>

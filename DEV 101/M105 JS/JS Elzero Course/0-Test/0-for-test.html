@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Learn JavaScript</title>
+</head>
+
+<body>
+    <script>
+        let now = new Date()
+        function verifieDate(d, m, y) {
+            let ymx = now.getFullYear();
+            let ymn = ymx - 120;
+            let mmx = 12;
+            let mmn = 1;
+            let dmx;
+            let dmn = 1;
+
+            if (m === 4 || m === 6 || m === 9 || m === 11) dmx = 30;
+            else if (m === 2 && y % 4 === 1) dmx = 28;
+            else if (m === 2 && y % 4 === 0) dmx = 29;
+            else dmx = 31;
+
+            if (y <= ymx && y >= ymn && m <= mmx && m >= mmn && d <= dmx && d >= 1)
+                return true;
+            else return false;
+        }
+        console.log(verifieDate(29, 4, 2025));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // 1
+        let n = new Date();
+        function nomeDuJour(number = n.getDay()) {
+            let jours = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
+            if (number <= 6 && number >= 0) return jours[n];
+            return "Error";
+        }
+
+        document.write('<br>Nom du jour : ' + nomeDuJour());
+
+        // 2
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GET</title>
+</head>
+
+<body>
+    <h1>All Posts</h1>
+    <div class="posts"></div>
+
+</body>
+<script>
+    // Get
+    function getData() {
+        let myRequest = new XMLHttpRequest();
+        myRequest.open("GET", "https://jsonplaceholder.typicode.com/posts");
+        // myRequest.open("GET", "https://jsonplaceholder.typicode.com/posts?userId=7");
+        myRequest.responseType = "json";
+        myRequest.send();
+        myRequest.onload = function () {
+            if (this.status >= 200 && this.status < 300 && this.readyState == 4) {
+                let posts = myRequest.response
+                for (post of posts) {
+                    document.querySelector(".posts").innerHTML += `<h2>${post.title}<h2>`;
+                }
+            } else {
+                console.log("error")
+            }
+        }
+    }
+    getData();
+</script>
+
+</html>

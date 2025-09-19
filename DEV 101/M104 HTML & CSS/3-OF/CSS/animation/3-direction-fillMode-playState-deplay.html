@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Animation - Direction, Fill Mode, Play State, Delay</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        body {
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: #eee;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -50px;
+            margin-top: -50px;
+            color: white;
+            border-radius: 50%;
+            border: 5px solid red;
+            border-left-color: transparent;
+
+            animation-name: spin;
+            animation-duration: 2s;
+
+            animation-iteration-count: 2;
+            animation-timing-function: linear;
+
+            animation-direction: reverse;
+            animation-delay: 1s;
+            animation-fill-mode: both;
+            animation-play-state: running;
+
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: coloring 2s linear 1s 2 normal both;
+        }
+
+        div:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes coloring {
+            0% {
+                background-color: red;
+            }
+
+            50% {
+                background-color: blue;
+            }
+
+            100% {
+                background-color: black;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

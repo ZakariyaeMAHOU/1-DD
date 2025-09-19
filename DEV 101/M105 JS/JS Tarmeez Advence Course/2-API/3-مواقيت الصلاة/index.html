@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Axios -->
+    <script src="../node_modules/axios/dist/axios.min.js"></script>
+    <style>
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(rgba(255, 255, 255, 0.5)),
+                url(./images/bgck.jpg);
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            /* border: 2px solid #000; */
+            width: 100%;
+            height: 40px;
+            margin: 0 auto;
+            margin-bottom: 40px;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+        }
+
+        .menu {
+            border: 1px solid #000;
+        }
+
+        img {
+            width: 50px;
+            height: 40px;
+            padding-right: 10px;
+        }
+
+        .local {
+            padding: 0 40px;
+            width: 300px;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .local select {
+            background-color: rgba(0, 171, 60, 0.399);
+            width: 80px;
+            height: fit-content;
+            text-align: center;
+            border-radius: 20px;
+            width: 100px;
+        }
+
+        .local select>option {
+            background-color: rgba(0, 152, 101, 0.234);
+        }
+
+        .container {
+            /* border: 2px solid #000; */
+            position: relative;
+            border-radius: 20px;
+            width: 80%;
+            height: 400px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .right {
+            /* border: 1px solid #000; */
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            width: 30%;
+            min-width: 200px;
+            height: 100%;
+        }
+
+        .right img {
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .left {
+            /* border: 1px solid #000; */
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .date {
+            /* border: 1px solid #000; */
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            font-size: larger;
+            font-weight: bolder;
+            background-color: rgba(0, 133, 11, 0.2);
+            border-start-start-radius: 20px;
+        }
+
+        .date>div {
+            /* border: 1px solid #000; */
+            display: flex;
+            justify-content: space-between;
+            align-content: center;
+            width: 33%;
+        }
+
+        .date div#day {
+            /* border: 1px solid #000; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .prayer {
+            /* border: 1px solid #000; */
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-around;
+            align-items: center;
+            padding: 20px;
+            font-size: larger;
+            font-weight: bolder;
+        }
+
+        .prayer>div {
+            /* border: 1px solid #000; */
+            /* width: 50%; */
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="local">
+            <select id="country">
+                <option value="morroco">المغرب</option>
+            </select>
+            <select id="cities">
+                <option value="Agadir">أكادير</option>
+                <option value="Asilah">أصيلة</option>
+                <option value="Azrou">أزرو</option>
+                <option value="Beni Mellal">بني ملال</option>
+                <option value="Berkane" selected>بركان</option>
+                <option value="Casablanca">الدار البيضاء</option>
+                <option value="Chefchaouen">شفشاون</option>
+                <option value="Dakhla">الداخلة</option>
+                <option value="El Jadida">الجديدة</option>
+                <option value="Errachidia">الراشيدية</option>
+                <option value="Essaouira">الصويرة</option>
+                <option value="Fes">فاس</option>
+                <option value="Guelmim">كلميم</option>
+                <option value="Kenitra">القنيطرة</option>
+                <option value="Khemisset">الخميسات</option>
+                <option value="Khenifra">خنيفرة</option>
+                <option value="Khouribga">خريبكة</option>
+                <option value="Larache">العرائش</option>
+                <option value="Marrakech">مراكش</option>
+                <option value="Meknes">مكناس</option>
+                <option value="Mohammedia">المحمدية</option>
+                <option value="Nador">الناظور</option>
+                <option value="Ouarzazate">ورزازات</option>
+                <option value="Oujda">وجدة</option>
+                <option value="Rabat">الرباط</option>
+                <option value="Safi">آسفي</option>
+                <option value="Sale">سلا</option>
+                <option value="Tangier">طنجة</option>
+                <option value="Tetouan">تطوان</option>
+
+            </select>
+        </div>
+        <img src="./images/menu.png" alt="menu">
+    </div>
+
+
+    <div class="container">
+
+        <div class="right">
+            <img src="./images/a-simple-islamic-design-with-a-green-gradient-back.jpg" alt="">
+        </div>
+
+        <div class="left">
+            <div class="date">
+                <div id="miladiDate">
+                    <p class="one">01</p>
+                    <p class="two">January</p>
+                    <p class="three"></p>
+                </div>
+                <div id="day">
+                    <p>الإثنين</p>
+                </div>
+                <div id="hijriDate">
+                    <p class="three"></p>
+                    <p class="two">محرم</p>
+                    <p class="one">01</p>
+                </div>
+            </div>
+            <div class="prayer">
+                <div class="prayerNames">
+                    <div>الصبح</div>
+                    <div>الشروق</div>
+                    <div>الظهر</div>
+                    <div>العصر</div>
+                    <div>المغرب</div>
+                    <div>العشاء</div>
+                </div>
+                <div class="prayerTimes">
+                    <div id="fajr">00:00</div>
+                    <div id="choroq">00:00</div>
+                    <div id="dohr">00:00</div>
+                    <div id="asr">00:00</div>
+                    <div id="maghreb">00:00</div>
+                    <div id="ichaa">00:00</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        function getCityName() {
+            showInfo()
+            let city = document.querySelector("#cities")
+            city.addEventListener("change", function () {
+                console.log(city.value);
+                showInfo(city.value)
+            })
+        }
+
+        function showInfo(city = "Berkane") {
+            axios.get(`https://api.aladhan.com/v1/timingsByCity?city=${city}&country=Morocco&method=1`)
+                .then((resolve) => {
+                    function setTextOnElement(selector, data) {
+                        const el = document.querySelector(selector);
+                        if (el) el.textContent = data;
+                    }
+
+                    const data = resolve.data.data;
+                    let timings = {
+                        "#fajr": data.timings.Fajr,
+                        "#choroq": data.timings.Sunrise,
+                        "#dohr": data.timings.Dhuhr,
+                        "#asr": data.timings.Asr,
+                        "#maghreb": data.timings.Maghrib,
+                        "#ichaa": data.timings.Isha,
+                    }
+                    let hijriDate = {
+                        ".date #day": data.date.hijri.weekday.ar,
+                        "#hijriDate .one": data.date.hijri.month.number,
+                        "#hijriDate .two": data.date.hijri.month.ar,
+                        "#hijriDate .three": data.date.hijri.year,
+                    }
+                    let gregorianDate = {
+                        "#miladiDate .one": data.date.gregorian.day,
+                        "#miladiDate .two": data.date.gregorian.month.en,
+                        "#miladiDate .three": data.date.gregorian.year,
+                    }
+
+                    const myData = { ...timings, ...hijriDate, ...gregorianDate };
+                    for (let selector in myData) {
+                        setTextOnElement(selector, myData[selector]);
+                    }
+                })
+        }
+        getCityName()
+    </script>
+</body>
+
+</html>

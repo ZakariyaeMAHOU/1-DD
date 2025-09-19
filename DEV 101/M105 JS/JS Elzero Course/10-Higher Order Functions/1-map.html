@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>map</title>
+</head>
+
+<body>
+
+    <script>
+        let arr = [1, 2, 3, 4, 5];
+
+        newArr = arr.map((ele) => ele + ele);
+        console.log(newArr);
+
+        let swapC = "elZERo";
+        let sc = swapC
+            .split("")
+            .map((a) => a === a.toLowerCase() ? a.toUpperCase() : a.toLowerCase())
+            .join("");
+        console.log(sc);
+
+        let invertedNbr = [1, -10, -20, 15, 100, -30];
+        let inn = invertedNbr.map((a) => a * -1);
+        console.log(inn);
+
+        let ignoreNbr = "Elz123er4o";
+        let ign = ignoreNbr
+            .split("")
+            // .map((a) => +a <= 9 || +a >= 0 ? "" : a)
+            .map((a) => isNaN(a) === false ? "" : a)
+            .join("");
+        console.log(ign);
+
+    </script>
+</body>
+
+</html>

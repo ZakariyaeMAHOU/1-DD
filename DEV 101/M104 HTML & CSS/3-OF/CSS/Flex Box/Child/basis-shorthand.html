@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Basis, Flex Shorthand</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .flex1 {
+            background-color: #eee;
+            width: 800px;
+            padding: 20px;
+            margin: 20px auto;
+            display: flex;
+            flex-flow: row;
+        }
+
+        .flex1 div {
+            /* box-sizing: content-box; */
+            background-color: red;
+            color: #eee;
+            width: 60px;
+            text-align: center;
+            margin-right: 5px;
+            padding: 20px;
+            /* flex-grow: 1; */
+
+        }
+
+        .flex2 {
+            background-color: #eee;
+            width: 800px;
+            height: 800px;
+            padding: 20px;
+            margin: 20px auto;
+            display: flex;
+            flex-flow: column;
+        }
+
+        .flex2 div {
+            /* box-sizing: content-box; */
+            background-color: red;
+            color: #eee;
+            width: 60px;
+            text-align: center;
+            margin-right: 5px;
+            padding: 20px;
+            /* flex-grow: 1; */
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>flex-flow: row; flex-basis: 350px;</h1>
+    <div class="flex1">
+        <div>1</div>
+        <div>2</div>
+        <div style="flex-basis: 350px;">3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+    <hr>
+    <h1>flex-flow: column; flex-basis: 350px;</h1>
+    <div class="flex2">
+        <div>1</div>
+        <div>2</div>
+        <div style="flex-basis: 350px;">3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+    <h1>Shorthand= flex: grow(0) shrink(1) basis(auto);</h1>
+</body>
+
+</html>

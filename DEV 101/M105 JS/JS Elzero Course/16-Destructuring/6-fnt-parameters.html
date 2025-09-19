@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let user = {
+            theName: "Zakaria",
+            theAge: 19,
+            skills: {
+                html: 90,
+                css: 80,
+            },
+        };
+        showDetails(user);
+
+        // function showDetails(user) {
+        //     console.log(`Your name ${user.theName}`)
+        //     console.log(`Your age ${user.theAge}`)
+        //     console.log(`Your css progress is ${user.skills.css}`)
+        // }
+
+        function showDetails({ theName: n, theAge: a, skills: { css: c } } = user) {
+            console.log(`Your name ${n}`)
+            console.log(`Your age ${a}`)
+            console.log(`Your css progress is ${c}`)
+        }
+    </script>
+</body>
+
+</html>

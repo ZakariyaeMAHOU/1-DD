@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        class User {
+            constructor(i, u, s) {
+                // Properties
+                this.id = i;
+                this.username = u || "Unkown";
+                this.salary = s < 7000 ? s += 500 : s = s;
+                this.msg = function () {
+                    return `hello ${this.username} your salary is ${this.salary}`
+                }
+            }
+            // Methods
+            writeMsg() {
+                return `Hello your id is ${this.id}`;
+            }
+        }
+
+        let user1 = new User(100, "Zakaria", 6000);
+
+        console.log(user1);
+        console.log(user1.msg());
+        console.log(user1.writeMsg());
+    </script>
+    </script>
+</body>
+
+</html>

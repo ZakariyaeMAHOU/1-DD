@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EFMR V1 M105-Js 2022</title>
+</head>
+
+<body>
+    <div id="voitures"></div>
+
+    <script>
+        // 1
+        let T_Voitures = [
+            {
+                Immatriculation: "48-A-20000",
+                Marque: "Clio 3",
+                Couleur: "Noir",
+                Carburant: "Diesel",
+                Prix_Jour: 250
+            },
+            {
+                Immatriculation: "48-A-20001",
+                Marque: "Clio 4",
+                Couleur: "Rouge",
+                Carburant: "Diesel",
+                Prix_Jour: 300
+            },
+            {
+                Immatriculation: "48-A-20002",
+                Marque: "Dacia",
+                Couleur: "Noir",
+                Carburant: "Essence",
+                Prix_Jour: 200
+            }
+        ];
+
+        // 2.a
+        function getVoitures() {
+            let tableau = `<table>
+                <tr>
+                    <th>Immatriculation</th>
+                    <th>Marque</th>
+                    <th>Couleur</th>
+                    <th>Carburant</th>
+                    <th>Prix_Jour</th>
+                    <th></th>
+                </tr>`;
+            for (let i = 0; i < T_Voitures.length; i++) {
+                tableau +=
+                    `<tr>
+                        <td>${T_Voitures[i].Immatriculation}</td>
+                        <td>${T_Voitures[i].Marque}</td>
+                        <td>${T_Voitures[i].Couleur}</td>
+                        <td>${T_Voitures[i].Carburant}</td>
+                        <td>${T_Voitures[i].Prix_Jour}</td>
+                        <td><button onclick = "deleteVoiture('${T_Voitures[i].Immatriculation}')">Suprrimer</button></td>
+                    </tr>`;
+            }
+            tableau += `</table>`;
+            document.getElementById("voitures").innerHTML = tableau;
+        }
+
+        // 2.b
+        function deleteVoiture(a) {
+            let deleteVoitures = [];
+            for (let i = 0; i < T_Voitures.length; i++) {
+                if (T_Voitures[i].Immatriculation !== a)
+                    deleteVoitures.push(T_Voitures[i]);
+            }
+            T_Voitures = deleteVoitures
+            // T_Voitures = T_Voitures.filter(T_Voitures => T_Voitures.Immatriculation !== immat);
+            getVoitures();
+        }
+
+
+        // 2.c
+    </script>
+    <label>Marque</label>
+    <input type="text" id="marque">
+    <button onclick="getVoitureMarque(document.getElementById('marque').value)">Filter</button>
+    <div id="divFilter"></div>
+    <script>
+        function getVoitureMarque(b) {
+            //////////////.filter()////////////////////////////
+            let filterVoitures = [];
+            for (let i = 0; i < T_Voitures.length; i++) {
+                if (T_Voitures[i].Marque === b)
+                    filterVoitures.push(T_Voitures[i])
+            }
+            /////////////////////////////////////////////////
+
+            let tableauFilter = `<table>
+                <tr>
+                    <th>Immatriculation</th>
+                    <th>Marque</th>
+                    <th>Couleur</th>
+                    <th>Carburant</th>
+                    <th>Prix_Jour</th>
+                </tr>`;
+
+            for (let i = 0; i < filterVoitures.length; i++) {
+                tableauFilter += `
+                    <tr>
+                        <td>${filterVoitures[i].Immatriculation}</td>
+                        <td>${filterVoitures[i].Marque}</td>
+                        <td>${filterVoitures[i].Couleur}</td>
+                        <td>${filterVoitures[i].Carburant}</td>
+                        <td>${filterVoitures[i].Prix_Jour}</td>
+                    </tr>
+                `;
+            }
+            tableauFilter += `</table>`;
+            document.getElementById('divFilter').innerHTML = tableauFilter;
+        }
+        getVoitures();
+        let filterVoitures = [];
+        for (let i = 0; i < T_Voitures.length; i++) {
+            if (T_Voitures[i].Marque === "Dacia")
+                filterVoitures.push(T_Voitures[i])
+        }
+        console.log(filterVoitures)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>Stop setTimeout</button>
+
+    <script>
+        // setTimeout
+        function sayHello(user, age) {
+            console.log(`Hello ${user} your age is ${age}`)
+        }
+        setTimeout(sayHello, 1000, "Zakaria", 19)
+
+        // clearTimeout
+        let counter = setTimeout(function () {
+            console.log("setTimeout");
+        }, 3000);
+        let btn = document.querySelector('button');
+        btn.onclick = function () {
+            clearTimeout(counter)
+        }
+    </script>
+</body>
+
+</html>

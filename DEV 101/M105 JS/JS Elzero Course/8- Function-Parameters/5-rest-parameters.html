@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Rest Parameters</title>
+</head>
+
+<body>
+
+    <script>
+        /*
+        Function
+        -rest parameters
+        -only one allowed
+        -must be last element
+        */
+
+        function calc(...numbers) {
+            let result = 0;
+            for (let i = 0; i < numbers.length; i++) {
+                result += numbers[i]
+            }
+            return result;
+        }
+
+        console.log(calc(10, 20, 30, 40));
+    </script>
+</body>
+
+</html>

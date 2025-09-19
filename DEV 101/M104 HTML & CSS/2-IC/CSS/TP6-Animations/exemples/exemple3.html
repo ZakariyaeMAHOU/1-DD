@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cube 3D animé</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+
+    .scene {
+      width: 200px;
+      height: 200px;
+      perspective: 600px; /* Perspective 3D */
+    }
+
+    .cube {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      animation: rotateCube 6s infinite ease-in-out; /* Animation de rotation */
+    }
+
+    .face {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border: 1px solid #ccc;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Position des faces du cube */
+    .front  { transform: translateZ(100px); background-color: #3498db; } /* Face avant (bleu) */
+    .back   { transform: rotateY(180deg) translateZ(100px); background-color: #e74c3c; } /* Face arrière (rouge) */
+    .left   { transform: rotateY(-90deg) translateZ(100px); background-color: #2ecc71; } /* Face gauche (vert) */
+    .right  { transform: rotateY(90deg) translateZ(100px); background-color: #f39c12; } /* Face droite (orange) */
+    .top    { transform: rotateX(90deg) translateZ(100px); background-color: #9b59b6; } /* Face du dessus (violet) */
+    .bottom { transform: rotateX(-90deg) translateZ(100px); background-color: #34495e; } /* Face du dessous (gris foncé) */
+
+    /* Animation du cube */
+    @keyframes rotateCube {
+      0% {
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+      }
+      25% {
+        transform: rotateX(90deg) rotateY(90deg) rotateZ(0deg);
+      }
+      50% {
+        transform: rotateX(180deg) rotateY(180deg) rotateZ(0deg);
+      }
+      75% {
+        transform: rotateX(270deg) rotateY(270deg) rotateZ(0deg);
+      }
+      100% {
+        transform: rotateX(360deg) rotateY(360deg) rotateZ(0deg);
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="scene">
+    <div class="cube">
+      <div class="face front"></div>
+      <div class="face back"></div>
+      <div class="face left"></div>
+      <div class="face right"></div>
+      <div class="face top"></div>
+      <div class="face bottom"></div>
+    </div>
+  </div>
+
+</body>
+</html>

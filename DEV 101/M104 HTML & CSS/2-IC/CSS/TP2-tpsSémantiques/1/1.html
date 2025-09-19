@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box; /* يضمن أن الأحجام تحسب بما في ذلك الحواف */
+        }
+
+        html, body {
+        height: 100%; /* لتغطية كامل الشاشة */
+        font-family: Arial, sans-serif; /* اختيار خط افتراضي */
+        line-height: 1.5; /* تحسين التباعد بين السطور */
+        }
+
+        img, video {
+        max-width: 100%; /* يجعل الوسائط مستجيبة */
+        height: auto;
+        }
+
+        a {
+        text-decoration: none; /* إزالة التسطير عن الروابط */
+        color: inherit; /* استخدام نفس لون النص المحيط */
+        }
+
+        ul, ol {
+        list-style: none; /* إزالة أنماط القوائم الافتراضية */
+        }
+
+        button, input, textarea {
+        font: inherit; /* يجعل النصوص متسقة مع النص العام */
+        border: none; /* إزالة الحدود الافتراضية */
+        outline: none; /* إزالة التأثير عند التركيز */
+        background: none; /* إزالة الخلفيات الافتراضية */
+        }
+
+        table {
+        border-collapse: collapse; /* إزالة المسافات بين خلايا الجدول */
+        width: 100%; /* ملء العرض المتاح */
+        }
+
+
+        hr{
+            color: rgb(74, 232, 69);
+        }
+
+        header{
+            background-color: rgb(74, 232, 69);
+            text-align: center;
+
+        }
+        h1{
+            text-align: center;
+            color: white;
+        }
+        .menu{
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 10px;
+            list-style-type: none;
+            color: white;
+            
+        }
+        
+
+     
+
+
+        main{
+            gap: 20px;
+            display: flex;
+            justify-content: space-around;
+
+        }
+        h2{
+            margin: auto auto auto 10px ;
+        }
+
+        h3{
+            margin: auto auto auto 10px ;
+        }
+
+        p{
+            margin:  10px 10px ;
+        }
+
+        #acc{
+            background-color: rgb(229, 229, 229);
+            margin: 10px 0px 10px 10px;
+            width: 30% ;
+            height: 250px;
+            text-align: left;
+            font-size: small;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+
+
+        }
+
+        #apdn{
+            background-color: rgb(229, 229, 229);
+            margin: 10px 0px;
+            width: 30% ;
+            height: 250px;
+            text-align: left;
+            font-size: small;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+
+        }
+
+        #ns{
+            background-color: rgb(229, 229, 229);
+            margin: 10px 0px;
+            width: 30% ;
+            height: 250px;
+            text-align: left;
+            font-size: small;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+
+        }
+        h3{
+            color: rgb(74, 232, 69);
+        }
+
+        h4{
+            margin: 20px 40px 30px 10px;
+        }
+
+        .ar li{
+            list-style-type: disc;
+            margin: 0px 30px 0px 30px;
+            text-decoration-line: underline ;
+            color: blue;
+        }
+
+
+        .ar{
+            background-color: rgb(229, 229, 229) ;
+            margin: 10px 10px 10px 0px;
+            height: 250px;
+            width: 10% ;
+            text-align: left;
+            font-size: small;
+
+        }
+
+
+        .contact{
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 10px;
+            list-style-type: none;
+            color: white;
+        }
+
+        footer{
+            background-color: rgb(44, 45, 45);
+            color: white;
+            text-align: center;
+            height: 250px;
+            padding: 30px;
+
+            
+        }
+
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Bienvenue sur Mon Site Web</h1>
+        <nav>
+            <ul class="menu">
+                <li><a href="#acc">Accueil</a></li>
+                <li><a href="#apdn">À propos</a></li>
+                <li><a href="#ns">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article id="acc">
+            <h2>Accueil</h2>
+            <hr>
+            <p>Bienvenue sur notre site web où nous vous proposons les meilleures solutions digitales.</p>
+        </article>
+        <article id="apdn">
+            <h2>À propos de nous</h2>
+            <hr>
+            <p>Nous sommes une entreprise innovante spécialisée dans les services numériques et les solutions de transformation digitale.</p>
+        </article>
+        <article id="ns">
+            <h2>Nos Services</h2>
+            <hr>
+            <h3>Développement Web</h3>
+            <p>Nous créons des sites web modernes et performants adaptés à vos besoins.</p>
+            <h3>Marketing Digital</h3>
+            <p>Améliorez votre visibilité en ligne grâce à nos services de marketing digital.</p>
+        </article>
+        <article class="ar">
+            <h4>Articles récents</h4>
+            <ul>
+                <li><a href="">Comment booster votre SEO</a></li>
+                <li><a href="">Les tendances du marketing en 2024</a></li>
+            </ul>
+        </article>
+    </main>
+    <footer>
+        <p id="p4">&copy; 2024 Mon Site Web. Tous droits réservés.</p>
+        <ul id="contact" class="contact">
+            <li><a href="">Facebook</a></li>
+            <li><a href="">Twitter</a></li>
+            <li><a href="">LinkedIn</a></li>
+        </ul>
+    </footer>
+    
+</body>
+</html>

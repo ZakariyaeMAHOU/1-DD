@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <input type="text" id="username" name="username" placeholder="Max 10 Chars only"><span id="userV"></span><br>
+        <input type="text" name="age" placeholder="Cant be empty"><span id="ageV"></span><br>
+        <input type="submit" id="btn" onclick="validateForm()" value="submit data">
+    </form>
+    <script>
+        /*
+            DOM [Events]
+            - Use Events On HTML
+            - Use Events On JS
+            --- onclick
+            --- oncontextmenu
+            --- onmouseenter
+            --- onmouseleave
+        
+            --- onload
+            --- onscroll
+            --- onresize
+        
+            --- onfocus
+            --- onblur
+            --- onsubmit
+        */
+
+        let username = document.getElementById('username');
+        let age = document.querySelector("[name = 'age']");
+
+        username.addEventListener('blur', vUser)
+        let errU = document.getElementById("userV");
+        function vUser() {
+            if (username.value.trim().length < 10 && username.value.trim().length !== 0) {
+                errU.textContent = "valid";
+                errU.style.color = "green";
+                username.style.border = "2px solid green";
+                return true;
+            } else if (username.value.trim().length === 0) {
+                errU.textContent = "error: Cant be empty";
+                errU.style.color = "red";
+                username.style.border = "2px solid red";
+                return false;
+            } else {
+                errU.textContent = "error: Max 10 Chars only";
+                errU.style.color = "red";
+                username.style.border = "2px solid red";
+                return false;
+            }
+        }
+
+        age.addEventListener('blur', vAge)
+        let errA = document.getElementById("ageV");
+        function vAge() {
+            if (age.value.trim().length > 0) {
+                errA.textContent = "valid";
+                errA.style.color = "green";
+                age.style.border = "2px solid green";
+                return true;
+            } else {
+                errA.textContent = "error: Cant be empty";
+                errA.style.color = "red";
+                age.style.border = "2px solid red";
+                return false;
+            }
+        }
+
+        let frm = document.getElementsByTagName('form')
+
+        frm[0].addEventListener('submit', vForm)
+        function vForm(e) {
+            if (vUser() === false || vAge() === false)
+                e.preventDefault();
+        }
+
+
+        function validateForm() {
+            if (vUser() === true && vAge() === true)
+                alert("succes!");
+            else
+                alert("error!");
+        }
+    </script>
+</body>
+
+</html>

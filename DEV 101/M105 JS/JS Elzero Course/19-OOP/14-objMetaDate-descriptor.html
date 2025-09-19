@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let myObject = {
+            a: 1,
+            b: 2,
+        };
+        Object.defineProperties(myObject, {
+            c: {
+                // writable: false, // its false by default
+                // enumerable: false,   // its false by default
+                configurable: true,
+                value: 3,
+            },
+            d: {
+                configurable: true,
+                value: 4,
+            },
+            e: {
+                configurable: true,
+                value: 5,
+            },
+        });
+
+        console.log(myObject);
+        console.log(Object.getOwnPropertyDescriptor(myObject, "d"));
+        console.log(Object.getOwnPropertyDescriptors(myObject));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="pageServeur.php">
+        <fieldset>
+            <legend>Formulaire d'inscription</legend>
+            
+            <label for="nom">Nom <span>*</span> :</label>
+            <input type="text" name="nom" id="nom"> <br>
+            
+            <label for="prenom">Prénom <span>*</span> :</label>
+            <input type="text" name="prenom" id="prenom"> <br>
+            
+            <label for="sexe">Sexe <span>*</span> :</label>
+                <input type="radio" name="sexe" id="F">
+                <label for="F">F</label>
+                <input type="radio" name="sexe" id="M">
+                <label for="M">M</label> <br>
+
+            <label for="situationFamiliale">Situation Familiale :</label>
+                <input type="radio" name="situationFamiliale" id="celebatire">
+                <label for="celebatire">Célibataire</label>
+                <input type="radio" name="situationFamiliale" id="marie">
+                <label for="marie">Marié</label>
+                <input type="radio" name="situationFamiliale" id="divorce">
+                <label for="divorce">Divorcé</label>
+                <input type="radio" name="situationFamiliale" id="veuf">
+                <label for="veuf">Veuf</label> <br>
+
+            <label for="dateDeNaissance">Date de naissance <span>*</span> :</label>
+            <input type="date" name="dateDeNaissance" id="dateDeNaissance"> <br>
+
+            <label for="langues">Langues <span>*</span> :</label>
+                <input type="checkbox" name="ar" id="ar" checked> 
+                <label for="ar">Ar</label>
+                <input type="checkbox" name="fr" id="fr">
+                <label for="fr">Fr</label>
+                <input type="checkbox" name="ang" id="ang">
+                <label for="ang">Ang</label> <br>
+
+            <label for="pays">Pays <span>*</span> :</label>
+                <select name="pays" id="pays">
+                    <option value="">Maroc</option>
+                    <option value="">France</option>
+                    <option value="">Algerie</option>
+                </select><br>
+
+            <label for="motDePasse">Mot de passe <span>*</span> :</label>
+            <input type="password" name="motDePasse" id="motDePasse"><br>
+
+            <label for="commentaire">Commentaire :</label>
+            <textarea name="commentaire" id="commentaire" cols="20">Bonjour,</textarea><br>
+
+            <input type="submit" value="S'inscrire">
+            <input type="reset" value="Annuler">
+            <input type="button" value="Imprimer" onclick="print()">
+        
+        
+        
+        
+        
+        
+        
+        </fieldset>
+    </form>
+    
+</body>
+</html>

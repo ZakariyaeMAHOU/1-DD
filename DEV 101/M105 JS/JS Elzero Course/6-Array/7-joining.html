@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joining Array</title>
+</head>
+
+<body>
+
+    <script>
+        /*
+        Arrays Methods [Joining]
+        -concat (Array, Array) =>Return a new array
+        -join(separator)
+        */
+
+        let myFriends = ["Amine", "Imad", "Hanin"];
+        let myBrothrs = ["Soufian", "Yassin"];
+        let mySchoolFriends = ["Anas", "Haytam"];
+
+        let all = myBrothrs.concat("Mohammed", myFriends, mySchoolFriends);
+
+        console.log(all);
+
+        console.log(all.join());
+        console.log(all.join(''));
+        console.log(all.join(' '));
+        console.log(all.join('|'));
+        console.log(all.join('|').toUpperCase());
+
+    </script>
+</body>
+
+</html>

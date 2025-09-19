@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>Div</div>
+    <p class="para" title="Paragraph" data-src="Testing">Paragraph</p>
+    <script>
+        let myP = document.getElementsByTagName('p')[0];
+        console.log(myP.attributes);
+        console.log('');
+        console.log(myP.hasAttribute('title'));
+        console.log('');
+
+        if (myP.hasAttributes())
+            console.log('has attr')
+        console.log('');
+
+        console.log(myP.removeAttribute('title'));
+    </script>
+</body>
+
+</html>

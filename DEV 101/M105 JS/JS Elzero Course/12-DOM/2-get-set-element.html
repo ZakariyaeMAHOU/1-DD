@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="js">
+        <p>hi &lt hi &gt</p>
+    </div>
+    <img src="" alt="">
+    <script>
+        let myElement = document.querySelector('.js');
+        // get 
+        myElement.innerHTML   //  =>      <p>hi &lt; hi &gt;</p>
+        myElement.textContent //  =>      hi < hi >
+        // set
+        myElement.innerHTML = `<span>hi</span>`;   //  =>      <span></span>
+        myElement.textContent = "hello <from> js";   //  =>      Hello <from> js
+
+
+
+        // set
+        document.images[0].src = "https://google.com";
+        document.images[0].alt = "Alternate";
+        document.images[0].title = "Picture";
+        document.images[0].id = "pic";
+        document.images[0].className = "img";
+
+
+
+        let myLink = document.querySelector(".link");
+        // getAttribute('name')
+        myLink.getAttribute("class");
+        myLink.getAttribute("href");
+        // setAttribute('href')
+        myLink.setAttribute("href", "https://twitter.com");
+        myLink.setAttribute("title", "Twitter");
+    </script>
+</body>
+
+</html>

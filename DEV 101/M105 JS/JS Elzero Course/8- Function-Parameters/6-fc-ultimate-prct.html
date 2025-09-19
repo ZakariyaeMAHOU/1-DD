@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> - Function Ultimate Practice</title>
+</head>
+
+<body>
+
+    <script>
+        /*
+        Funtion
+        -Parameters
+        -Default
+        -rest
+        -loop
+        -condition
+        */
+
+        function showInfo(fullName = "Unknown", age = "Unknown", rate = 0, show = "Yes", ...skills) {
+            document.write(`<div>`);
+            document.write(`<h3>Show Info</h3>`);
+            document.write(`<p>Full Name: ${fullName}</p>`);
+            document.write(`<p>Age: ${age}</p>`);
+            document.write(`<p>Rate: ${rate}$</p>`);
+            if (show === "Yes") {
+                if (skills.length <= 0) {
+                    document.write(`<p>Skills: 0 skills</p>`)
+                } else {
+                    document.write(`<p>Skills:</p>`)
+                    document.write(`<ul>`);
+                    for (let i = 0; i < skills.length; i++) {
+                        document.write(`<li>${skills[i]}</li>`)
+                    }
+                    document.write(`</ul>`);
+                }
+            } else {
+                document.write(`<p>Skills: Hidden</p>`);
+            }
+            document.write(`</div>`);
+        }
+        showInfo("Zakaria", 18, 10, "Yes", "Html", "CSS", "Js",);
+    </script>
+</body>
+
+</html>

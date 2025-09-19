@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let testArr = [1, 2, 3];
+        let testSet = new Set();
+
+        //add items
+        testArr.push(2);
+        testSet.add(1).add(2).add(3).add(2);
+
+        console.log(testArr);
+        console.log(testSet);
+
+        // not ordered
+        console.log(testSet[0]); // undefined
+
+        // size 
+        console.log(testSet.size); //3  .length => undefined
+
+        // delete
+        console.log(testSet.delete(2)); //true => set(2) {1, 3}
+        console.log(testSet.delete(20)); //false
+
+        //has
+        console.log(testSet.has(3)); //true 
+
+        //clear
+        // testSet.clear()
+
+        console.log("\n keys & iterator")
+        //keys & next & value & done
+        let myArr = [1, 2, 3]
+        let mySet = new Set(myArr);
+        let iterator = mySet.keys();
+        console.log(iterator);
+        console.log(iterator.next());// value: 1, done:false
+        console.log(iterator.next());// value: 2, done:false
+        console.log(iterator.next().value);// 3
+        console.log(iterator.next().done);// true
+
+        console.log("\nforeach")
+        // foreach 
+        mySet.forEach((element) => {
+            console.log(element)
+        });
+
+    </script>
+</body>
+
+</html>

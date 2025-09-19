@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incscreption</title>
+    <style>
+        body {
+            background-color: #9b46d3;
+        }
+
+        input,
+        select {
+            background-color: #9b46d3;
+            color: aliceblue;
+            outline: none;
+            border: 2px solid rgb(116, 0, 148);
+            border-radius: 5px;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px;
+        }
+
+        form {
+            margin: 30px;
+            padding: 50px;
+            background-color: rgb(215, 195, 250);
+            border-radius: 20px;
+            box-shadow: 0px 0px 15px 5px rgb(116, 0, 148);
+        }
+
+        form>div {
+            margin: 10px;
+            width: 100%;
+            height: 40px;
+            position: relative;
+        }
+
+        #gender {
+            position: relative;
+        }
+
+        form>div>input {
+            position: absolute;
+            right: 50%;
+            left: calc(50% - 100px);
+            width: 200px;
+        }
+
+        #gender+label+label {
+            text-align: center;
+            position: absolute;
+            right: 50%;
+            left: calc(50% - 100px);
+            width: 80px;
+
+            border: 2px solid rgb(116, 0, 148);
+            padding: 4px;
+            border-radius: 4px;
+        }
+
+        #gender+label {
+            text-align: center;
+            position: absolute;
+            right: 50%;
+            left: calc(50% + 20px);
+            width: 80px;
+
+            border: 2px solid rgb(116, 0, 148);
+            padding: 4px;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            cursor: pointer;
+            width: 80px;
+            right: calc(50% - 40px);
+        }
+
+        input[type="reset"] {
+            cursor: pointer;
+            width: 80px;
+            left: calc(50% + 27px);
+        }
+
+        div>span {
+            color: red;
+            position: absolute;
+            right: 50%;
+            left: calc(50% + 120px);
+            width: 200px;
+        }
+
+        #dateOfBirth+div {
+            display: inline-block;
+            position: absolute;
+            left: calc(50% - 100px);
+        }
+
+        #dateOfBirth+div>select {
+            width: calc(200px/3);
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="">
+        <h1>Inscription</h1>
+        <div>
+            <label for="fName">First Name<span>:</span></label>
+            <input type="text" id="fName">
+            <span>*</span>
+        </div>
+        <div>
+            <label for="lName">Last Name<span>:</span></label>
+            <input type="text" id="lName">
+            <span>*</span>
+        </div>
+        <div>
+            <label id="dateOfBirth">Date of Birth<span>:</span></label>
+            <div>
+                <select name="days" id="days">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                </select>
+                <select name="months" id="months">
+                    <option value="1">Jan</option>
+                    <option value="2">Feb</option>
+                    <option value="3">Mar</option>
+                    <option value="4">Apr</option>
+                    <option value="5">May</option>
+                    <option value="6">Jun</option>
+                    <option value="7">Jul</option>
+                    <option value="8">Aug</option>
+                    <option value="9">Sep</option>
+                    <option value="10">Oct</option>
+                    <option value="11">Nov</option>
+                    <option value="12">Dec</option>
+                </select>
+                <select name="years" id="years">
+                </select>
+                <span>*</span>
+            </div>
+        </div>
+        <div>
+            <label id="gender">Gender<span>:</span></label>
+            <label for="female">Female
+                <input type="radio" id="female" name="gender">
+            </label>
+            <label for="male">Male
+                <input type="radio" id="male" name="gender" checked>
+            </label>
+        </div>
+        <div>
+            <label for="phoneNumber">Phone Number<span>:</span></label>
+            <input type="text" id="phoneNumber" name="phoneNumber">
+            <span>*</span>
+        </div>
+        <div>
+            <label for="email">Email<span>:</span></label>
+            <input type="text" id="email" name="email">
+            <span>*</span>
+        </div>
+        <div>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </div>
+    </form>
+
+    <script>
+
+        //date update
+
+        const today = new Date();
+        const thisDay = today.getDate();
+        const thisMonth = today.getMonth();
+        const thisYear = today.getFullYear();
+
+        // add years
+        const years = document.getElementById('years');
+        const startYear = 1950;
+
+        for (let i = startYear; i <= thisYear; i++) {
+            const addYear = document.createElement('option');
+            addYear.value = i;
+            addYear.textContent = i;
+            years.appendChild(addYear);
+        }
+        // set today date
+        document.getElementById("days").value = thisDay;
+        document.getElementById("months").value = thisMonth;
+        document.getElementById("years").value = thisYear;
+
+
+
+        //check first name
+        let fName = document.getElementById('fName');
+        let lName = document.getElementById('lName');
+
+        fName.addEventListener('blur', checkFirstName);
+        function checkFirstName() {
+            let fNameErr = document.querySelector("#fName+span")
+            if (fName.value.trim === "" || fName.value.length <= 2) {
+                fNameErr.textContent = "The name is too short";
+                fName.style.border = "2px solid red";
+                return false;
+            } else {
+                fNameErr.textContent = "";
+                fName.style.border = "2px solid rgb(116, 0, 148)";
+                return true;
+            }
+        }
+
+
+
+        //check last name
+        lName.addEventListener('blur', checkLasttName);
+        function checkLasttName() {
+            let lNameErr = document.querySelector("#lName+span")
+            if (lName.value.trim === "" || lName.value.length <= 2) {
+                lNameErr.textContent = "The name is too short";
+                lName.style.border = "2px solid red";
+                return false;
+            } else {
+                lNameErr.textContent = "";
+                lName.style.border = "2px solid rgb(116, 0, 148)";
+                return true;
+            }
+        }
+
+
+
+        // check birth day
+
+        let dayB = document.getElementById("days");
+        let monthB = document.getElementById("months");
+        let yearB = document.getElementById("years");
+
+        let dayMax;
+        dayB.addEventListener('change', checkDateOfBirth);
+        monthB.addEventListener('change', checkDateOfBirth);
+        yearB.addEventListener('change', checkDateOfBirth);
+        function checkDateOfBirth() {
+            if (+monthB.value === 4 || +monthB.value === 6 || +monthB.value === 9 || +monthB.value === 11)
+                dayMax = 30;
+            else if (+monthB.value === 2 && +yearB.value % 4 === 1)
+                dayMax = 28;
+            else if (+monthB.value === 2 && +yearB.value % 4 === 0)
+                dayMax = 29;
+            else
+                dayMax = 31;
+
+            let birthERR = document.querySelector('#years+span');
+            let birthDate = new Date(+yearB.value, +monthB.value - 1, +dayB.value);
+            let usertYears = thisYear - birthDate.getFullYear();
+            let userMonth = thisMonth - birthDate.getMonth();
+            let userDays = thisDay - birthDate.getDate();
+
+            if (userMonth < 0 || (userMonth === 0 && userDays < 0)) {
+                usertYears--;
+            }
+            if (usertYears < 18) {
+                birthERR.textContent = " Age must be 18 or older";
+                dayB.style.border = "2px solid red";
+                monthB.style.border = "2px solid red";
+                yearB.style.border = "2px solid red";
+                return false;
+            }
+            else if (dayMax < +dayB.value) {
+                birthERR.textContent = "The date is invalid";
+                dayB.style.border = "2px solid red";
+                return false;
+            }
+            else {
+                birthERR.textContent = "";
+                return true;
+            }
+
+
+        }
+
+
+
+        //chack phone number
+        let phoneNumber = document.getElementById("phoneNumber");
+        phoneNumber.addEventListener('blur', checkPhoneNumber);
+        function checkPhoneNumber() {
+            let phoneNumberErr = document.querySelector("#phoneNumber+span")
+            let phoneNumberForm = /^0[67]\d{8}$/;
+            if (phoneNumber.value.trim() === "") {
+                phoneNumberErr.textContent = "Enter your phone number";
+                phoneNumber.style.border = "2px solid red";
+                return false;
+            }
+            else if (!phoneNumberForm.test(phoneNumber.value.trim())) {
+                phoneNumberErr.textContent = "The phone number is wrong";
+                phoneNumber.style.border = "2px solid red";
+                return false;
+            } else {
+                phoneNumberErr.textContent = "";
+                phoneNumber.style.border = "2px solid rgb(116, 0, 148)";
+                return true;
+            }
+        }
+
+
+
+        //check email
+        let email = document.getElementById("email");
+        email.addEventListener('blur', checkEmail);
+        function checkEmail() {
+            let emailErr = document.querySelector("#email+span");
+            let emailForm = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (email.value.trim() === "") {
+                emailErr.textContent = "Enter your email";
+                email.style.border = "2px solid red";
+                return false;
+            }
+            else if (!emailForm.test(email.value.trim())) {
+                emailErr.textContent = "Email format is wrong";
+                email.style.border = "2px solid red";
+                return false;
+            }
+            else {
+                emailErr.textContent = "";
+                email.style.border = "2px solid rgb(116, 0, 148)";
+                return true;
+            }
+        }
+
+
+        // stop send false or empty informations
+        document.querySelector('form').addEventListener('submit', checkInformation);
+        function checkInformation(e) {
+            if (!checkFirstName() || !checkLasttName() || !checkDateOfBirth() || !checkPhoneNumber() || !checkEmail())
+                e.preventDefault();
+        }
+    </script>
+
+</body>
+
+</html>

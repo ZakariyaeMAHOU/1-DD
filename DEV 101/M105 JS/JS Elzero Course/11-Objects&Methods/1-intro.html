@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object</title>
+</head>
+
+<body>
+
+    <script>
+        let user = {
+            //properties
+            name: "Zakaria",
+            age: 18,
+            "country of": "morocco",
+            //Methods
+            sayHello: function (name) {
+                return `Hello ${name}`;
+            },
+        };
+        console.log(user);
+        console.log(user.name);
+        console.log(user.age);
+        console.log(user["country of"]);
+        console.log(user.sayHello("zak"));
+    </script>
+</body>
+
+</html>

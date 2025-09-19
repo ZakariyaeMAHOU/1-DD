@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grow Shrink Order</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .flex {
+            background-color: #eee;
+            width: 800px;
+            padding: 20px;
+            margin: 20px auto;
+            display: flex;
+        }
+        .flex div {
+            box-sizing: content-box;
+            background-color: red;
+            color: #eee;
+            width: 80px;
+            text-align: center;
+            margin-right: 5px;
+            padding: 20px;
+
+            flex-grow: 1;
+            flex-shrink: 1;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="flex">
+        <div style="flex-grow: 6 ;flex-shrink: 1; order: 6;">1</div>
+        <div style="flex-grow: 5 ;flex-shrink: 2; order: 5;">2</div>
+        <div style="flex-grow: 4; flex-shrink: 3; order: 4;">3</div>
+        <div style="flex-grow: 3 ;flex-shrink: 4; order: 3;">4</div>
+        <div style="flex-grow: 2 ;flex-shrink: 5; order: 2;">5</div>
+        <div style="flex-grow: 1 ;flex-shrink: 6; order: 1;">6</div>
+    </div>
+</body>
+</html>

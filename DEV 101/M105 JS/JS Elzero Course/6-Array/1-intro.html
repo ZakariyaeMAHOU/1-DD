@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Introduction</title>
+</head>
+
+<body>
+
+    <script>
+        /*
+        Array
+        -Creat Arrays
+        -Access Arrays
+        -Nested Arrays
+        -Change Arrays Elaments
+        -Check For Array Array.isArray(arr);
+        */
+
+        let myFriends = ["Anas", "Haytam", "Ahmed", ["Mohammed", "Amine"]];
+
+        console.log(`Hello ${myFriends[2]}`);//Ahmed
+        console.log(`Hello ${myFriends[2][3]}`);//e
+        console.log(`Hello ${myFriends[3][1]}`);//Amine
+        console.log(`Hello ${myFriends[3][1][4]}`);//e
+
+        myFriends[1] = "Jrm";
+        console.log(myFriends);
+        myFriends[3] = "Anas"
+        console.log(myFriends);
+        myFriends[0] = ["Mohammed", "Amine"]
+        console.log(myFriends);
+
+        console.log(typeof myFriends);//Object
+        console.log(Array.isArray(myFriends));//true => myFriends is Array
+    </script>
+</body>
+
+</html>

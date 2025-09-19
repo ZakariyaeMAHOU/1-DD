@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background and colors</title>
+    <!-- External Style  -->
+    <link rel="stylesheet" href="css.css">
+    <!-- Internal Style  -->
+    <style>
+        
+        /* Background */
+
+        /* Background color  */
+        .div-1 {
+            background-color: grey; /*color name*/
+        }
+
+        .div-2 {
+            background-color: rgb(255, 0, 0); /*Red Green Blue Alpha Channel*/
+        }
+
+        .div-3 {
+            background-color: #00ff00; /*color Hex Code*/
+        }
+
+        /* background image and repeat */
+        .div-4 {
+            background-image: url(srs/images.jpg);
+            background-repeat: no-repeat;
+        }
+        .div-5 {
+            background-image: url(srs/images.jpg);
+            background-repeat: repeat-y;
+        }
+        .div-6 {
+            background-image: url(srs/images.jpg);
+            background-repeat: repeat-x;
+        }
+
+        .div-4,
+        .div-5,
+        .div-6 {
+            background-color: #0000FF;
+        }
+
+        /* background attachment */
+        .div-7 {
+            background: url(srs/images.jpg) repeat-y;
+            background-attachment: fixed;
+        }
+
+        /* background position */
+        .div-8 {
+            background: url(srs/Screenshot.png) no-repeat;
+            background-position: center;
+            background-position: 50% 50%;
+        }
+
+        /* background size */
+        .div-9 {
+            background: url(srs/Screenshot.png) no-repeat center;
+            background-size: 100% 100%;
+            background-size: contain;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="div-1">
+        <h1 class="title">Background and colors</h1>
+        <p class="first-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo vitae laboriosam perferendis laborum dolor. Ratione officia consequatur dolores sequi veritatis provident esse quasi debitis eaque, dolor, ut nemo alias ullam?</p>
+        <p id="secend-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo vitae laboriosam perferendis laborum dolor. Ratione officia consequatur dolores sequi veritatis provident esse quasi debitis eaque, dolor, ut nemo alias ullam?</p>
+        <p class="p-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo vitae laboriosam perferendis laborum dolor. Ratione officia consequatur dolores sequi veritatis provident esse quasi debitis eaque, dolor, ut nemo alias ullam?</p>
+    </div>
+
+    <div class="div-2">
+        <h2>background color</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, dolore ut? Quae tempore voluptas rerum tempora obcaecati officiis, fugit labore magni. A, autem architecto recusandae perferendis id quas illum eum!</p>
+    </div>
+    <div class="div-3">
+        <h2>background color</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, dolore ut? Quae tempore voluptas rerum tempora obcaecati officiis, fugit labore magni. A, autem architecto recusandae perferendis id quas illum eum!</p>
+    </div>
+    <div class="div-4">
+        <h2>background image and No repeat</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, dolore ut? Quae tempore voluptas rerum tempora obcaecati officiis, fugit labore magni. A, autem architecto recusandae perferendis id quas illum eum!</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda sequi maxime culpa repellat et sapiente soluta omnis reprehenderit voluptate? Distinctio quia rerum doloremque blanditiis eum, porro in ducimus amet labore.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae minima iure similique laudantium impedit? Voluptas modi asperiores eaque neque nobis non ea nostrum, culpa voluptate facilis, adipisci voluptatibus ullam fugit!</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro hic cumque at beatae eos, dignissimos perspiciatis, saepe tempore rem magnam impedit maxime ipsa reiciendis deserunt ducimus et voluptatem sit ullam.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore voluptatum exercitationem, commodi, laudantium, sapiente velit blanditiis sequi consequuntur necessitatibus quos sit id cumque eos explicabo aliquid? Est quae qui ad!</p>
+    </div>
+    <div class="div-5">
+        <h2>background image and repeat y</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, dolore ut? Quae tempore voluptas rerum tempora obcaecati officiis, fugit labore magni. A, autem architecto recusandae perferendis id quas illum eum!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus vitae praesentium fugiat maxime fugit consequatur eaque debitis eos similique quaerat qui esse, aspernatur, excepturi, iusto ratione neque eligendi molestias dolorum?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A hic delectus beatae officiis ab architecto quam qui sit accusamus odit? Voluptatem incidunt magni impedit sunt tenetur laborum dolor eum consequuntur.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro hic cumque at beatae eos, dignissimos perspiciatis, saepe tempore rem magnam impedit maxime ipsa reiciendis deserunt ducimus et voluptatem sit ullam.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore voluptatum exercitationem, commodi, laudantium, sapiente velit blanditiis sequi consequuntur necessitatibus quos sit id cumque eos explicabo aliquid? Est quae qui ad!</p>
+    </div>
+    <div class="div-6">
+        <h2>background image and repeat x</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, dolore ut? Quae tempore voluptas rerum tempora obcaecati officiis, fugit labore magni. A, autem architecto recusandae perferendis id quas illum eum! lo</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus vitae praesentium fugiat maxime fugit consequatur eaque debitis eos similique quaerat qui esse, aspernatur, excepturi, iusto ratione neque eligendi molestias dolorum?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A hic delectus beatae officiis ab architecto quam qui sit accusamus odit? Voluptatem incidunt magni impedit sunt tenetur laborum dolor eum consequuntur.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro hic cumque at beatae eos, dignissimos perspiciatis, saepe tempore rem magnam impedit maxime ipsa reiciendis deserunt ducimus et voluptatem sit ullam.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore voluptatum exercitationem, commodi, laudantium, sapiente velit blanditiis sequi consequuntur necessitatibus quos sit id cumque eos explicabo aliquid? Est quae qui ad!</p>
+    </div>
+    <div class="div-7">
+        <h2>background attachment fixed</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, dolore ut? Quae tempore voluptas rerum tempora obcaecati officiis, fugit labore magni. A, autem architecto recusandae perferendis id quas illum eum! lo</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus vitae praesentium fugiat maxime fugit consequatur eaque debitis eos similique quaerat qui esse, aspernatur, excepturi, iusto ratione neque eligendi molestias dolorum?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A hic delectus beatae officiis ab architecto quam qui sit accusamus odit? Voluptatem incidunt magni impedit sunt tenetur laborum dolor eum consequuntur.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro hic cumque at beatae eos, dignissimos perspiciatis, saepe tempore rem magnam impedit maxime ipsa reiciendis deserunt ducimus et voluptatem sit ullam.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore voluptatum exercitationem, commodi, laudantium, sapiente velit blanditiis sequi consequuntur necessitatibus quos sit id cumque eos explicabo aliquid? Est quae qui ad!</p>
+    </div>
+    <div class="div-8">
+        <h2>background position</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, dolore ut? Quae tempore voluptas rerum tempora obcaecati officiis, fugit labore magni. A, autem architecto recusandae perferendis id quas illum eum! lo</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus vitae praesentium fugiat maxime fugit consequatur eaque debitis eos similique quaerat qui esse, aspernatur, excepturi, iusto ratione neque eligendi molestias dolorum?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A hic delectus beatae officiis ab architecto quam qui sit accusamus odit? Voluptatem incidunt magni impedit sunt tenetur laborum dolor eum consequuntur.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro hic cumque at beatae eos, dignissimos perspiciatis, saepe tempore rem magnam impedit maxime ipsa reiciendis deserunt ducimus et voluptatem sit ullam.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore voluptatum exercitationem, commodi, laudantium, sapiente velit blanditiis sequi consequuntur necessitatibus quos sit id cumque eos explicabo aliquid? Est quae qui ad!</p>
+    </div>
+    <div class="div-9">
+        <h2>background size</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, dolore ut? Quae tempore voluptas rerum tempora obcaecati officiis, fugit labore magni. A, autem architecto recusandae perferendis id quas illum eum! lo</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus vitae praesentium fugiat maxime fugit consequatur eaque debitis eos similique quaerat qui esse, aspernatur, excepturi, iusto ratione neque eligendi molestias dolorum?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A hic delectus beatae officiis ab architecto quam qui sit accusamus odit? Voluptatem incidunt magni impedit sunt tenetur laborum dolor eum consequuntur.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro hic cumque at beatae eos, dignissimos perspiciatis, saepe tempore rem magnam impedit maxime ipsa reiciendis deserunt ducimus et voluptatem sit ullam.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore voluptatum exercitationem, commodi, laudantium, sapiente velit blanditiis sequi consequuntur necessitatibus quos sit id cumque eos explicabo aliquid? Est quae qui ad!</p>
+    </div>
+</body>
+</html>

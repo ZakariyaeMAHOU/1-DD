@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label{
+            display: inline-block;
+            width: 150px;
+
+        }
+        input+label{
+            width: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form action="pageserveur.php">
+        <fieldset>
+            <legend>formulaire d'inscreption</legend> 
+            <label for="name">NOM : </label>
+            <input type="text" id="name" value="" placeholder="Type your name" required autofocus title="hhhh"> <br>
+            <label for="prenom">PRENOM : </label>
+            <input type="text" id="prenom" maxlength="20" > <br>
+            <label for="email">Email : </label> 
+            <input type="email" id="email"> <br>
+            <label for="psw">Mot de passe : </label>
+            <input type="password" id="psw"> <br>
+            <label for="genre">GENRE : </label>
+                <input type="radio" name="genre" id="m" checked>
+                <label for="m">M</label>
+                <input type="radio" name="genre" id="f">
+                <label for="f">F</label><br>
+            <label for="dateDeNaissance">DATE DE NAISSANCE : </label>
+            <input type="date" id="dateDeNaissance" autofocus> <br>
+            <label for="pays">PAYS : </label>
+            <select id="pays" name="pays" size="4" >
+                <option>MOROCOO</option>
+                <option>PALESTINE</option>
+                <option>ALGERIE</option>
+            </select> <br>
+            <label for="langue">LANGUAGE : </label>
+            <input type="checkbox" id="langAr" disabled >
+                <label for="langAr">Ar</label>          
+            <input type="checkbox" id="langAng">
+                <label for="langAng">Ang</label>
+            <input type="checkbox" id="langIt">
+                <label for="langIt">It</label>
+            <input type="checkbox" id="langFr">
+                <label for="langFr">Fr</label><br>
+            <label for="nbr">Nombre des enfants : </label>
+                <input type="number" id="nbr" max="15" min="0"  step="2"> <br>
+            <label for="Pht">Photo</label>
+            <input type="file" id="Pht" multiple> <br>
+            <label for="tel">Phone number</label>
+            <input type="tel" id="tel"   placeholder="06xxxxxx" pattern="0[7-5]{1}[0-9]{8}"> <br>
+            <label for="favcolor">Select your favorite color :</label> 
+            <input type="color" id="favcolor" name="favcolor"> <br>  
+            <label for="birthdaytime">date and time :</label> 
+            <input type="datetime-local" id="birthdaytime" name="birthdaytime"> <br>
+            <label for="appt">time :</label> 
+            <input type="time" id="appt" name="appt"> <br> 
+            <label for="country_code">Country code :</label> 
+            <input type="text" id="country_code" name="country_code" 
+             title="Three letter country code"> <br> 
+            <input list="browsers"> 
+            <datalist id="browsers"> 
+              <option value="Internet Explorer"> 
+              <option value="Firefox"> 
+              <option value="Chrome"> 
+              <option value="Opera"> 
+              <option value="Safari"> 
+            </datalist> <br>-
+            <input type="submit" value="valider">
+            <input type="reset" value="annuler"><br>
+            <label for="commentaire">Commentaire :</label>
+            <textarea name="commentaire" id="commentaire">bonjour,</textarea><br>
+
+            <label for="cars">Choose a car:</label>
+                <select  name="cars" id="cars">
+                <optgroup>
+                    <option>Volvo</option>
+                    <option>Saab</option>
+                </optgroup>
+                <optgroup label="German Cars">
+                    <option>Mercedes</option>
+                    <option>Audi</option>
+                </optgroup>
+                </select>
+
+        </fieldset>
+    </form>
+</body>
+</html>

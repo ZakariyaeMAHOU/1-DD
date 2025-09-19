@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Arguments Function Challenge</title>
+</head>
+
+<body>
+    <script>
+        /*
+        chalenge
+        */
+
+        /*
+        Function - Random Argument Challenge
+        ====================================
+        Create Function showDetails
+        Function Accept 3 Parameters [a, b, c]
+        Data Types For Info Is
+        - String => Name
+        - Number => Age
+        - Boolean => Status
+        Argument Is Random
+        Data Is Not Sorted Output Depend On Data Types
+        - Use Ternary Conditional Operator
+        */
+
+        function showDetails(userName, age, status) {
+            let uName, a, st;
+            if (typeof userName === "string") {
+                uName = userName
+            } else if (typeof age === "string") {
+                uName = age
+            } else if (typeof status === "string") {
+                uName = status
+            }
+
+            if (typeof userName === "number") {
+                a = userName
+            } else if (typeof age === "number") {
+                a = age
+            } else if (typeof status === "number") {
+                a = status
+            }
+
+            if (typeof userName === "boolean") {
+                st = userName
+            } else if (typeof age === "boolean") {
+                st = age
+            } else if (typeof status === "boolean") {
+                st = status
+            }
+
+            if (st === true) {
+                console.log(`Hello ${uName}, Your Age Is ${a}, You Are Available For Hire`)
+            } else {
+                console.log(`Hello ${uName}, Your Age Is ${a}, You Are Not Available For Hire`)
+            }
+        }
+        showDetails("Osama", 38, true); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
+        showDetails(38, "Osama", true); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
+        showDetails(true, 38, "Osama"); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
+        showDetails(false, "Osama", 38); // "Hello Osama, Your Age Is 38, You Are Not Available For Hire"
+    </script>
+</body>
+
+</html>

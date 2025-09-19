@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box -parent: Align Items</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .flex {
+            background-color: #eee;
+            width: 600px;
+            padding: 20px;
+            margin: 20px auto;
+            /*********************************/
+            display: flex;
+            /* flex-direction: row;
+            flex-wrap: wrap; */
+            flex-flow: row wrap;
+            /*********************************/
+            align-items: stretch;
+        }
+        .flex1 {
+            background-color: #eee;
+            width: 600px;
+            padding: 20px;
+            margin: 20px auto;
+            /*********************************/
+            display: flex;
+            /* flex-direction: row;
+            flex-wrap: wrap; */
+            flex-flow: row wrap;
+            /*********************************/
+            align-items: flex-start;
+        }
+        .flex2 {
+            background-color: #eee;
+            width: 600px;
+            padding: 20px;
+            margin: 20px auto;
+            /*********************************/
+            display: flex;
+            /* flex-direction: row;
+            flex-wrap: wrap; */
+            flex-flow: row wrap;
+            /*********************************/
+            align-items: center;
+        }
+        .flex3 {
+            background-color: #eee;
+            width: 600px;
+            padding: 20px;
+            margin: 20px auto;
+            /*********************************/
+            display: flex;
+            /* flex-direction: row;
+            flex-wrap: wrap; */
+            flex-flow: row wrap;
+            /*********************************/
+            align-items: flex-end;
+        }
+        .flex div,
+        .flex1 div,
+        .flex2 div,
+        .flex3 div
+         {
+            background-color: red;
+            color: white;
+            width: calc(100%/3);
+            text-align: center;
+            padding: 20px;
+        }
+        /***************************************************************/
+        .one {
+            height: 50px;
+        }
+        .two {
+            height: 100px;
+        }
+        /*******************/
+        .center {
+            background-color: rgb(255, 200, 113);
+            width: 300px;
+            height: 200px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h3>align-items: stretch;</h3>
+    <div class="flex">
+        <div class="one">Text 1</div>
+        <div class="two">Text 2</div>
+        <div class="three">Text 3</div>
+    </div>
+    <hr>
+    <h3>align-items: flex-start;</h3>
+    <div class="flex1">
+        <div class="one">Text 1</div>
+        <div class="two">Text 2</div>
+        <div class="three">Text 3</div>
+    </div>
+    <hr>
+    <h3>align-items: center;</h3>
+    <div class="flex2">
+        <div class="one">Text 1</div>
+        <div class="two">Text 2</div>
+        <div class="three">Text 3</div>
+    </div>
+    <hr>
+    <h3>align-items: flex-start;</h3>
+    <div class="flex3">
+        <div class="one">Text 1</div>
+        <div class="two">Text 2</div>
+        <div class="three">Text 3</div>
+    </div>
+    <hr>
+    <div class="center">center</div>
+</body>
+</html>

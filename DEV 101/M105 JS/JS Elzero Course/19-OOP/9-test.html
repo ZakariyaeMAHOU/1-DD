@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        class User {
+            #id;
+            #password;
+            constructor(i, u, p) {
+                this.#id = i;
+                this.username = u;
+                this.#password = p;
+            }
+            printPrivetPropertie() {
+                return `id: ${this.#id} (this info is private)`;
+            }
+            checkPass(pass) {
+                return pass === this.#password;
+            }
+        }
+
+        class Admin extends User {
+            constructor(i, u, e, p) {
+                super(i, u, p)
+                this.email = e;
+            }
+            // test () {
+            //     return this.#password;
+            // }
+        }
+
+        let user1 = new User(100, "Zakaria", "123456");
+
+        console.log(user1);
+        console.log(user1.printPrivetPropertie());
+        console.log(user1.checkPass("123456"));
+
+        console.log("##############")
+
+        let admin1 = new Admin(101, "Mahou", "Ziko@gmail.com", "654321");
+
+        console.log(admin1);
+        console.log(admin1.printPrivetPropertie());
+        console.log(admin1.checkPass("654321"));
+        // console.log(admin1.test());
+    </script>
+</body>
+
+</html>

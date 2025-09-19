@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let a, b, c;
+        do {
+            a = prompt('Entrer le 1er nombre :');
+            if (isNaN(a))
+                alert('La valeur entrée n\'est pas un nombre !');
+        } while (isNaN(a));
+        
+        do {
+            b = prompt('Entrer le 2eme nombre :');
+            if (isNaN(b))
+                alert('La valeur entrée n\'est pas un nombre !');
+        } while (isNaN(b));
+        
+        do {
+            c = prompt('Entrer le 3eme nombre :');
+            if (isNaN(c))
+                alert('La valeur entrée n\'est pas un nombre !');
+        } while (isNaN(c));
+        
+        if (a == b && b == c)
+            alert('Les trois variables sont identiques !!');
+        else if (a == b || a == c || b == c)
+            alert('Deux variables sont égales !!');
+        else
+            alert('Les trois variables sont différentes !!');
+        </script>
+        
+</body>
+</html>

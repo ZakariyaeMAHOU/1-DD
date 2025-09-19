@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forEach</title>
+</head>
+
+<body>
+    <ul>
+        <li class="active">1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <div class="content">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <script>
+        let allLis = document.querySelectorAll("ul li");
+        let allDivs = document.querySelectorAll(".content div");
+
+        allLis.forEach(function (ele) {
+            ele.onclick = function () {
+                // Remove Active Class From All Elements
+                allLis.forEach(function (ele) {
+                    ele.classList.remove("active");
+                });
+                // Add Active Class To This Element
+                this.classList.add("active");
+                // Hide All Divs
+                allDivs.forEach(function (ele) {
+                    ele.style.display = "none";
+                });
+            };
+        });
+    </script>
+</body>
+
+</html>

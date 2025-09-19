@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; 
+            }
+    
+            html, body {
+            height: 100%;
+            font-family: Arial, sans-serif; 
+            line-height: 1.5; 
+            }
+    
+            button, input, textarea {
+            font: inherit; 
+            border: none;
+            outline: none; 
+            background: none;
+            }
+        div{
+            border: 1px solid #000;
+            width: 25%;
+            margin: 10px;
+        }
+        #div1{
+            background-color: aquamarine;
+            height: 200px;
+            /*padding: 20px;*/
+            width: 80%;
+            position: relative;
+        }
+        #div2{
+            background-color: #ca812e;
+            position: relative;
+            left: 500px;
+            bottom: 0px;
+        }
+        #div3{
+            background-color: rgb(50, 116, 116);
+            position: fixed;
+            bottom: 0; 
+            right: 0;
+        }
+        p{
+            border: 1px solid #aa0000;
+            background-color: #a0ffa8;
+            width: 10%;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+        section {
+            border: 1px solid #000;
+            background-color: bisque;
+            width: 80%;
+            margin-top: 100%;
+            /*position: relative;*/
+        }
+        #parag{
+            border: 1px solid #000;
+            background-color: #88d186;
+            position: sticky;
+            top: 0;
+
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div id="div1">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla blanditiis distinctio dolorum esse suscipit in aliquam, numquam doloremque, laborum hic a illo quia dolorem, cupiditate quibusdam nobis autem quis magnam?
+            <p>Lorem</p>
+        </div>
+    </section>
+        <div id="div2">
+            position: relative
+        </div>
+    <div id="div3">position: fixed</div>
+</body>
+</html>
