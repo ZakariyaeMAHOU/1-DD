@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const mapp = [1, 2, 3, 4, 5];
+        const maps = mapp.map((carre) => carre * carre)
+        console.log(maps);
+        //////////
+        const fil = [1, -2, 3, 4, -5];
+        const positive = fil.filter((n) => n >= 0);
+        console.log(positive);
+        //////////
+        const somme = fil.reduce((s, n) => n + s, -2);
+        console.log(somme);
+        //////////////
+
+        const nump = fil.filter((n) => n >= 0).reduce((s, n) => n + s, 0);
+        console.log(nump);
+
+        ////////////// EX 5 ///////////////////////
+        let livres = [
+            { id: 10, titre: 'POO', auteur: 'RAMI', prix: 300 },
+            { id: 11, titre: 'JS ES6', auteur: 'FAMI', prix: 230 },
+            { id: 12, titre: 'Algorithme', auteur: 'KARIMI', prix: 330 },
+            { id: 13, titre: 'HTMH & CSS', auteur: 'RAMI', prix: 340 }
+        ]
+
+    </script>
+</body>
+
+</html>

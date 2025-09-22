@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //
+        let a = 5;
+        let b = 10;
+        const result = (a > 5 && b > 5) ? "A" : (a === 5 ? "C" : "D");
+        console.log(result);
+        //
+        const fruits = ["pomme", "banane", "cerise"];
+        const [fruit1, fruit2] = fruits;
+        console.log(fruit1); // "pomme"
+        console.log(fruit2); // "banane"
+        //
+        const personne = {
+            nom: 'AAA',
+            prenom: 'BBB',
+            age: 23,
+            adressre: {
+                rue: 15,
+                ville: 'berkane'
+            }
+        };
+        const { nom, prenom, age, adressre: { rue }, adressre: { ville } } = personne;
+        console.log(nom, prenom, age, rue, ville); // "AAA BBB 23"
+        //////////
+        const personnes = [
+            { nom: "Rami", age: 33, estMember: true },
+            { nom: "Fatihi", age: 24, estMember: false },
+            { nom: "Chakib", age: 45, estMember: true },
+            { nom: "Mounir", age: 37, estMember: false },
+        ];
+        // const noms = personnes.map(function(par){return par.nom})
+        const noms = personnes.map((par)=> par.nom)
+        console.log(noms)
+        //
+        const persAges=personnes.filter(p=>p.age>35)
+        console.log(persAges);
+        //
+        const persAges1=personnes.find(p=>p.age>35)
+        console.log(persAges1);
+        ////
+        const sommeAge=personnes.reduce((s,p)=>s+p.age,0)
+        console.log('sommeAge :',sommeAge)
+        
+    </script>
+</body>
+
+</html>
