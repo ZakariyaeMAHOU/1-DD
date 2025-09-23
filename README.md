@@ -33,6 +33,7 @@ git push -u origin main
 ## Pull changes
 ```
 git pull origin
+git pull origin main --rebase
 ```
 ---
 ---
