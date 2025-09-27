@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css'
+import './index.css';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import Products from './tp4/Products';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const p1 = <p>Berkane</p>
@@ -54,8 +56,9 @@ const ListeElements = function (props) { // compesant
     )
 }
 root.render(
-    <div>
-        <ListeElements arr={stagiaire} style={style1} />
-        <ListeElements arr={clr} style={style2} />
-    </div>
+    // <div>
+    //     <ListeElements arr={stagiaire} style={style1} />
+    //     <ListeElements arr={clr} style={style2} />
+    // </div>
+    <Products/>
 );

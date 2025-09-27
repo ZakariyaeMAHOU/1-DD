@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "41a2acbbb6f3ac46",
@@ -171,6 +172,9 @@
   },
   "active": "124b3526399accd4",
   "lastOpenFiles": [
+    "DEV OWFS 201/files/m201-etape-principale.png",
+    "DEV OWFS 201/files/m201-v.png",
+    "DEV OWFS 201/files/m201-cascad.png",
     "DEV OWFS 201/M204 Développement front-end/2-local/tp1_react/src/logo.svg",
     "Untitled.md",
     "DEV OWFS 201/M204 Développement front-end/2-local/tp1_react/src/test.png",
