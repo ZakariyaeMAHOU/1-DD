@@ -8,9 +8,26 @@
  3- **الأدوات العملية** (Jira, GitLab, CI/CD, SonarQube).
 >- النتيجة النهائية: أن تصبح قادرًا على **قيادة مشروع ويب أو تطوير رقمي من البداية للنهاية** بكفاءة ومرونة.
 
+> [!NOTE] Resume
+> ##### 1. Connaître les fondamentaux de la gestion de projet :     ==معرفة أساسيات إدارة المشاريع==
+>  - Découvrir les Concepts de gestion de proje :==استكشاف مفاهيم إدارة المشاريع==
+>  - Découvrir les différentes méthodes de gestion de projet:     ==اكتشاف الطرق المختلفة لإدارة المشاريع==
+>  ##### 2. Planifier un projet:
+> -  Analyser le cahier des charges:
+> -  Préparer le projet:
+ >##### 3. Adopter l ’approche Agile dans gestion de projet:
+> - Appréhender la méthodologie Agile Scrum:
+> - Manipuler l ’outil de gestion de projet Agile (Scrum /Jira ):
+ >##### 4. Mettre en œuvre des outils de gestion de versions et de mesure de la qualité du code:
+> - Manipuler les outils de gestion de versions (Git/Gitlab ):
+> - Manipuler l ’outil de mesure de la qualité du code (SonarQube):
+ >##### 5. Mettre en œuvre l es outils de la chaîne du DevOps:
+> - Introduire la chaîne DevOps:
+> - Mettre en place la CI/CD avec Gitlab:
+
 # [Playliste](https://youtube.com/playlist?list=PLKV6WevXj-lWQfNX5OrF5IjdOTSuyTXuE&si=QG1JZzmUwWzCKMcw):[chatGPT](https://chatgpt.com/share/68d3d57b-5c00-800b-a3f6-ab2c284a6e69):[Copilot](https://github.com/copilot/share/482d4332-4340-8895-b800-de47a05220a2):
-## <span style="color: rgb(255 100 100)">1. Connaître les fondamentaux de la gestion de projet</span>:معرفة أساسيات إدارة المشاريع
-### <span style="color: rgb(50 200 50)">Découvrir les Concepts de gestion de projet</span>:استكشاف مفاهيم إدارة المشاريع
+## <span style="color: rgb(255 100 100)">1. Connaître les fondamentaux de la gestion de projet</span>:
+### <span style="color: rgb(50 200 50)">Découvrir les Concepts de gestion de projet</span>:
 #### <span style="color: rgb(10 150 255)">1. Concepts de gestion de projet</span>:مفاهيم إدارة المشروع
 - ***Projet***: Un effort ponctuel visant un objectif unique, avec début/fin, ressources et budget.
 - (مشروع: جهد مؤقت له هدف فريد وبداية ونهاية وموارد وميزانية.)
@@ -45,10 +62,6 @@
 | ------------------------------ | ------------------------------------------------------------------- | ------------------------------------------------------- | ----------------------------------------------------------- |
 | من ينفذ المهمة (مثلاً: مطوّر). | من يوقّع ويأخذ القرار النهائي (مثلاً: مدير المشروع أو مالك المنتج). | يُستشار قبل القرار (مثلاً: مهندس معماري، مستخدم رئيسي). | المُطّلع: يُخبَر بالتطورات دون استشارة (مثلاً: إدارة عليا). |
 
-ممتاز 👍 لقد وجدت الفقرتين المتبقيتين داخل الملف الذي أرسلته (الوحدة **M202 – gestion de projet**) وسأكملك إياهما بنفس طريقتك في كتابة الدرس، مع التبسيط والشرح بالفرنسية والعربية:
-
----
-
 #### <span style="color: rgb(10 150 255)">4. Caractéristiques de base d’un projet</span>
 
 ##### Les éléments fondamentaux : خصائص أساسية لأي مشروع
@@ -69,7 +82,7 @@
     (النتائج المتوقعة هي منتجات أو خدمات يقود تحقيقها إلى الهدف النهائي.)
     
 
-#### <span style="color: rgb(10 150 255)">5. Contraintes dans la gestion d’un projet</span>:
+#### <span style="color: rgb(10 150 255)">5. Contraintes dans la gestion d’un projet</span>: القيود في إدارة المشاريع
 
 ###### Définition : القيود في المشروع = الحدود التي لا يمكن تجاوزها
 
@@ -87,7 +100,7 @@
     (قيود الجودة: احترام المعايير القانونية، الصحية، والأمان، إضافة إلى الالتزامات التجارية.)
     
 
-### <span style="color: rgb(50 200 50)">Découvrir les différentes méthodes de gestion de projet</span>:اكتشاف الطرق المختلفة لإدارة المشاريع
+### <span style="color: rgb(50 200 50)">Découvrir les différentes méthodes de gestion de projet</span>:
 - الطرق التقليدية (Waterfall, V, Y) = تخطيط صارم، صعوبة التعديل.
 - الطرق المرنة (Agile) = تقسيم المشروع إلى أجزاء صغيرة، مرونة عالية، تواصل مستمر مع العميل.
 - الفرق الأساسي: التقليدية تركّز على **الخطة**، بينما Agile تركّز على **القيمة والمنتج النهائي**.
@@ -139,3 +152,5 @@
 ## <span style="color: rgb(255 100 100)">5. Mettre en œuvre l es outils de la chaîne du DevOps</span>:
 ### <span style="color: rgb(50 200 50)">Introduire la chaîne DevOps</span>:
 ### <span style="color: rgb(50 200 50)">Mettre en place la CI/CD avec Gitlab</span>:
+
+[^1]: test
