@@ -118,27 +118,44 @@
         
 
 #### <span style="color: rgb(10 150 255)">2. Méthodes imprévisibles</span> (Agiles)
+#####  Les 4 valeurs agiles:
 
+| الترجمة والشرح بالعربية                                                         | Valeur                                                                   |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| الأفراد والتفاعل أهم من الأداة نفسها (الأدوات تُسهِّل لكن البشر يحلون المشكلات) | Les individus et leurs interactions plus que les processus et les outils |
+| برنامج يعمل أهم من وثائق ضخمة غير مستعملة (لكن الوثائق “الكافية” مطلوبة)        | Du logiciel opérationnel plus qu’une documentation exhaustive            |
+| تعاون حيّ مع العميل أهم من التمسك الجامد بالعقد                                 | La collaboration avec le client plus que la négociation contractuelle    |
+| التعديل الذكي مع التغير أهم من تنفيذ خطة قديمة حرفياً                           | L’adaptation au changement plus que le suivi d’un plan                   |
+
+##### Approche itérative et incrémentale
 - Approche itérative et incrémentale (projet découpé en petites parties).
-    
 - Adaptation rapide aux changements, collaboration forte avec le client.
-    
-- **Principales méthodes :**
-    
-    - **Scrum** : organisation en _sprints_ courts, avec Product Owner, Scrum Master, Daily Meetings.
-        
-    - **Kanban** : tableau de suivi visuel des tâches et de leur avancement.
-        
-    - **Lean Development** : réduire le gaspillage, améliorer l’apprentissage.
-        
+
+##### Principales méthodes :
+| Méthode              | Idée centrale                                  | Quand c’est pertinent                         | Points clés                                                                                                      |
+| -------------------- | ---------------------------------------------- | --------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| **Scrum**            | Sprints time-boxés livrant un incrément “Done” | Travail complexe avec incertitude produit     | Rôles (PO, Scrum Master, Dev Team), artefacts (Backlogs, Increment), cérémonies (Planning, Daily, Review, Rétro) |
+| **Kanban**           | Gestion du flux continu et limitation du WIP   | Flux de demandes variées ou maintenance       | Tableau visuel, limites WIP, mesure Lead/Cycle Time                                                              |
+| **Lean Development** | Maximiser la valeur, éliminer le gaspillage    | Besoin d’efficacité et d’apprentissage rapide | Évite sur‑fonctionnalités, retards, re-travail ; améliore la qualité en amont                                    |
+
+| المنهجية | الفكرة المركزية | متى تكون مناسبة | نقاط رئيسية |
+|----------|-----------------|-----------------|-------------|
+| **Scrum (سكرَم)** | تقسيم العمل إلى دورات قصيرة محددة الزمن (Sprints) تُسلِّم في كل دورة زيادة مكتملة قابلة للاستخدام (Increment “Done”) | عند وجود عمل معقّد، غموض أو تغيّر في المتطلبات / المنتج | أدوار: مالك المنتج (PO)، ميسّر المنهجية (Scrum Master)، فريق التطوير. المخرجات: قوائم العمل (Product & Sprint Backlog)، الزيادة (Increment). الفعاليات: التخطيط، الاجتماع اليومي، المراجعة، جلسة التحسين (Retrospective) |
+| **Kanban (كانبان)** | إدارة تدفّق العمل بصريًا وتقليل العمل الجاري (WIP) لتحسين الانسيابية | عند وجود تدفّق مستمر من طلبات متنوّعة، دعم، صيانة، أو حاجة للاستجابة السريعة | لوحة مرئية (Kanban Board)، حدود العمل الجاري (WIP Limits)، قياس زمن الإنجاز (Lead Time) وزمن الدورة (Cycle Time)، كشف الاختناقات |
+| **Lean Development (التطوير الرشيق/اللّين)** | تعظيم القيمة وإزالة الهدر (Reducing Waste) وتحسين التعلّم والتحسين المستمر | عندما تكون الكفاءة، الجودة المبكرة، وتقليل التكاليف/الهدر أولوية؛ في البيئات التي تحتاج تسريع التعلّم | يركّز على إزالة الهدر (ميزات غير مستخدمة، إعادة عمل، انتظار، تبديل السياق، إلخ)، بناء الجودة مبكرًا، التعلّم السريع، التبسيط |
+
 
 #### <span style="color: rgb(10 150 255)">3. Comparaison</span>
 
 - **Cycle en V** : focalisé sur le processus, peu de place à l’adaptation.
-    
 - **Agile** : focalisé sur le produit, flexible, adapté aux besoins changeants.
 ## <span style="color: rgb(255 100 100)">2. Planifier un projet</span>:
 ### <span style="color: rgb(50 200 50)">Analyser le cahier des charges</span>:
+#### <span style="color: rgb(10 150 255)">1. Compréhension des besoins client</span>:فهم احتياجات العملاء
+##### 1. Objectif de cette étape  
+- S’assurer que ce que le client (ou l’utilisateur) veut ET ce dont il a réellement besoin sont clairement compris, validés, structurés et priorisés avant d’engager des ressources lourdes.  
+- التأكد من أننا نفهم ما يريده العميل وما يحتاجه فعلاً، ونوثقه ونُحدِّد أولوياته قبل استهلاك الموارد.
+
 ### <span style="color: rgb(50 200 50)">Préparer le projet</span>:
 
 ## <span style="color: rgb(255 100 100)">3. Adopter l ’approche Agile dans gestion de projet</span>:
