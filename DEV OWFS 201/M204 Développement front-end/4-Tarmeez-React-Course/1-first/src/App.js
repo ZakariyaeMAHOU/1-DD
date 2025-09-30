@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import MyFirstComponent from './MyFirstComponent'
 
 function App() {
   return (
@@ -20,11 +21,6 @@ function App() {
         </a>
       </header>
     </div>
-  );
-}
-function MyFirstComponent() {
-  return (
-    <h1>Hellow World</h1>
   );
 }
 
