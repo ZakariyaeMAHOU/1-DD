@@ -5,6 +5,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Products from "./tp4/Products";
 import ProductsClass from "./ClassComponents/ProductsClass";
 import Message from "./ClassComponents/Message";
+import Panorama from "./ClassComponents/Panorama";
+import JeuDe from "./ClassComponents/JeuDe";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const p1 = <p>Berkane</p>;
@@ -100,5 +102,7 @@ root.render(
   //     <Products products={voitures} />
   //     <ProductsClass listeProducts={laptop} />
   //   </>
-  <Message />
+  // <Message />
+  // <Panorama />
+  <JeuDe valeurCachee="3"/>
 );

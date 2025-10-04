@@ -9,7 +9,7 @@ export default class Message extends Component {
     inscription() {
         this.setState({
             message: 'Bonsoir !!',
-            btnmessgae: 'Merci'
+            btnMessgae: 'Merci'
         })
     }
     render() {
@@ -17,10 +17,10 @@ export default class Message extends Component {
             <div>
                 <h2>{this.state.message}</h2>
                 <button
-                    onClik={() => this.inscription()}
-                    >
-                        {this.state.btnMessgae}
-                    </button>
+                    onClick={() => this.inscription()}
+                >
+                    {this.state.btnMessgae}
+                </button>
             </div>
         )
     }
